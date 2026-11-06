@@ -1,0 +1,197 @@
+{
+  "scene": "SA-R1",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA-R1_source_c01.png",
+  "prompt_or_instruction": "A young woman sewing a dress at a wooden worktable. She sits in the right third of the frame, a pair of scissors and a spool of thread lie beside her on the table, and the left end of the table is bare. Soft rose, cream, and warm gray. Afternoon light falls from a window on the left. Oil painting with soft, broken brushwork. Patient and focused. Eye level, seen from the front. A papered wall with a small framed picture. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:15:30+00:00",
+  "seconds": 95.4,
+  "usage": {
+    "input_tokens": 160,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 160
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5648
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "scissors",
+        "boxes_at_or_above_cut": 3,
+        "needed": 1,
+        "best_score": 0.7966,
+        "boxes": [
+          {
+            "score": 0.7966,
+            "box": [
+              742.6,
+              890.7,
+              957.9,
+              978.5
+            ]
+          },
+          {
+            "score": 0.1687,
+            "box": [
+              687.7,
+              886.9,
+              860.2,
+              923.3
+            ]
+          },
+          {
+            "score": 0.1518,
+            "box": [
+              858.1,
+              894.3,
+              997.7,
+              976.3
+            ]
+          },
+          {
+            "score": 0.1399,
+            "box": [
+              622.7,
+              876.9,
+              928.9,
+              991.1
+            ]
+          },
+          {
+            "score": 0.1154,
+            "box": [
+              677.0,
+              884.8,
+              922.2,
+              981.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a spool of thread",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.5882,
+        "boxes": [
+          {
+            "score": 0.5882,
+            "box": [
+              614.2,
+              805.1,
+              670.0,
+              901.3
+            ]
+          },
+          {
+            "score": 0.2055,
+            "box": [
+              619.4,
+              821.1,
+              668.8,
+              899.1
+            ]
+          },
+          {
+            "score": 0.1638,
+            "box": [
+              617.0,
+              806.4,
+              670.8,
+              830.7
+            ]
+          },
+          {
+            "score": 0.0622,
+            "box": [
+              613.5,
+              805.4,
+              727.7,
+              911.0
+            ]
+          },
+          {
+            "score": 0.0592,
+            "box": [
+              636.0,
+              812.0,
+              647.3,
+              818.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a pair of scissors on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a spool of thread on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the left end of the table bare, with nothing on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-28T00:15:44+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

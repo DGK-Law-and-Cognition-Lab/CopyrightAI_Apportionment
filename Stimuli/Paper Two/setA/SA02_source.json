@@ -1,0 +1,197 @@
+{
+  "scene": "SA02",
+  "kind": "source",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA02_source_c02.png",
+  "prompt_or_instruction": "An old fisherman mending a net on a wooden dock. He sits low in the center, a wooden crate and a coil of rope lie to his left, and the dock stretches empty to his right. Slate blues and rust browns. Flat, overcast light. Thick oil paint with heavy impasto. Weathered and patient. Seen from slightly above. A gray harbor with a single moored rowboat. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:39:23+00:00",
+  "seconds": 91.9,
+  "usage": {
+    "input_tokens": 145,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 145
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5633
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a wooden crate",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.4705,
+        "boxes": [
+          {
+            "score": 0.4705,
+            "box": [
+              73.2,
+              459.6,
+              494.3,
+              769.9
+            ]
+          },
+          {
+            "score": 0.2455,
+            "box": [
+              79.4,
+              461.4,
+              491.5,
+              668.3
+            ]
+          },
+          {
+            "score": 0.1837,
+            "box": [
+              78.3,
+              553.5,
+              491.9,
+              753.6
+            ]
+          },
+          {
+            "score": 0.0986,
+            "box": [
+              77.4,
+              616.7,
+              283.7,
+              753.1
+            ]
+          },
+          {
+            "score": 0.0895,
+            "box": [
+              405.5,
+              802.0,
+              656.0,
+              1018.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a coil of rope",
+        "boxes_at_or_above_cut": 13,
+        "needed": 1,
+        "best_score": 0.6296,
+        "boxes": [
+          {
+            "score": 0.6296,
+            "box": [
+              142.5,
+              769.7,
+              528.5,
+              945.7
+            ]
+          },
+          {
+            "score": 0.5208,
+            "box": [
+              141.8,
+              668.3,
+              510.5,
+              835.9
+            ]
+          },
+          {
+            "score": 0.4106,
+            "box": [
+              253.5,
+              729.4,
+              506.4,
+              837.3
+            ]
+          },
+          {
+            "score": 0.381,
+            "box": [
+              244.1,
+              790.2,
+              525.9,
+              926.6
+            ]
+          },
+          {
+            "score": 0.3769,
+            "box": [
+              134.2,
+              790.2,
+              236.6,
+              863.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a wooden crate on the dock?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a coil of rope on the dock?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there an empty stretch of dock beside the man, with nothing on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:40:04+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

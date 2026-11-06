@@ -1,0 +1,259 @@
+{
+  "scene": "SA01",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA01_medium_c01.png",
+  "raw_file": "SA01_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a vase of daisies on the bare end of the table. Change nothing else.",
+  "input_file": "SA01_source.png",
+  "input_sha256": "aeba9c1a70f12c4250d1679519c29d5bd1e4c7d201e973b754b092a69180f297",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:45:40+00:00",
+  "seconds": 77.3,
+  "usage": {
+    "input_tokens": 1560,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 24
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7048
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "31a44588f89e9066394384c20bb219fd0cbab60650dad0caf5e38e404054cff8",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.72,
+    "widened_area_pct": 12.173,
+    "masked_area_pct": 2.72,
+    "size_rule": "medium: at least 2 x the accepted small's 0.127 percent and at least 0.5 percent",
+    "size_min_pct": 0.5,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a vase of daisies on the bare end of the table",
+        "query": "a vase of daisies",
+        "best_score_inside_region": 0.5197,
+        "best_score_anywhere": 0.5197,
+        "boxes": [
+          {
+            "score": 0.5197,
+            "box": [
+              929.2,
+              340.5,
+              1295.7,
+              600.6
+            ]
+          },
+          {
+            "score": 0.3525,
+            "box": [
+              1321.2,
+              320.5,
+              1533.3,
+              483.7
+            ]
+          },
+          {
+            "score": 0.1491,
+            "box": [
+              1325.8,
+              318.6,
+              1536.0,
+              620.6
+            ]
+          },
+          {
+            "score": 0.1105,
+            "box": [
+              1438.8,
+              460.0,
+              1535.5,
+              619.5
+            ]
+          },
+          {
+            "score": 0.1051,
+            "box": [
+              919.8,
+              333.6,
+              1294.7,
+              746.1
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a vase of daisies on the end of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:27:41+00:00",
+    "input_sha256": "aeba9c1a70f12c4250d1679519c29d5bd1e4c7d201e973b754b092a69180f297",
+    "unchanged": {
+      "question": "Apart from a vase of daisies on the bare end of the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "8286cd5cc7f1700929716d6533a5328442f98981db12e0927a17b5b09f50942d",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.72,
+        "widened_area_pct": 12.173,
+        "masked_area_pct": 2.72,
+        "size_rule": "medium: at least 2 x the accepted small's 0.127 percent and at least 0.5 percent",
+        "size_min_pct": 0.5,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a vase of daisies on the bare end of the table",
+            "query": "a vase of daisies",
+            "best_score_inside_region": 0.5197,
+            "best_score_anywhere": 0.5197,
+            "boxes": [
+              {
+                "score": 0.5197,
+                "box": [
+                  929.2,
+                  340.5,
+                  1295.7,
+                  600.6
+                ]
+              },
+              {
+                "score": 0.3525,
+                "box": [
+                  1321.2,
+                  320.5,
+                  1533.3,
+                  483.7
+                ]
+              },
+              {
+                "score": 0.1491,
+                "box": [
+                  1325.8,
+                  318.6,
+                  1536.0,
+                  620.6
+                ]
+              },
+              {
+                "score": 0.1105,
+                "box": [
+                  1438.8,
+                  460.0,
+                  1535.5,
+                  619.5
+                ]
+              },
+              {
+                "score": 0.1051,
+                "box": [
+                  919.8,
+                  333.6,
+                  1294.7,
+                  746.1
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a vase of daisies on the end of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:55:44+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

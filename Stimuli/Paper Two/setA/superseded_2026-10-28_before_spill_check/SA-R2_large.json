@@ -1,0 +1,443 @@
+{
+  "scene": "SA-R2",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA-R2_large_c01.png",
+  "raw_file": "SA-R2_large_c01_raw.png",
+  "prompt_or_instruction": "Add a grazing horse, and a stone water trough. Change nothing else.",
+  "input_file": "SA-R2_medium.png",
+  "input_sha256": "db392631e061e1d29c496d1d9ee9f46755bc09249f7dc324577b020aed4cb1fb",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:55:39+00:00",
+  "seconds": 73.8,
+  "usage": {
+    "input_tokens": 1557,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 21
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7045
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "be08bcf7bd21d59542f9497c20d321286c4b57b5770101502e4bce48bfd2ded3",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 7.479,
+    "widened_area_pct": 26.226,
+    "masked_area_pct": 11.845,
+    "size_rule": "large: at least 2 x the accepted medium's 3.866 percent",
+    "size_min_pct": 7.732,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a haystack on the open right side of the field",
+        "query": "a haystack",
+        "best_score_inside_region": 0.5754,
+        "best_score_anywhere": 0.5754,
+        "boxes": [
+          {
+            "score": 0.5754,
+            "box": [
+              1159.1,
+              600.1,
+              1384.8,
+              762.7
+            ]
+          },
+          {
+            "score": 0.3824,
+            "box": [
+              6.9,
+              494.4,
+              499.9,
+              686.4
+            ]
+          },
+          {
+            "score": 0.1427,
+            "box": [
+              838.0,
+              742.1,
+              1536.0,
+              1024.0
+            ]
+          },
+          {
+            "score": 0.1148,
+            "box": [
+              863.3,
+              582.1,
+              1398.3,
+              766.9
+            ]
+          },
+          {
+            "score": 0.1123,
+            "box": [
+              3.4,
+              498.9,
+              214.5,
+              664.6
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a grazing horse",
+        "query": "a horse",
+        "best_score_inside_region": 0.6766,
+        "best_score_anywhere": 0.6766,
+        "boxes": [
+          {
+            "score": 0.6766,
+            "box": [
+              872.5,
+              605.9,
+              1237.5,
+              814.3
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a stone water trough",
+        "query": "a water trough",
+        "best_score_inside_region": 0.1514,
+        "best_score_anywhere": 0.1514,
+        "boxes": [
+          {
+            "score": 0.1514,
+            "box": [
+              184.3,
+              430.8,
+              639.5,
+              770.6
+            ]
+          },
+          {
+            "score": 0.1419,
+            "box": [
+              398.3,
+              799.1,
+              784.9,
+              931.3
+            ]
+          },
+          {
+            "score": 0.1265,
+            "box": [
+              4.2,
+              494.8,
+              515.7,
+              794.9
+            ]
+          },
+          {
+            "score": 0.0914,
+            "box": [
+              4.2,
+              430.8,
+              633.7,
+              788.8
+            ]
+          },
+          {
+            "score": 0.0859,
+            "box": [
+              395.6,
+              793.8,
+              789.6,
+              953.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a haystack on the right side of the field?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a grazing horse?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a stone water trough?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:29:20+00:00",
+    "medium_mask_pixels_inside_large_mask": 299563,
+    "input_sha256": "db392631e061e1d29c496d1d9ee9f46755bc09249f7dc324577b020aed4cb1fb",
+    "unchanged": {
+      "question": "Apart from a haystack on the open right side of the field, a grazing horse, and a stone water trough, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "e92a06b5d214b05a3b2ae2b7bdf390aada588b6ed6988c6bb4c448bee5b0ec7f",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 7.479,
+        "widened_area_pct": 26.226,
+        "masked_area_pct": 11.845,
+        "size_rule": "large: at least 2 x the accepted medium's 3.866 percent",
+        "size_min_pct": 7.732,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a haystack on the open right side of the field",
+            "query": "a haystack",
+            "best_score_inside_region": 0.5754,
+            "best_score_anywhere": 0.5754,
+            "boxes": [
+              {
+                "score": 0.5754,
+                "box": [
+                  1159.1,
+                  600.1,
+                  1384.8,
+                  762.7
+                ]
+              },
+              {
+                "score": 0.3824,
+                "box": [
+                  6.9,
+                  494.4,
+                  499.9,
+                  686.4
+                ]
+              },
+              {
+                "score": 0.1427,
+                "box": [
+                  838.0,
+                  742.1,
+                  1536.0,
+                  1024.0
+                ]
+              },
+              {
+                "score": 0.1148,
+                "box": [
+                  863.3,
+                  582.1,
+                  1398.3,
+                  766.9
+                ]
+              },
+              {
+                "score": 0.1123,
+                "box": [
+                  3.4,
+                  498.9,
+                  214.5,
+                  664.6
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a grazing horse",
+            "query": "a horse",
+            "best_score_inside_region": 0.6766,
+            "best_score_anywhere": 0.6766,
+            "boxes": [
+              {
+                "score": 0.6766,
+                "box": [
+                  872.5,
+                  605.9,
+                  1237.5,
+                  814.3
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a stone water trough",
+            "query": "a water trough",
+            "best_score_inside_region": 0.1514,
+            "best_score_anywhere": 0.1514,
+            "boxes": [
+              {
+                "score": 0.1514,
+                "box": [
+                  184.3,
+                  430.8,
+                  639.5,
+                  770.6
+                ]
+              },
+              {
+                "score": 0.1419,
+                "box": [
+                  398.3,
+                  799.1,
+                  784.9,
+                  931.3
+                ]
+              },
+              {
+                "score": 0.1265,
+                "box": [
+                  4.2,
+                  494.8,
+                  515.7,
+                  794.9
+                ]
+              },
+              {
+                "score": 0.0914,
+                "box": [
+                  4.2,
+                  430.8,
+                  633.7,
+                  788.8
+                ]
+              },
+              {
+                "score": 0.0859,
+                "box": [
+                  395.6,
+                  793.8,
+                  789.6,
+                  953.8
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a haystack on the right side of the field?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a grazing horse?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a stone water trough?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T00:56:02+00:00",
+        "medium_mask_pixels_inside_large_mask": 299563,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

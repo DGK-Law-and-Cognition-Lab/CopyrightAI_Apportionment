@@ -1,0 +1,259 @@
+{
+  "scene": "SA06",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA06_small_c01.png",
+  "raw_file": "SA06_small_c01_raw.png",
+  "prompt_or_instruction": "Add a duck on the empty stretch of water. Change nothing else.",
+  "input_file": "SA06_source.png",
+  "input_sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:49:19+00:00",
+  "seconds": 71.3,
+  "usage": {
+    "input_tokens": 1556,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 20
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7044
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "fd25798bc833dcfdf8252334cd61a720a871baa5f72761d056dd89b84436c774",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.314,
+    "widened_area_pct": 6.779,
+    "masked_area_pct": 0.314,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a duck on the empty stretch of water",
+        "query": "a duck",
+        "best_score_inside_region": 0.7475,
+        "best_score_anywhere": 0.7475,
+        "boxes": [
+          {
+            "score": 0.7475,
+            "box": [
+              1191.3,
+              635.8,
+              1284.8,
+              683.1
+            ]
+          },
+          {
+            "score": 0.1067,
+            "box": [
+              1193.5,
+              635.3,
+              1289.2,
+              686.4
+            ]
+          },
+          {
+            "score": 0.0796,
+            "box": [
+              732.2,
+              376.2,
+              932.2,
+              480.9
+            ]
+          },
+          {
+            "score": 0.0629,
+            "box": [
+              1157.3,
+              432.6,
+              1380.0,
+              607.9
+            ]
+          },
+          {
+            "score": 0.0568,
+            "box": [
+              1192.5,
+              634.0,
+              1289.6,
+              684.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a duck on the stretch of water?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:26:59+00:00",
+    "input_sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f",
+    "unchanged": {
+      "question": "Apart from a duck on the empty stretch of water, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "d620dcbdf7025cf3f6c2e29dd5cc9f978b9d6c07efa52be8fdf4c3f5818ae006",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.314,
+        "widened_area_pct": 6.779,
+        "masked_area_pct": 0.314,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a duck on the empty stretch of water",
+            "query": "a duck",
+            "best_score_inside_region": 0.7475,
+            "best_score_anywhere": 0.7475,
+            "boxes": [
+              {
+                "score": 0.7475,
+                "box": [
+                  1191.3,
+                  635.8,
+                  1284.8,
+                  683.1
+                ]
+              },
+              {
+                "score": 0.1067,
+                "box": [
+                  1193.5,
+                  635.3,
+                  1289.2,
+                  686.4
+                ]
+              },
+              {
+                "score": 0.0796,
+                "box": [
+                  732.2,
+                  376.2,
+                  932.2,
+                  480.9
+                ]
+              },
+              {
+                "score": 0.0629,
+                "box": [
+                  1157.3,
+                  432.6,
+                  1380.0,
+                  607.9
+                ]
+              },
+              {
+                "score": 0.0568,
+                "box": [
+                  1192.5,
+                  634.0,
+                  1289.6,
+                  684.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a duck on the stretch of water?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:54:27+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

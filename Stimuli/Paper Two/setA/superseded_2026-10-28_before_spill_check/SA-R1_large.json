@@ -1,0 +1,479 @@
+{
+  "scene": "SA-R1",
+  "kind": "large",
+  "candidate": 42,
+  "revision": 0,
+  "file": "SA-R1_large_c42.png",
+  "raw_file": "SA-R1_large_c42_raw.png",
+  "prompt_or_instruction": "Add a tall wooden cupboard against the back wall, and a rocking chair beside the table. Change nothing else.",
+  "input_file": "SA-R1_medium.png",
+  "input_sha256": "4b352c620c62ec6464367d3f243e30b334216a25010a0467ff379227ffd8e7bb",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T19:17:09+00:00",
+  "seconds": 76.0,
+  "usage": {
+    "input_tokens": 1564,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 28
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7052
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "d7967523c94c705b9e9d5e356aab718323b960fcc7b1c152ad29278a875a83bf",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 21.225,
+    "widened_area_pct": 33.003,
+    "masked_area_pct": 30.088,
+    "size_rule": "large: at least 2 x the accepted medium's 8.547 percent",
+    "size_min_pct": 17.094,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a basket of folded cloth on the bare left end of the table",
+        "query": "a basket of folded cloth",
+        "best_score_inside_region": 0.3127,
+        "best_score_anywhere": 0.3127,
+        "boxes": [
+          {
+            "score": 0.3127,
+            "box": [
+              46.7,
+              656.9,
+              534.3,
+              806.3
+            ]
+          },
+          {
+            "score": 0.2997,
+            "box": [
+              408.5,
+              0.6,
+              529.0,
+              65.2
+            ]
+          },
+          {
+            "score": 0.2105,
+            "box": [
+              87.0,
+              600.7,
+              512.3,
+              715.5
+            ]
+          },
+          {
+            "score": 0.2064,
+            "box": [
+              59.5,
+              772.1,
+              520.9,
+              894.8
+            ]
+          },
+          {
+            "score": 0.1658,
+            "box": [
+              542.4,
+              1.5,
+              641.9,
+              64.3
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a tall wooden cupboard against the back wall",
+        "query": "a cupboard",
+        "best_score_inside_region": 0.3443,
+        "best_score_anywhere": 0.3443,
+        "boxes": [
+          {
+            "score": 0.3443,
+            "box": [
+              331.8,
+              55.9,
+              712.4,
+              695.3
+            ]
+          },
+          {
+            "score": 0.1133,
+            "box": [
+              370.0,
+              100.9,
+              669.1,
+              528.0
+            ]
+          },
+          {
+            "score": 0.0533,
+            "box": [
+              391.4,
+              123.9,
+              515.1,
+              518.4
+            ]
+          },
+          {
+            "score": 0.0505,
+            "box": [
+              386.3,
+              540.3,
+              663.2,
+              702.8
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a rocking chair beside the table",
+        "query": "a rocking chair",
+        "best_score_inside_region": 0.397,
+        "best_score_anywhere": 0.397,
+        "boxes": [
+          {
+            "score": 0.397,
+            "box": [
+              198.1,
+              389.9,
+              524.3,
+              650.1
+            ]
+          },
+          {
+            "score": 0.2224,
+            "box": [
+              48.4,
+              382.0,
+              554.1,
+              806.4
+            ]
+          },
+          {
+            "score": 0.1754,
+            "box": [
+              196.6,
+              389.9,
+              590.2,
+              715.3
+            ]
+          },
+          {
+            "score": 0.0973,
+            "box": [
+              1183.0,
+              468.8,
+              1333.0,
+              720.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a basket of folded cloth on the left end of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a tall wooden cupboard against the back wall?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a rocking chair beside the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:31:00+00:00",
+    "medium_mask_pixels_inside_large_mask": 61636,
+    "input_sha256": "4b352c620c62ec6464367d3f243e30b334216a25010a0467ff379227ffd8e7bb",
+    "unchanged": {
+      "question": "Apart from a basket of folded cloth on the bare left end of the table, a tall wooden cupboard against the back wall, and a rocking chair beside the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "b3f90f91a81d1a5429b63999f1376f2e9ea7572cffaaa3f5e1b0845d1960febd",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 21.225,
+        "widened_area_pct": 33.003,
+        "masked_area_pct": 30.088,
+        "size_rule": "large: at least 2 x the accepted medium's 8.547 percent",
+        "size_min_pct": 17.094,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a basket of folded cloth on the bare left end of the table",
+            "query": "a basket of folded cloth",
+            "best_score_inside_region": 0.3127,
+            "best_score_anywhere": 0.3127,
+            "boxes": [
+              {
+                "score": 0.3127,
+                "box": [
+                  46.7,
+                  656.9,
+                  534.3,
+                  806.3
+                ]
+              },
+              {
+                "score": 0.2997,
+                "box": [
+                  408.5,
+                  0.6,
+                  529.0,
+                  65.2
+                ]
+              },
+              {
+                "score": 0.2105,
+                "box": [
+                  87.0,
+                  600.7,
+                  512.3,
+                  715.5
+                ]
+              },
+              {
+                "score": 0.2064,
+                "box": [
+                  59.5,
+                  772.1,
+                  520.9,
+                  894.8
+                ]
+              },
+              {
+                "score": 0.1658,
+                "box": [
+                  542.4,
+                  1.5,
+                  641.9,
+                  64.3
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a tall wooden cupboard against the back wall",
+            "query": "a cupboard",
+            "best_score_inside_region": 0.3443,
+            "best_score_anywhere": 0.3443,
+            "boxes": [
+              {
+                "score": 0.3443,
+                "box": [
+                  331.8,
+                  55.9,
+                  712.4,
+                  695.3
+                ]
+              },
+              {
+                "score": 0.1133,
+                "box": [
+                  370.0,
+                  100.9,
+                  669.1,
+                  528.0
+                ]
+              },
+              {
+                "score": 0.0533,
+                "box": [
+                  391.4,
+                  123.9,
+                  515.1,
+                  518.4
+                ]
+              },
+              {
+                "score": 0.0505,
+                "box": [
+                  386.3,
+                  540.3,
+                  663.2,
+                  702.8
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a rocking chair beside the table",
+            "query": "a rocking chair",
+            "best_score_inside_region": 0.397,
+            "best_score_anywhere": 0.397,
+            "boxes": [
+              {
+                "score": 0.397,
+                "box": [
+                  198.1,
+                  389.9,
+                  524.3,
+                  650.1
+                ]
+              },
+              {
+                "score": 0.2224,
+                "box": [
+                  48.4,
+                  382.0,
+                  554.1,
+                  806.4
+                ]
+              },
+              {
+                "score": 0.1754,
+                "box": [
+                  196.6,
+                  389.9,
+                  590.2,
+                  715.3
+                ]
+              },
+              {
+                "score": 0.0973,
+                "box": [
+                  1183.0,
+                  468.8,
+                  1333.0,
+                  720.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a basket of folded cloth on the left end of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a tall wooden cupboard against the back wall?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a rocking chair beside the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T19:17:24+00:00",
+        "medium_mask_pixels_inside_large_mask": 61636,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "scene": "SA07",
+  "kind": "source",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA07_source_c02.png",
+  "prompt_or_instruction": "A still life of bread, cheese, and a clay wine jug on a wooden table. The bread, cheese, and jug cluster in the left half with a knife laid diagonally in front of them, nothing else is on the table, and the whole right half of the table is bare wood. Warm browns, cream, and deep red. Raking light from the left. Realist oil painting with smooth blending. Rustic and generous. Slightly above, close up. A dark, nearly black wall. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:40:44+00:00",
+  "seconds": 81.5,
+  "usage": {
+    "input_tokens": 165,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 165
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5653
+  },
+  "estimated_usd": 0.1655,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a clay jug",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.7859,
+        "boxes": [
+          {
+            "score": 0.7859,
+            "box": [
+              140.8,
+              26.1,
+              530.3,
+              450.9
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a loaf of bread",
+        "boxes_at_or_above_cut": 3,
+        "needed": 1,
+        "best_score": 0.6302,
+        "boxes": [
+          {
+            "score": 0.6302,
+            "box": [
+              58.1,
+              381.1,
+              535.2,
+              706.8
+            ]
+          },
+          {
+            "score": 0.3522,
+            "box": [
+              198.9,
+              642.3,
+              434.8,
+              827.6
+            ]
+          },
+          {
+            "score": 0.2534,
+            "box": [
+              452.5,
+              505.3,
+              716.1,
+              712.2
+            ]
+          },
+          {
+            "score": 0.0969,
+            "box": [
+              59.0,
+              388.6,
+              337.1,
+              698.0
+            ]
+          },
+          {
+            "score": 0.0956,
+            "box": [
+              466.8,
+              678.6,
+              533.1,
+              733.4
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a clay jug on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there bread on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the right half of the table bare wood, with nothing on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:41:44+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

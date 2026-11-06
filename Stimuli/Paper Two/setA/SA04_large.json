@@ -1,0 +1,330 @@
+{
+  "scene": "SA04",
+  "kind": "large",
+  "candidate": 93,
+  "revision": 0,
+  "file": "SA04_large_c93.png",
+  "raw_file": "SA04_large_c93_raw.png",
+  "prompt_or_instruction": "Add a side table with a vase in the right foreground, and a candlestick on the side table. Change nothing else.",
+  "input_file": "SA04_medium.png",
+  "input_sha256": "482a7d444698a6d56e290dcea2253a0d7e91297dbe0fbc64ed7bed6c03a58bb4",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T18:33:06+00:00",
+  "seconds": 76.1,
+  "usage": {
+    "input_tokens": 1567,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 31
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7055
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "6cae3f58013bd7f549bedb9eaced2d7ffa721820e5569044c7d4d9cb2b5c253b",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.578,
+    "widened_area_pct": 12.318,
+    "masked_area_pct": 5.058,
+    "size_rule": "large: at least 2 x the accepted medium's 2.48 percent",
+    "size_min_pct": 4.96,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large dog asleep on the rug in front of the man",
+        "query": "a dog",
+        "best_score_inside_region": 0.4861,
+        "best_score_anywhere": 0.4861,
+        "boxes": [
+          {
+            "score": 0.4861,
+            "box": [
+              682.6,
+              806.9,
+              869.0,
+              993.1
+            ]
+          },
+          {
+            "score": 0.3581,
+            "box": [
+              798.2,
+              795.3,
+              987.4,
+              983.2
+            ]
+          },
+          {
+            "score": 0.2159,
+            "box": [
+              630.5,
+              798.0,
+              906.2,
+              995.9
+            ]
+          },
+          {
+            "score": 0.0624,
+            "box": [
+              745.3,
+              758.8,
+              1016.1,
+              977.3
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a side table with a vase in the right foreground",
+        "query": "a side table",
+        "best_score_inside_region": 0.1711,
+        "best_score_anywhere": 0.2715,
+        "boxes": [
+          {
+            "score": 0.2715,
+            "box": [
+              1.1,
+              541.7,
+              253.3,
+              779.4
+            ]
+          },
+          {
+            "score": 0.1715,
+            "box": [
+              435.2,
+              384.4,
+              667.6,
+              787.1
+            ]
+          },
+          {
+            "score": 0.1711,
+            "box": [
+              1051.4,
+              710.0,
+              1482.4,
+              886.9
+            ]
+          },
+          {
+            "score": 0.1191,
+            "box": [
+              517.3,
+              698.9,
+              633.0,
+              935.4
+            ]
+          },
+          {
+            "score": 0.0776,
+            "box": [
+              1297.7,
+              413.4,
+              1536.0,
+              719.6
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a candlestick on the side table",
+        "query": "a candlestick",
+        "best_score_inside_region": 0.279,
+        "best_score_anywhere": 0.279,
+        "boxes": [
+          {
+            "score": 0.279,
+            "box": [
+              1327.6,
+              509.4,
+              1352.3,
+              574.7
+            ]
+          },
+          {
+            "score": 0.2362,
+            "box": [
+              1305.0,
+              584.1,
+              1385.3,
+              733.8
+            ]
+          },
+          {
+            "score": 0.2111,
+            "box": [
+              1308.5,
+              507.5,
+              1386.7,
+              730.9
+            ]
+          },
+          {
+            "score": 0.1817,
+            "box": [
+              82.5,
+              213.7,
+              179.8,
+              558.6
+            ]
+          },
+          {
+            "score": 0.1664,
+            "box": [
+              263.3,
+              277.3,
+              313.4,
+              430.0
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large dog asleep on the rug in front of the man?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a side table with a vase in the right foreground?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a candlestick on the side table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T18:33:28+00:00",
+    "medium_mask_pixels_inside_large_mask": 443,
+    "input_sha256": "482a7d444698a6d56e290dcea2253a0d7e91297dbe0fbc64ed7bed6c03a58bb4",
+    "object_position": {
+      "trackable": [
+        "a stand",
+        "a chair",
+        "a mirror"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a stand",
+          "in_input": true,
+          "input_box": [
+            434.5,
+            384.6,
+            668.6,
+            787.9
+          ],
+          "input_score": 0.2383,
+          "output_box": [
+            435.2,
+            384.4,
+            667.6,
+            787.1
+          ],
+          "output_score": 0.222,
+          "iou": 0.99,
+          "pass": true
+        },
+        {
+          "object": "a chair",
+          "in_input": true,
+          "input_box": [
+            259.7,
+            628.3,
+            566.4,
+            1007.2
+          ],
+          "input_score": 0.4807,
+          "output_box": [
+            258.6,
+            610.3,
+            562.7,
+            1009.9
+          ],
+          "output_score": 0.4833,
+          "iou": 0.934,
+          "pass": true
+        },
+        {
+          "object": "a mirror",
+          "in_input": true,
+          "input_box": [
+            195.7,
+            2.4,
+            492.5,
+            509.6
+          ],
+          "input_score": 0.2412,
+          "output_box": [
+            194.6,
+            3.1,
+            488.8,
+            509.1
+          ],
+          "output_score": 0.2161,
+          "iou": 0.982,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "543def289d254d9020cf8ce9f7d3dcc4a9c37b8eecb7b2c3b64f3e353b6cc1e3"
+}

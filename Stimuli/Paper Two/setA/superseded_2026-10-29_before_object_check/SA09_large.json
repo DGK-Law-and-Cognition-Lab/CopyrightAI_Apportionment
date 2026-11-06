@@ -1,0 +1,312 @@
+{
+  "scene": "SA09",
+  "kind": "large",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA09_large_c02.png",
+  "raw_file": "SA09_large_c02_raw.png",
+  "prompt_or_instruction": "Add a wheelbarrow, and a birdbath. Change nothing else.",
+  "input_file": "SA09_medium.png",
+  "input_sha256": "ea77a358a45bac69f1cb07cd81cf1331e7c265b99d0d2ed0fdabd69c444bce70",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T07:11:43+00:00",
+  "seconds": 83.8,
+  "usage": {
+    "input_tokens": 1557,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 21
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7045
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "66446ab89e8fea9c51276486fd0867432c3aaca5d3ce424542555519a82f147f",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 4.311,
+    "widened_area_pct": 28.179,
+    "masked_area_pct": 6.868,
+    "size_rule": "large: at least 2 x the accepted medium's 1.896 percent",
+    "size_min_pct": 3.792,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a watering can on the path",
+        "query": "a watering can",
+        "best_score_inside_region": 0.4739,
+        "best_score_anywhere": 0.4739,
+        "boxes": [
+          {
+            "score": 0.4739,
+            "box": [
+              853.6,
+              789.3,
+              1012.2,
+              920.6
+            ]
+          },
+          {
+            "score": 0.0821,
+            "box": [
+              208.3,
+              816.9,
+              383.0,
+              999.6
+            ]
+          },
+          {
+            "score": 0.0609,
+            "box": [
+              805.7,
+              718.8,
+              970.0,
+              810.4
+            ]
+          },
+          {
+            "score": 0.0594,
+            "box": [
+              815.2,
+              698.8,
+              944.0,
+              819.0
+            ]
+          },
+          {
+            "score": 0.0527,
+            "box": [
+              799.8,
+              688.7,
+              1031.8,
+              817.8
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a wheelbarrow",
+        "query": "a wheelbarrow",
+        "best_score_inside_region": 0.2055,
+        "best_score_anywhere": 0.2055,
+        "boxes": [
+          {
+            "score": 0.2055,
+            "box": [
+              799.8,
+              688.7,
+              1031.8,
+              817.8
+            ]
+          },
+          {
+            "score": 0.1384,
+            "box": [
+              805.7,
+              718.8,
+              970.0,
+              810.4
+            ]
+          },
+          {
+            "score": 0.0861,
+            "box": [
+              272.0,
+              529.0,
+              755.0,
+              867.6
+            ]
+          },
+          {
+            "score": 0.0637,
+            "box": [
+              718.6,
+              741.1,
+              905.0,
+              922.8
+            ]
+          },
+          {
+            "score": 0.0621,
+            "box": [
+              748.4,
+              780.0,
+              869.5,
+              919.3
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a birdbath",
+        "query": "a birdbath",
+        "best_score_inside_region": 0.417,
+        "best_score_anywhere": 0.417,
+        "boxes": [
+          {
+            "score": 0.417,
+            "box": [
+              1192.6,
+              722.7,
+              1412.5,
+              796.3
+            ]
+          },
+          {
+            "score": 0.1776,
+            "box": [
+              1184.9,
+              758.6,
+              1403.0,
+              877.9
+            ]
+          },
+          {
+            "score": 0.1595,
+            "box": [
+              1182.9,
+              736.8,
+              1407.9,
+              929.2
+            ]
+          },
+          {
+            "score": 0.1241,
+            "box": [
+              805.7,
+              718.8,
+              970.0,
+              810.4
+            ]
+          },
+          {
+            "score": 0.0839,
+            "box": [
+              799.8,
+              688.7,
+              1031.8,
+              817.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a watering can on the path?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a wheelbarrow?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a birdbath?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T07:12:12+00:00",
+    "medium_mask_pixels_inside_large_mask": 200345,
+    "input_sha256": "ea77a358a45bac69f1cb07cd81cf1331e7c265b99d0d2ed0fdabd69c444bce70",
+    "spill": {
+      "spill_pct": 0.5721,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 15.425,
+      "boxes_used": {
+        "a watering can on the path": [
+          [
+            853.6,
+            789.3,
+            1012.2,
+            920.6
+          ]
+        ],
+        "a wheelbarrow": [
+          [
+            799.8,
+            688.7,
+            1031.8,
+            817.8
+          ]
+        ],
+        "a birdbath": [
+          [
+            1192.6,
+            722.7,
+            1412.5,
+            796.3
+          ],
+          [
+            1184.9,
+            758.6,
+            1403.0,
+            877.9
+          ],
+          [
+            1182.9,
+            736.8,
+            1407.9,
+            929.2
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "ddab44bea601f90634387fad4f589437be62da92ae94ca2723fcfa4df0cfad64"
+}

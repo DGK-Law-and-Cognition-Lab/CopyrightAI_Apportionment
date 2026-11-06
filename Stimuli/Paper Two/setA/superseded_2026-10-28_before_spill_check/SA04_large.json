@@ -1,0 +1,515 @@
+{
+  "scene": "SA04",
+  "kind": "large",
+  "candidate": 28,
+  "revision": 1,
+  "file": "SA04_large_c28.png",
+  "raw_file": "SA04_large_c28_raw.png",
+  "prompt_or_instruction": "Add a side table with a vase, and a candlestick, clearly visible. Change nothing else.",
+  "input_file": "SA04_medium.png",
+  "input_sha256": "ce0415b7ce4ec2409b59f354187f6bd0dac5a0b0933de01fa2e37cf916f723e9",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T20:07:22+00:00",
+  "seconds": 78.4,
+  "usage": {
+    "input_tokens": 1562,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 26
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7050
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "52e56f8f6b4a78c7a472d4bae81e7e6b6b31fe3de6e5a53941e7ea91e15abaa5",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.663,
+    "widened_area_pct": 18.841,
+    "masked_area_pct": 5.364,
+    "size_rule": "large: at least 2 x the accepted medium's 2.631 percent",
+    "size_min_pct": 5.262,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large dog asleep on the rug in front of the man",
+        "query": "a dog",
+        "best_score_inside_region": 0.4094,
+        "best_score_anywhere": 0.4094,
+        "boxes": [
+          {
+            "score": 0.4094,
+            "box": [
+              675.5,
+              786.7,
+              1058.7,
+              1024.0
+            ]
+          },
+          {
+            "score": 0.2552,
+            "box": [
+              782.0,
+              803.0,
+              948.1,
+              1019.3
+            ]
+          },
+          {
+            "score": 0.1284,
+            "box": [
+              541.6,
+              783.6,
+              814.8,
+              1006.9
+            ]
+          },
+          {
+            "score": 0.0688,
+            "box": [
+              804.1,
+              734.2,
+              1171.0,
+              997.0
+            ]
+          },
+          {
+            "score": 0.0605,
+            "box": [
+              959.9,
+              752.0,
+              1181.4,
+              985.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a side table with a vase",
+        "query": "a side table",
+        "best_score_inside_region": 0.354,
+        "best_score_anywhere": 0.354,
+        "boxes": [
+          {
+            "score": 0.354,
+            "box": [
+              113.4,
+              588.5,
+              471.5,
+              819.3
+            ]
+          },
+          {
+            "score": 0.3307,
+            "box": [
+              0.7,
+              533.4,
+              211.8,
+              780.4
+            ]
+          },
+          {
+            "score": 0.1357,
+            "box": [
+              270.7,
+              419.6,
+              463.1,
+              609.4
+            ]
+          },
+          {
+            "score": 0.1155,
+            "box": [
+              435.9,
+              386.2,
+              671.2,
+              787.0
+            ]
+          },
+          {
+            "score": 0.0574,
+            "box": [
+              1293.8,
+              411.6,
+              1533.6,
+              766.9
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a candlestick",
+        "query": "a candlestick",
+        "best_score_inside_region": 0.3063,
+        "best_score_anywhere": 0.3063,
+        "boxes": [
+          {
+            "score": 0.3063,
+            "box": [
+              343.0,
+              424.9,
+              356.2,
+              501.6
+            ]
+          },
+          {
+            "score": 0.2503,
+            "box": [
+              263.7,
+              270.1,
+              313.4,
+              427.5
+            ]
+          },
+          {
+            "score": 0.2215,
+            "box": [
+              322.2,
+              492.9,
+              380.2,
+              606.6
+            ]
+          },
+          {
+            "score": 0.191,
+            "box": [
+              83.5,
+              213.8,
+              179.8,
+              565.2
+            ]
+          },
+          {
+            "score": 0.1143,
+            "box": [
+              92.3,
+              213.8,
+              167.8,
+              391.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large dog asleep on the rug in front of the man?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a side table with a vase?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a candlestick?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:33:55+00:00",
+    "medium_mask_pixels_inside_large_mask": 52985,
+    "input_sha256": "ce0415b7ce4ec2409b59f354187f6bd0dac5a0b0933de01fa2e37cf916f723e9",
+    "unchanged": {
+      "question": "Apart from a large dog asleep on the rug in front of the man, a side table with a vase, and a candlestick, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "781f78a0bdc2f27844ef24224a970d7e48908942303b2834922f0f65c0f2978e",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.663,
+        "widened_area_pct": 18.841,
+        "masked_area_pct": 5.364,
+        "size_rule": "large: at least 2 x the accepted medium's 2.631 percent",
+        "size_min_pct": 5.262,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a large dog asleep on the rug in front of the man",
+            "query": "a dog",
+            "best_score_inside_region": 0.4094,
+            "best_score_anywhere": 0.4094,
+            "boxes": [
+              {
+                "score": 0.4094,
+                "box": [
+                  675.5,
+                  786.7,
+                  1058.7,
+                  1024.0
+                ]
+              },
+              {
+                "score": 0.2552,
+                "box": [
+                  782.0,
+                  803.0,
+                  948.1,
+                  1019.3
+                ]
+              },
+              {
+                "score": 0.1284,
+                "box": [
+                  541.6,
+                  783.6,
+                  814.8,
+                  1006.9
+                ]
+              },
+              {
+                "score": 0.0688,
+                "box": [
+                  804.1,
+                  734.2,
+                  1171.0,
+                  997.0
+                ]
+              },
+              {
+                "score": 0.0605,
+                "box": [
+                  959.9,
+                  752.0,
+                  1181.4,
+                  985.5
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a side table with a vase",
+            "query": "a side table",
+            "best_score_inside_region": 0.354,
+            "best_score_anywhere": 0.354,
+            "boxes": [
+              {
+                "score": 0.354,
+                "box": [
+                  113.4,
+                  588.5,
+                  471.5,
+                  819.3
+                ]
+              },
+              {
+                "score": 0.3307,
+                "box": [
+                  0.7,
+                  533.4,
+                  211.8,
+                  780.4
+                ]
+              },
+              {
+                "score": 0.1357,
+                "box": [
+                  270.7,
+                  419.6,
+                  463.1,
+                  609.4
+                ]
+              },
+              {
+                "score": 0.1155,
+                "box": [
+                  435.9,
+                  386.2,
+                  671.2,
+                  787.0
+                ]
+              },
+              {
+                "score": 0.0574,
+                "box": [
+                  1293.8,
+                  411.6,
+                  1533.6,
+                  766.9
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a candlestick",
+            "query": "a candlestick",
+            "best_score_inside_region": 0.3063,
+            "best_score_anywhere": 0.3063,
+            "boxes": [
+              {
+                "score": 0.3063,
+                "box": [
+                  343.0,
+                  424.9,
+                  356.2,
+                  501.6
+                ]
+              },
+              {
+                "score": 0.2503,
+                "box": [
+                  263.7,
+                  270.1,
+                  313.4,
+                  427.5
+                ]
+              },
+              {
+                "score": 0.2215,
+                "box": [
+                  322.2,
+                  492.9,
+                  380.2,
+                  606.6
+                ]
+              },
+              {
+                "score": 0.191,
+                "box": [
+                  83.5,
+                  213.8,
+                  179.8,
+                  565.2
+                ]
+              },
+              {
+                "score": 0.1143,
+                "box": [
+                  92.3,
+                  213.8,
+                  167.8,
+                  391.7
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a large dog asleep on the rug in front of the man?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a side table with a vase?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a candlestick?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T20:07:50+00:00",
+        "medium_mask_pixels_inside_large_mask": 52985,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "scene": "SA04",
+  "kind": "large",
+  "candidate": 67,
+  "revision": 1,
+  "file": "SA04_large_c67.png",
+  "raw_file": "SA04_large_c67_raw.png",
+  "prompt_or_instruction": "Add a side table with a vase, and a candlestick, clearly visible. Change nothing else.",
+  "input_file": "SA04_medium.png",
+  "input_sha256": "482a7d444698a6d56e290dcea2253a0d7e91297dbe0fbc64ed7bed6c03a58bb4",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T10:13:14+00:00",
+  "seconds": 81.0,
+  "usage": {
+    "input_tokens": 1562,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 26
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7050
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "966c1ed27d4b2cb441025ddbd89ff33e44d1d106d34eb31d75801acbf77aa97a",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 3.538,
+    "widened_area_pct": 19.033,
+    "masked_area_pct": 5.966,
+    "size_rule": "large: at least 2 x the accepted medium's 2.48 percent",
+    "size_min_pct": 4.96,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large dog asleep on the rug in front of the man",
+        "query": "a dog",
+        "best_score_inside_region": 0.4048,
+        "best_score_anywhere": 0.4048,
+        "boxes": [
+          {
+            "score": 0.4048,
+            "box": [
+              629.1,
+              796.9,
+              911.3,
+              1000.2
+            ]
+          },
+          {
+            "score": 0.3375,
+            "box": [
+              809.8,
+              794.7,
+              988.8,
+              984.6
+            ]
+          },
+          {
+            "score": 0.3171,
+            "box": [
+              677.7,
+              802.4,
+              832.8,
+              993.9
+            ]
+          },
+          {
+            "score": 0.235,
+            "box": [
+              644.1,
+              800.4,
+              873.3,
+              996.9
+            ]
+          },
+          {
+            "score": 0.1627,
+            "box": [
+              752.8,
+              740.0,
+              1104.4,
+              968.8
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a side table with a vase",
+        "query": "a side table",
+        "best_score_inside_region": 0.3859,
+        "best_score_anywhere": 0.3859,
+        "boxes": [
+          {
+            "score": 0.3859,
+            "box": [
+              148.6,
+              602.9,
+              507.6,
+              865.3
+            ]
+          },
+          {
+            "score": 0.3051,
+            "box": [
+              0.4,
+              539.0,
+              235.4,
+              785.5
+            ]
+          },
+          {
+            "score": 0.1073,
+            "box": [
+              435.2,
+              384.0,
+              668.0,
+              756.8
+            ]
+          },
+          {
+            "score": 0.059,
+            "box": [
+              1294.2,
+              412.1,
+              1533.3,
+              763.9
+            ]
+          },
+          {
+            "score": 0.0537,
+            "box": [
+              214.3,
+              755.3,
+              451.6,
+              1018.0
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a candlestick",
+        "query": "a candlestick",
+        "best_score_inside_region": 0.2939,
+        "best_score_anywhere": 0.2939,
+        "boxes": [
+          {
+            "score": 0.2939,
+            "box": [
+              240.1,
+              464.8,
+              259.1,
+              535.5
+            ]
+          },
+          {
+            "score": 0.2404,
+            "box": [
+              214.9,
+              529.6,
+              282.4,
+              638.1
+            ]
+          },
+          {
+            "score": 0.2308,
+            "box": [
+              82.8,
+              214.2,
+              178.6,
+              564.0
+            ]
+          },
+          {
+            "score": 0.1359,
+            "box": [
+              261.8,
+              271.2,
+              316.3,
+              436.8
+            ]
+          },
+          {
+            "score": 0.1304,
+            "box": [
+              216.2,
+              464.9,
+              280.8,
+              638.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large dog asleep on the rug in front of the man?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a side table with a vase?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a candlestick?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T10:13:37+00:00",
+    "medium_mask_pixels_inside_large_mask": 53735,
+    "input_sha256": "482a7d444698a6d56e290dcea2253a0d7e91297dbe0fbc64ed7bed6c03a58bb4",
+    "object_position": {
+      "trackable": [
+        "a stand",
+        "a chair",
+        "a mirror"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a stand",
+          "in_input": true,
+          "input_box": [
+            434.5,
+            384.6,
+            668.6,
+            787.9
+          ],
+          "input_score": 0.2383,
+          "output_box": [
+            435.2,
+            384.0,
+            668.0,
+            756.8
+          ],
+          "output_score": 0.2271,
+          "iou": 0.916,
+          "pass": true
+        },
+        {
+          "object": "a chair",
+          "in_input": true,
+          "input_box": [
+            259.7,
+            628.3,
+            566.4,
+            1007.2
+          ],
+          "input_score": 0.4807,
+          "output_box": [
+            209.0,
+            738.5,
+            618.9,
+            1023.8
+          ],
+          "output_score": 0.1754,
+          "iou": 0.547,
+          "pass": true
+        },
+        {
+          "object": "a mirror",
+          "in_input": true,
+          "input_box": [
+            195.7,
+            2.4,
+            492.5,
+            509.6
+          ],
+          "input_score": 0.2412,
+          "output_box": [
+            205.3,
+            2.8,
+            490.6,
+            508.2
+          ],
+          "output_score": 0.193,
+          "iou": 0.958,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "a54ede45762453b6fe1a438d8bbabcd77bed0f2b068b284630b3327671946e78"
+}

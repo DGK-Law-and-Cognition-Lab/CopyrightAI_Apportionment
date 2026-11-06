@@ -1,0 +1,197 @@
+{
+  "scene": "SA04",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA04_source_c01.png",
+  "prompt_or_instruction": "A young man practicing the violin in a dim parlor. He stands right of center, a music stand and an empty wooden chair are at the left, and the rug in front of him is bare. Deep reds and browns with touches of gold. A single oil lamp on the left casts strong shadows. Tonal oil painting with soft edges. Intimate and melancholy. Eye level, seen from the side. Heavy curtains and a tall gilt-framed mirror on the wall that reflects the lamp's glow. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:29:55+00:00",
+  "seconds": 90.6,
+  "usage": {
+    "input_tokens": 164,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 164
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5652
+  },
+  "estimated_usd": 0.1655,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a music stand",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.3615,
+        "boxes": [
+          {
+            "score": 0.3615,
+            "box": [
+              435.2,
+              383.8,
+              673.0,
+              803.3
+            ]
+          },
+          {
+            "score": 0.3117,
+            "box": [
+              492.8,
+              730.9,
+              674.1,
+              964.5
+            ]
+          },
+          {
+            "score": 0.1692,
+            "box": [
+              489.8,
+              645.2,
+              669.4,
+              936.2
+            ]
+          },
+          {
+            "score": 0.1223,
+            "box": [
+              821.6,
+              178.3,
+              972.9,
+              480.7
+            ]
+          },
+          {
+            "score": 0.064,
+            "box": [
+              435.5,
+              382.4,
+              674.7,
+              807.1
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a wooden chair",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.4949,
+        "boxes": [
+          {
+            "score": 0.4949,
+            "box": [
+              251.7,
+              575.5,
+              564.5,
+              1016.6
+            ]
+          },
+          {
+            "score": 0.0767,
+            "box": [
+              435.2,
+              383.8,
+              673.0,
+              803.3
+            ]
+          },
+          {
+            "score": 0.0755,
+            "box": [
+              0.6,
+              540.9,
+              252.8,
+              782.1
+            ]
+          },
+          {
+            "score": 0.0582,
+            "box": [
+              1392.4,
+              465.6,
+              1534.6,
+              766.7
+            ]
+          },
+          {
+            "score": 0.0574,
+            "box": [
+              253.6,
+              583.3,
+              665.2,
+              1024.0
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a music stand?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there an empty wooden chair?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the rug in front of the man bare, with nothing on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:38:01+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

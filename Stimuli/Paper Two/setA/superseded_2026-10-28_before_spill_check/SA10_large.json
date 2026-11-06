@@ -1,0 +1,261 @@
+{
+  "scene": "SA10",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA10_large_c01.png",
+  "raw_file": "SA10_large_c01_raw.png",
+  "prompt_or_instruction": "Add a rowboat, and a flare in the sky. Change nothing else.",
+  "input_file": "SA10_medium.png",
+  "input_sha256": "76dfef51d0c970362d96b0e4f961b6b31c1bf258b7e10a97e8c85ae108fa6271",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T06:41:34+00:00",
+  "seconds": 82.6,
+  "usage": {
+    "input_tokens": 1558,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 22
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7046
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "cad850f5bd25cc128a67068493494b886ee6dab2b4e61817f38730c9b7948208",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.379,
+    "widened_area_pct": 12.33,
+    "masked_area_pct": 4.682,
+    "size_rule": "large: at least 2 x the accepted medium's 2.269 percent",
+    "size_min_pct": 4.538,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large sailing ship in the open sea",
+        "query": "a sailing ship",
+        "best_score_inside_region": 0.6965,
+        "best_score_anywhere": 0.6965,
+        "boxes": [
+          {
+            "score": 0.6965,
+            "box": [
+              482.3,
+              435.8,
+              672.1,
+              696.4
+            ]
+          },
+          {
+            "score": 0.3496,
+            "box": [
+              269.4,
+              757.8,
+              356.8,
+              863.0
+            ]
+          },
+          {
+            "score": 0.1334,
+            "box": [
+              381.0,
+              809.8,
+              690.8,
+              960.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a rowboat",
+        "query": "a rowboat",
+        "best_score_inside_region": 0.5666,
+        "best_score_anywhere": 0.5666,
+        "boxes": [
+          {
+            "score": 0.5666,
+            "box": [
+              381.0,
+              809.8,
+              690.8,
+              960.5
+            ]
+          },
+          {
+            "score": 0.37,
+            "box": [
+              269.4,
+              757.8,
+              356.8,
+              863.0
+            ]
+          },
+          {
+            "score": 0.1079,
+            "box": [
+              482.3,
+              435.8,
+              672.1,
+              696.4
+            ]
+          },
+          {
+            "score": 0.0871,
+            "box": [
+              382.2,
+              861.9,
+              581.2,
+              961.4
+            ]
+          },
+          {
+            "score": 0.0684,
+            "box": [
+              522.2,
+              813.1,
+              694.4,
+              944.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a flare in the sky",
+        "query": "a flare",
+        "best_score_inside_region": 0.4772,
+        "best_score_anywhere": 0.4772,
+        "boxes": [
+          {
+            "score": 0.4772,
+            "box": [
+              284.0,
+              204.4,
+              349.2,
+              320.1
+            ]
+          },
+          {
+            "score": 0.3884,
+            "box": [
+              316.7,
+              211.1,
+              348.2,
+              246.7
+            ]
+          },
+          {
+            "score": 0.3293,
+            "box": [
+              823.6,
+              115.9,
+              1146.9,
+              219.6
+            ]
+          },
+          {
+            "score": 0.2327,
+            "box": [
+              281.1,
+              206.7,
+              350.8,
+              322.2
+            ]
+          },
+          {
+            "score": 0.222,
+            "box": [
+              314.6,
+              211.1,
+              347.1,
+              258.9
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large sailing ship in the sea?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a rowboat?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a flare in the sky?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:42:03+00:00",
+    "medium_mask_pixels_inside_large_mask": 102710,
+    "input_sha256": "76dfef51d0c970362d96b0e4f961b6b31c1bf258b7e10a97e8c85ae108fa6271",
+    "unchanged": {
+      "question": "Apart from a large sailing ship in the open sea, a rowboat, and a flare in the sky, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "4aa778039207b6c04ce698ad5dfd1baa5da3a59fa7e75224f82e47955ee9f53f"
+}

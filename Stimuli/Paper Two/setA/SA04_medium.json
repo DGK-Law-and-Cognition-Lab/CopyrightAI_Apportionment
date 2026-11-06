@@ -1,0 +1,203 @@
+{
+  "scene": "SA04",
+  "kind": "medium",
+  "candidate": 73,
+  "revision": 1,
+  "file": "SA04_medium_c73.png",
+  "raw_file": "SA04_medium_c73_raw.png",
+  "prompt_or_instruction": "Add a large dog asleep on the rug in front of the man, clearly visible. Change nothing else.",
+  "input_file": "SA04_source.png",
+  "input_sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T08:58:50+00:00",
+  "seconds": 83.4,
+  "usage": {
+    "input_tokens": 1563,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 27
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7051
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "96d0fe1e78214931856ef3a43449758a6f185ab76e6808d1353cfacb852e1f38",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.48,
+    "widened_area_pct": 10.272,
+    "masked_area_pct": 2.48,
+    "size_rule": "medium: at least 2 x the accepted small's 1.12 percent and at least 0.5 percent",
+    "size_min_pct": 2.24,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large dog asleep on the rug in front of the man",
+        "query": "a dog",
+        "best_score_inside_region": 0.5061,
+        "best_score_anywhere": 0.5061,
+        "boxes": [
+          {
+            "score": 0.5061,
+            "box": [
+              678.6,
+              805.7,
+              874.4,
+              994.0
+            ]
+          },
+          {
+            "score": 0.4292,
+            "box": [
+              797.0,
+              794.7,
+              991.9,
+              984.8
+            ]
+          },
+          {
+            "score": 0.095,
+            "box": [
+              773.7,
+              740.1,
+              1098.0,
+              964.9
+            ]
+          },
+          {
+            "score": 0.0847,
+            "box": [
+              916.2,
+              741.0,
+              1173.0,
+              973.5
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large dog asleep on the rug in front of the man?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:59:05+00:00",
+    "input_sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f",
+    "object_position": {
+      "trackable": [
+        "a stand",
+        "a chair",
+        "a mirror"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a stand",
+          "in_input": true,
+          "input_box": [
+            492.8,
+            730.9,
+            674.1,
+            964.5
+          ],
+          "input_score": 0.3693,
+          "output_box": [
+            509.7,
+            707.0,
+            633.9,
+            933.8
+          ],
+          "output_score": 0.2234,
+          "iou": 0.556,
+          "pass": true
+        },
+        {
+          "object": "a chair",
+          "in_input": true,
+          "input_box": [
+            251.7,
+            575.5,
+            564.5,
+            1016.6
+          ],
+          "input_score": 0.477,
+          "output_box": [
+            259.7,
+            628.3,
+            566.4,
+            1007.2
+          ],
+          "output_score": 0.4807,
+          "iou": 0.833,
+          "pass": true
+        },
+        {
+          "object": "a mirror",
+          "in_input": true,
+          "input_box": [
+            212.2,
+            3.3,
+            494.0,
+            453.8
+          ],
+          "input_score": 0.2394,
+          "output_box": [
+            219.3,
+            2.7,
+            491.1,
+            443.7
+          ],
+          "output_score": 0.1666,
+          "iou": 0.942,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "482a7d444698a6d56e290dcea2253a0d7e91297dbe0fbc64ed7bed6c03a58bb4"
+}

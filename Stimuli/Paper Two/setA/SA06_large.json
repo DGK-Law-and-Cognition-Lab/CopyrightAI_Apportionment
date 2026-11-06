@@ -1,0 +1,1079 @@
+{
+  "scene": "SA06",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA06_large_c01.png",
+  "raw_file": "SA06_large_c01_raw.png",
+  "prompt_or_instruction": "Add a second boat, and a stand of reeds. Change nothing else.",
+  "input_file": "SA06_medium.png",
+  "input_sha256": "2186157420d534df79f865de17ece5afc5c5e40caf6e524d995d49e498dc15f3",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:58:08+00:00",
+  "seconds": 76.3,
+  "usage": {
+    "input_tokens": 1557,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 21
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7045
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "e5964d7f2d1ebe068ff98519456a2a22a846e5fd6ad2e13ce600547b0aebd3c7",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 12.717,
+    "widened_area_pct": 33.211,
+    "masked_area_pct": 13.948,
+    "size_rule": "large: at least 2 x the accepted medium's 1.095 percent",
+    "size_min_pct": 2.19,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a heron standing in the shallow water",
+        "query": "a heron",
+        "best_score_inside_region": 0.721,
+        "best_score_anywhere": 0.721,
+        "boxes": [
+          {
+            "score": 0.721,
+            "box": [
+              1102.8,
+              478.2,
+              1224.9,
+              670.7
+            ]
+          },
+          {
+            "score": 0.0536,
+            "box": [
+              1101.2,
+              472.6,
+              1229.6,
+              671.1
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a second boat",
+        "query": "a boat",
+        "best_score_inside_region": 0.4915,
+        "best_score_anywhere": 0.4915,
+        "boxes": [
+          {
+            "score": 0.4915,
+            "box": [
+              256.0,
+              778.0,
+              737.5,
+              938.3
+            ]
+          },
+          {
+            "score": 0.375,
+            "box": [
+              853.8,
+              678.3,
+              1166.0,
+              808.8
+            ]
+          },
+          {
+            "score": 0.3308,
+            "box": [
+              732.9,
+              581.3,
+              906.2,
+              763.5
+            ]
+          },
+          {
+            "score": 0.2777,
+            "box": [
+              262.8,
+              561.5,
+              820.4,
+              813.9
+            ]
+          },
+          {
+            "score": 0.1951,
+            "box": [
+              783.2,
+              740.6,
+              1081.2,
+              905.7
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a stand of reeds",
+        "query": "reeds",
+        "best_score_inside_region": 0.3786,
+        "best_score_anywhere": 0.3786,
+        "boxes": [
+          {
+            "score": 0.3786,
+            "box": [
+              416.5,
+              331.1,
+              739.1,
+              582.9
+            ]
+          },
+          {
+            "score": 0.3438,
+            "box": [
+              765.9,
+              408.3,
+              854.7,
+              581.8
+            ]
+          },
+          {
+            "score": 0.3369,
+            "box": [
+              730.3,
+              387.8,
+              849.5,
+              576.9
+            ]
+          },
+          {
+            "score": 0.3163,
+            "box": [
+              643.8,
+              375.6,
+              908.8,
+              586.2
+            ]
+          },
+          {
+            "score": 0.2339,
+            "box": [
+              610.8,
+              345.8,
+              749.8,
+              587.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a heron standing in the shallow water?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a second boat?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a stand of reeds?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:07:25+00:00",
+    "medium_mask_pixels_inside_large_mask": 73145,
+    "input_sha256": "2186157420d534df79f865de17ece5afc5c5e40caf6e524d995d49e498dc15f3",
+    "object_position": {
+      "trackable": [
+        "an oar",
+        "a view",
+        "a tree",
+        "a bridge"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "an oar",
+          "in_input": true,
+          "input_box": [
+            751.4,
+            662.6,
+            1028.2,
+            923.9
+          ],
+          "input_score": 0.3952,
+          "output_box": [
+            692.3,
+            631.3,
+            1032.4,
+            905.5
+          ],
+          "output_score": 0.2987,
+          "iou": 0.684,
+          "pass": true
+        },
+        {
+          "object": "a view",
+          "in_input": true,
+          "input_box": [
+            480.0,
+            0.0,
+            1536.0,
+            814.6
+          ],
+          "input_score": 0.5395,
+          "output_box": [
+            553.5,
+            0.0,
+            1536.0,
+            806.2
+          ],
+          "output_score": 0.5006,
+          "iou": 0.921,
+          "pass": true
+        },
+        {
+          "object": "a tree",
+          "in_input": true,
+          "input_box": [
+            9.9,
+            2.8,
+            310.1,
+            533.6
+          ],
+          "input_score": 0.4303,
+          "output_box": [
+            17.6,
+            2.9,
+            308.7,
+            530.6
+          ],
+          "output_score": 0.4297,
+          "iou": 0.964,
+          "pass": true
+        },
+        {
+          "object": "a bridge",
+          "in_input": true,
+          "input_box": [
+            842.2,
+            350.6,
+            1186.0,
+            415.2
+          ],
+          "input_score": 0.6746,
+          "output_box": [
+            841.0,
+            350.5,
+            1186.3,
+            415.1
+          ],
+          "output_score": 0.6371,
+          "iou": 0.993,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "28ee7ab71267aede8d9aa17e60f1faca7a1855356d868b0715335fd671830355",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 12.717,
+        "widened_area_pct": 33.211,
+        "masked_area_pct": 13.948,
+        "size_rule": "large: at least 2 x the accepted medium's 1.095 percent",
+        "size_min_pct": 2.19,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a heron standing in the shallow water",
+            "query": "a heron",
+            "best_score_inside_region": 0.721,
+            "best_score_anywhere": 0.721,
+            "boxes": [
+              {
+                "score": 0.721,
+                "box": [
+                  1102.8,
+                  478.2,
+                  1224.9,
+                  670.7
+                ]
+              },
+              {
+                "score": 0.0536,
+                "box": [
+                  1101.2,
+                  472.6,
+                  1229.6,
+                  671.1
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second boat",
+            "query": "a boat",
+            "best_score_inside_region": 0.4915,
+            "best_score_anywhere": 0.4915,
+            "boxes": [
+              {
+                "score": 0.4915,
+                "box": [
+                  256.0,
+                  778.0,
+                  737.5,
+                  938.3
+                ]
+              },
+              {
+                "score": 0.375,
+                "box": [
+                  853.8,
+                  678.3,
+                  1166.0,
+                  808.8
+                ]
+              },
+              {
+                "score": 0.3308,
+                "box": [
+                  732.9,
+                  581.3,
+                  906.2,
+                  763.5
+                ]
+              },
+              {
+                "score": 0.2777,
+                "box": [
+                  262.8,
+                  561.5,
+                  820.4,
+                  813.9
+                ]
+              },
+              {
+                "score": 0.1951,
+                "box": [
+                  783.2,
+                  740.6,
+                  1081.2,
+                  905.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a stand of reeds",
+            "query": "reeds",
+            "best_score_inside_region": 0.3786,
+            "best_score_anywhere": 0.3786,
+            "boxes": [
+              {
+                "score": 0.3786,
+                "box": [
+                  416.5,
+                  331.1,
+                  739.1,
+                  582.9
+                ]
+              },
+              {
+                "score": 0.3438,
+                "box": [
+                  765.9,
+                  408.3,
+                  854.7,
+                  581.8
+                ]
+              },
+              {
+                "score": 0.3369,
+                "box": [
+                  730.3,
+                  387.8,
+                  849.5,
+                  576.9
+                ]
+              },
+              {
+                "score": 0.3163,
+                "box": [
+                  643.8,
+                  375.6,
+                  908.8,
+                  586.2
+                ]
+              },
+              {
+                "score": 0.2339,
+                "box": [
+                  610.8,
+                  345.8,
+                  749.8,
+                  587.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a heron standing in the shallow water?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a second boat?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a stand of reeds?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:58:46+00:00",
+        "medium_mask_pixels_inside_large_mask": 73145,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 12.717,
+        "widened_area_pct": 33.211,
+        "masked_area_pct": 13.948,
+        "size_rule": "large: at least 2 x the accepted medium's 1.095 percent",
+        "size_min_pct": 2.19,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a heron standing in the shallow water",
+            "query": "a heron",
+            "best_score_inside_region": 0.721,
+            "best_score_anywhere": 0.721,
+            "boxes": [
+              {
+                "score": 0.721,
+                "box": [
+                  1102.8,
+                  478.2,
+                  1224.9,
+                  670.7
+                ]
+              },
+              {
+                "score": 0.0536,
+                "box": [
+                  1101.2,
+                  472.6,
+                  1229.6,
+                  671.1
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second boat",
+            "query": "a boat",
+            "best_score_inside_region": 0.4915,
+            "best_score_anywhere": 0.4915,
+            "boxes": [
+              {
+                "score": 0.4915,
+                "box": [
+                  256.0,
+                  778.0,
+                  737.5,
+                  938.3
+                ]
+              },
+              {
+                "score": 0.375,
+                "box": [
+                  853.8,
+                  678.3,
+                  1166.0,
+                  808.8
+                ]
+              },
+              {
+                "score": 0.3308,
+                "box": [
+                  732.9,
+                  581.3,
+                  906.2,
+                  763.5
+                ]
+              },
+              {
+                "score": 0.2777,
+                "box": [
+                  262.8,
+                  561.5,
+                  820.4,
+                  813.9
+                ]
+              },
+              {
+                "score": 0.1951,
+                "box": [
+                  783.2,
+                  740.6,
+                  1081.2,
+                  905.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a stand of reeds",
+            "query": "reeds",
+            "best_score_inside_region": 0.3786,
+            "best_score_anywhere": 0.3786,
+            "boxes": [
+              {
+                "score": 0.3786,
+                "box": [
+                  416.5,
+                  331.1,
+                  739.1,
+                  582.9
+                ]
+              },
+              {
+                "score": 0.3438,
+                "box": [
+                  765.9,
+                  408.3,
+                  854.7,
+                  581.8
+                ]
+              },
+              {
+                "score": 0.3369,
+                "box": [
+                  730.3,
+                  387.8,
+                  849.5,
+                  576.9
+                ]
+              },
+              {
+                "score": 0.3163,
+                "box": [
+                  643.8,
+                  375.6,
+                  908.8,
+                  586.2
+                ]
+              },
+              {
+                "score": 0.2339,
+                "box": [
+                  610.8,
+                  345.8,
+                  749.8,
+                  587.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a heron standing in the shallow water?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a second boat?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a stand of reeds?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:27:51+00:00",
+        "medium_mask_pixels_inside_large_mask": 73145,
+        "input_sha256": "2186157420d534df79f865de17ece5afc5c5e40caf6e524d995d49e498dc15f3",
+        "unchanged": {
+          "question": "Apart from a heron standing in the shallow water, a second boat, and a stand of reeds, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 12.717,
+        "widened_area_pct": 33.211,
+        "masked_area_pct": 13.948,
+        "size_rule": "large: at least 2 x the accepted medium's 1.095 percent",
+        "size_min_pct": 2.19,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a heron standing in the shallow water",
+            "query": "a heron",
+            "best_score_inside_region": 0.721,
+            "best_score_anywhere": 0.721,
+            "boxes": [
+              {
+                "score": 0.721,
+                "box": [
+                  1102.8,
+                  478.2,
+                  1224.9,
+                  670.7
+                ]
+              },
+              {
+                "score": 0.0536,
+                "box": [
+                  1101.2,
+                  472.6,
+                  1229.6,
+                  671.1
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second boat",
+            "query": "a boat",
+            "best_score_inside_region": 0.4915,
+            "best_score_anywhere": 0.4915,
+            "boxes": [
+              {
+                "score": 0.4915,
+                "box": [
+                  256.0,
+                  778.0,
+                  737.5,
+                  938.3
+                ]
+              },
+              {
+                "score": 0.375,
+                "box": [
+                  853.8,
+                  678.3,
+                  1166.0,
+                  808.8
+                ]
+              },
+              {
+                "score": 0.3308,
+                "box": [
+                  732.9,
+                  581.3,
+                  906.2,
+                  763.5
+                ]
+              },
+              {
+                "score": 0.2777,
+                "box": [
+                  262.8,
+                  561.5,
+                  820.4,
+                  813.9
+                ]
+              },
+              {
+                "score": 0.1951,
+                "box": [
+                  783.2,
+                  740.6,
+                  1081.2,
+                  905.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a stand of reeds",
+            "query": "reeds",
+            "best_score_inside_region": 0.3786,
+            "best_score_anywhere": 0.3786,
+            "boxes": [
+              {
+                "score": 0.3786,
+                "box": [
+                  416.5,
+                  331.1,
+                  739.1,
+                  582.9
+                ]
+              },
+              {
+                "score": 0.3438,
+                "box": [
+                  765.9,
+                  408.3,
+                  854.7,
+                  581.8
+                ]
+              },
+              {
+                "score": 0.3369,
+                "box": [
+                  730.3,
+                  387.8,
+                  849.5,
+                  576.9
+                ]
+              },
+              {
+                "score": 0.3163,
+                "box": [
+                  643.8,
+                  375.6,
+                  908.8,
+                  586.2
+                ]
+              },
+              {
+                "score": 0.2339,
+                "box": [
+                  610.8,
+                  345.8,
+                  749.8,
+                  587.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a heron standing in the shallow water?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a second boat?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a stand of reeds?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:03+00:00",
+        "medium_mask_pixels_inside_large_mask": 73145,
+        "input_sha256": "2186157420d534df79f865de17ece5afc5c5e40caf6e524d995d49e498dc15f3",
+        "spill": {
+          "spill_pct": 0.0198,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 44.141,
+          "boxes_used": {
+            "a heron standing in the shallow water": [
+              [
+                1102.8,
+                478.2,
+                1224.9,
+                670.7
+              ]
+            ],
+            "a second boat": [
+              [
+                256.0,
+                778.0,
+                737.5,
+                938.3
+              ],
+              [
+                853.8,
+                678.3,
+                1166.0,
+                808.8
+              ],
+              [
+                732.9,
+                581.3,
+                906.2,
+                763.5
+              ],
+              [
+                262.8,
+                561.5,
+                820.4,
+                813.9
+              ],
+              [
+                783.2,
+                740.6,
+                1081.2,
+                905.7
+              ],
+              [
+                753.2,
+                569.3,
+                1155.4,
+                813.9
+              ],
+              [
+                689.8,
+                826.9,
+                798.2,
+                1010.4
+              ],
+              [
+                780.6,
+                764.7,
+                1136.2,
+                935.6
+              ]
+            ],
+            "a stand of reeds": [
+              [
+                416.5,
+                331.1,
+                739.1,
+                582.9
+              ],
+              [
+                765.9,
+                408.3,
+                854.7,
+                581.8
+              ],
+              [
+                730.3,
+                387.8,
+                849.5,
+                576.9
+              ],
+              [
+                643.8,
+                375.6,
+                908.8,
+                586.2
+              ],
+              [
+                610.8,
+                345.8,
+                749.8,
+                587.3
+              ],
+              [
+                765.4,
+                376.3,
+                846.3,
+                582.3
+              ],
+              [
+                434.9,
+                353.3,
+                582.8,
+                537.7
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

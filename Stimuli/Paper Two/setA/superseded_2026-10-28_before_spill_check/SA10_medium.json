@@ -1,0 +1,125 @@
+{
+  "scene": "SA10",
+  "kind": "medium",
+  "candidate": 85,
+  "revision": 0,
+  "file": "SA10_medium_c85.png",
+  "raw_file": "SA10_medium_c85_raw.png",
+  "prompt_or_instruction": "Add a large sailing ship in the open sea. Change nothing else.",
+  "input_file": "SA10_source.png",
+  "input_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T06:39:45+00:00",
+  "seconds": 80.3,
+  "usage": {
+    "input_tokens": 1556,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 20
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7044
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "93c73831ecb586bddaa8560e1f7dc92036020dcc650a8bbff594dd6411937251",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.269,
+    "widened_area_pct": 27.25,
+    "masked_area_pct": 2.269,
+    "size_rule": "medium: at least 2 x the accepted small's 0.822 percent and at least 0.5 percent",
+    "size_min_pct": 1.644,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large sailing ship in the open sea",
+        "query": "a sailing ship",
+        "best_score_inside_region": 0.723,
+        "best_score_anywhere": 0.723,
+        "boxes": [
+          {
+            "score": 0.723,
+            "box": [
+              484.2,
+              436.0,
+              668.4,
+              696.5
+            ]
+          },
+          {
+            "score": 0.3965,
+            "box": [
+              269.0,
+              757.2,
+              354.2,
+              862.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large sailing ship in the sea?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:40:05+00:00",
+    "input_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+    "unchanged": {
+      "question": "Apart from a large sailing ship in the open sea, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "76dfef51d0c970362d96b0e4f961b6b31c1bf258b7e10a97e8c85ae108fa6271"
+}

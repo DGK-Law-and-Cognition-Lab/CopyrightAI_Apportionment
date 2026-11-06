@@ -1,0 +1,179 @@
+{
+  "scene": "SA10",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA10_source_c01.png",
+  "prompt_or_instruction": "A lighthouse on a rocky coast during a storm. The lighthouse stands in the right third, waves break over rocks on the left where a red buoy bobs, and the sea in the center is open. Dark slate, white foam, and the yellow beam of the lamp. Storm light under heavy clouds, with the lamp lit. Expressive oil painting with heavy, sweeping strokes. Dramatic and turbulent. Low, from the shore. Dark clouds, a small ship on the horizon, and a keeper's cottage at the foot of the lighthouse. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:33:14+00:00",
+  "seconds": 102.8,
+  "usage": {
+    "input_tokens": 171,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 171
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5659
+  },
+  "estimated_usd": 0.1655,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a red buoy",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.241,
+        "boxes": [
+          {
+            "score": 0.241,
+            "box": [
+              270.0,
+              755.0,
+              355.1,
+              861.0
+            ]
+          },
+          {
+            "score": 0.135,
+            "box": [
+              267.7,
+              711.6,
+              284.2,
+              729.1
+            ]
+          },
+          {
+            "score": 0.1293,
+            "box": [
+              267.4,
+              712.0,
+              288.3,
+              732.0
+            ]
+          },
+          {
+            "score": 0.0731,
+            "box": [
+              272.1,
+              763.8,
+              335.2,
+              835.5
+            ]
+          },
+          {
+            "score": 0.0662,
+            "box": [
+              577.6,
+              633.9,
+              624.6,
+              665.4
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a ship",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.6034,
+        "boxes": [
+          {
+            "score": 0.6034,
+            "box": [
+              270.0,
+              755.0,
+              355.1,
+              861.0
+            ]
+          },
+          {
+            "score": 0.4097,
+            "box": [
+              577.9,
+              634.9,
+              624.1,
+              665.0
+            ]
+          },
+          {
+            "score": 0.0569,
+            "box": [
+              577.6,
+              633.9,
+              624.6,
+              665.4
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a red buoy in the water?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a small ship on the horizon?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there an open stretch of sea in the center of the image?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:42:28+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

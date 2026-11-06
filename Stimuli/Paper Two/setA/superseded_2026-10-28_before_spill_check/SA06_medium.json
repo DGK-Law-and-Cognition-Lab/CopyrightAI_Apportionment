@@ -1,0 +1,223 @@
+{
+  "scene": "SA06",
+  "kind": "medium",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA06_medium_c02.png",
+  "raw_file": "SA06_medium_c02_raw.png",
+  "prompt_or_instruction": "Add a heron standing in the shallow water. Change nothing else.",
+  "input_file": "SA06_source.png",
+  "input_sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:56:31+00:00",
+  "seconds": 76.4,
+  "usage": {
+    "input_tokens": 1556,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 20
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7044
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "b08ac1e11bbcf34092cd27312a1b1c2d1f35685db691662d2cf8afe27afe605c",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 1.095,
+    "widened_area_pct": 14.187,
+    "masked_area_pct": 1.095,
+    "size_rule": "medium: at least 2 x the accepted small's 0.314 percent and at least 0.5 percent",
+    "size_min_pct": 0.628,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a heron standing in the shallow water",
+        "query": "a heron",
+        "best_score_inside_region": 0.741,
+        "best_score_anywhere": 0.741,
+        "boxes": [
+          {
+            "score": 0.741,
+            "box": [
+              1103.6,
+              478.5,
+              1224.5,
+              670.4
+            ]
+          },
+          {
+            "score": 0.0646,
+            "box": [
+              1138.6,
+              688.7,
+              1222.1,
+              827.9
+            ]
+          },
+          {
+            "score": 0.0528,
+            "box": [
+              1101.5,
+              472.8,
+              1229.1,
+              671.6
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a heron standing in the shallow water?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:27:33+00:00",
+    "input_sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f",
+    "unchanged": {
+      "question": "Apart from a heron standing in the shallow water, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "2186157420d534df79f865de17ece5afc5c5e40caf6e524d995d49e498dc15f3",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.095,
+        "widened_area_pct": 14.187,
+        "masked_area_pct": 1.095,
+        "size_rule": "medium: at least 2 x the accepted small's 0.314 percent and at least 0.5 percent",
+        "size_min_pct": 0.628,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a heron standing in the shallow water",
+            "query": "a heron",
+            "best_score_inside_region": 0.741,
+            "best_score_anywhere": 0.741,
+            "boxes": [
+              {
+                "score": 0.741,
+                "box": [
+                  1103.6,
+                  478.5,
+                  1224.5,
+                  670.4
+                ]
+              },
+              {
+                "score": 0.0646,
+                "box": [
+                  1138.6,
+                  688.7,
+                  1222.1,
+                  827.9
+                ]
+              },
+              {
+                "score": 0.0528,
+                "box": [
+                  1101.5,
+                  472.8,
+                  1229.1,
+                  671.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a heron standing in the shallow water?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:56:51+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

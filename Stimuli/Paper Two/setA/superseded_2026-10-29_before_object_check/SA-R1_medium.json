@@ -1,0 +1,163 @@
+{
+  "scene": "SA-R1",
+  "kind": "medium",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA-R1_medium_c02.png",
+  "raw_file": "SA-R1_medium_c02_raw.png",
+  "prompt_or_instruction": "Add a basket of folded cloth on the bare left end of the table. Change nothing else.",
+  "input_file": "SA-R1_source.png",
+  "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T06:59:07+00:00",
+  "seconds": 84.1,
+  "usage": {
+    "input_tokens": 1561,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 25
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7049
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "7d862a2cea4e125ee423756c731968b25c4ac093e239fe714c394e5b5455d4fb",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 6.86,
+    "widened_area_pct": 16.083,
+    "masked_area_pct": 6.86,
+    "size_rule": "medium: at least 2 x the accepted small's 1.267 percent and at least 0.5 percent",
+    "size_min_pct": 2.534,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a basket of folded cloth on the bare left end of the table",
+        "query": "a basket of folded cloth",
+        "best_score_inside_region": 0.3554,
+        "best_score_anywhere": 0.3554,
+        "boxes": [
+          {
+            "score": 0.3554,
+            "box": [
+              104.6,
+              617.1,
+              563.3,
+              818.0
+            ]
+          },
+          {
+            "score": 0.1877,
+            "box": [
+              145.2,
+              575.5,
+              523.9,
+              722.9
+            ]
+          },
+          {
+            "score": 0.0826,
+            "box": [
+              733.5,
+              560.1,
+              1536.0,
+              1007.7
+            ]
+          },
+          {
+            "score": 0.0757,
+            "box": [
+              157.2,
+              573.9,
+              456.5,
+              637.1
+            ]
+          },
+          {
+            "score": 0.0706,
+            "box": [
+              112.8,
+              573.0,
+              553.0,
+              810.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a basket of folded cloth on the left end of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:59:21+00:00",
+    "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+    "spill": {
+      "spill_pct": 0.1038,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 13.653,
+      "boxes_used": {
+        "a basket of folded cloth on the bare left end of the table": [
+          [
+            104.6,
+            617.1,
+            563.3,
+            818.0
+          ],
+          [
+            145.2,
+            575.5,
+            523.9,
+            722.9
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "00829cf6477994443701f9392fd5fcefbca0f7831796e4f2cbe75ebe8ba43ac4"
+}

@@ -1,0 +1,259 @@
+{
+  "scene": "SA04",
+  "kind": "medium",
+  "candidate": 47,
+  "revision": 0,
+  "file": "SA04_medium_c47.png",
+  "raw_file": "SA04_medium_c47_raw.png",
+  "prompt_or_instruction": "Add a large dog asleep on the rug in front of the man. Change nothing else.",
+  "input_file": "SA04_source.png",
+  "input_sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T19:24:07+00:00",
+  "seconds": 77.4,
+  "usage": {
+    "input_tokens": 1560,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 24
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7048
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "132fc3aadd2130e0fa49f59b35f436836949a4b16ac627b99024d306bde05052",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.631,
+    "widened_area_pct": 10.961,
+    "masked_area_pct": 2.631,
+    "size_rule": "medium: at least 2 x the accepted small's 1.12 percent and at least 0.5 percent",
+    "size_min_pct": 2.24,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a large dog asleep on the rug in front of the man",
+        "query": "a dog",
+        "best_score_inside_region": 0.479,
+        "best_score_anywhere": 0.479,
+        "boxes": [
+          {
+            "score": 0.479,
+            "box": [
+              683.5,
+              792.5,
+              1065.4,
+              1024.0
+            ]
+          },
+          {
+            "score": 0.2591,
+            "box": [
+              784.0,
+              804.3,
+              951.5,
+              1018.7
+            ]
+          },
+          {
+            "score": 0.1892,
+            "box": [
+              543.5,
+              782.9,
+              821.6,
+              1015.2
+            ]
+          },
+          {
+            "score": 0.067,
+            "box": [
+              477.1,
+              776.5,
+              879.3,
+              1023.8
+            ]
+          },
+          {
+            "score": 0.0533,
+            "box": [
+              753.3,
+              794.2,
+              1011.4,
+              1019.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a large dog asleep on the rug in front of the man?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:31:04+00:00",
+    "input_sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f",
+    "unchanged": {
+      "question": "Apart from a large dog asleep on the rug in front of the man, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "ce0415b7ce4ec2409b59f354187f6bd0dac5a0b0933de01fa2e37cf916f723e9",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.631,
+        "widened_area_pct": 10.961,
+        "masked_area_pct": 2.631,
+        "size_rule": "medium: at least 2 x the accepted small's 1.12 percent and at least 0.5 percent",
+        "size_min_pct": 2.24,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a large dog asleep on the rug in front of the man",
+            "query": "a dog",
+            "best_score_inside_region": 0.479,
+            "best_score_anywhere": 0.479,
+            "boxes": [
+              {
+                "score": 0.479,
+                "box": [
+                  683.5,
+                  792.5,
+                  1065.4,
+                  1024.0
+                ]
+              },
+              {
+                "score": 0.2591,
+                "box": [
+                  784.0,
+                  804.3,
+                  951.5,
+                  1018.7
+                ]
+              },
+              {
+                "score": 0.1892,
+                "box": [
+                  543.5,
+                  782.9,
+                  821.6,
+                  1015.2
+                ]
+              },
+              {
+                "score": 0.067,
+                "box": [
+                  477.1,
+                  776.5,
+                  879.3,
+                  1023.8
+                ]
+              },
+              {
+                "score": 0.0533,
+                "box": [
+                  753.3,
+                  794.2,
+                  1011.4,
+                  1019.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a large dog asleep on the rug in front of the man?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T19:24:16+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

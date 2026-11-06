@@ -1,0 +1,131 @@
+{
+  "scene": "SA01",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA01_small_c01.png",
+  "raw_file": "SA01_small_c01_raw.png",
+  "prompt_or_instruction": "Add a spoon beside the cup. Change nothing else.",
+  "input_file": "SA01_source.png",
+  "input_sha256": "aeba9c1a70f12c4250d1679519c29d5bd1e4c7d201e973b754b092a69180f297",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:43:59+00:00",
+  "seconds": 73.9,
+  "usage": {
+    "input_tokens": 1553,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 17
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7041
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "d037597f7926322897779f86dc45718b80d4596e3e8602fa0f2684d3168a1a01",
+  "request_errors": [],
+  "note": "first GPT Image 2 edit call: test of the edit request on one image, before batching",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.127,
+    "widened_area_pct": 3.682,
+    "masked_area_pct": 0.127,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a spoon beside the cup",
+        "query": "a spoon",
+        "best_score_inside_region": 0.5686,
+        "best_score_anywhere": 0.5686,
+        "boxes": [
+          {
+            "score": 0.5686,
+            "box": [
+              621.5,
+              791.1,
+              776.4,
+              841.9
+            ]
+          },
+          {
+            "score": 0.0898,
+            "box": [
+              625.9,
+              799.4,
+              772.9,
+              842.1
+            ]
+          },
+          {
+            "score": 0.0807,
+            "box": [
+              732.6,
+              790.1,
+              788.7,
+              824.9
+            ]
+          },
+          {
+            "score": 0.0698,
+            "box": [
+              621.3,
+              789.3,
+              781.1,
+              840.9
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a spoon beside the cup?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:55:01+00:00",
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "63820847c4449485dbebbd890494cf17a9397276f23604ba9cbe7975c3d297e1"
+}

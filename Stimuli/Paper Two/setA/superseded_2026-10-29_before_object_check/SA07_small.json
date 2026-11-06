@@ -1,0 +1,381 @@
+{
+  "scene": "SA07",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA07_small_c01.png",
+  "raw_file": "SA07_small_c01_raw.png",
+  "prompt_or_instruction": "Add a single walnut. Change nothing else.",
+  "input_file": "SA07_source.png",
+  "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:49:25+00:00",
+  "seconds": 73.7,
+  "usage": {
+    "input_tokens": 1551,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 15
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7039
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "1025c7a44676b35e372d5e1405af8bc2d1ff583e213642903560f079f3f4706b",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.798,
+    "widened_area_pct": 14.316,
+    "masked_area_pct": 0.798,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a single walnut",
+        "query": "a walnut",
+        "best_score_inside_region": 0.3994,
+        "best_score_anywhere": 0.3994,
+        "boxes": [
+          {
+            "score": 0.3994,
+            "box": [
+              841.5,
+              622.0,
+              939.9,
+              711.9
+            ]
+          },
+          {
+            "score": 0.0909,
+            "box": [
+              415.8,
+              661.8,
+              461.3,
+              699.3
+            ]
+          },
+          {
+            "score": 0.0609,
+            "box": [
+              298.7,
+              703.4,
+              344.0,
+              727.8
+            ]
+          },
+          {
+            "score": 0.0603,
+            "box": [
+              465.4,
+              678.6,
+              533.1,
+              733.8
+            ]
+          },
+          {
+            "score": 0.0575,
+            "box": [
+              196.5,
+              642.9,
+              432.3,
+              828.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a single walnut?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:54:13+00:00",
+    "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+    "spill": {
+      "spill_pct": 0.1225,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 3.146,
+      "boxes_used": {
+        "a single walnut": [
+          [
+            841.5,
+            622.0,
+            939.9,
+            711.9
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "187130c559a81c5bbd8efdf419c863f072cce0445f375be6decfb5a8520424e0",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.798,
+        "widened_area_pct": 14.316,
+        "masked_area_pct": 0.798,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a single walnut",
+            "query": "a walnut",
+            "best_score_inside_region": 0.3994,
+            "best_score_anywhere": 0.3994,
+            "boxes": [
+              {
+                "score": 0.3994,
+                "box": [
+                  841.5,
+                  622.0,
+                  939.9,
+                  711.9
+                ]
+              },
+              {
+                "score": 0.0909,
+                "box": [
+                  415.8,
+                  661.8,
+                  461.3,
+                  699.3
+                ]
+              },
+              {
+                "score": 0.0609,
+                "box": [
+                  298.7,
+                  703.4,
+                  344.0,
+                  727.8
+                ]
+              },
+              {
+                "score": 0.0603,
+                "box": [
+                  465.4,
+                  678.6,
+                  533.1,
+                  733.8
+                ]
+              },
+              {
+                "score": 0.0575,
+                "box": [
+                  196.5,
+                  642.9,
+                  432.3,
+                  828.7
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a single walnut?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:58:06+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.798,
+        "widened_area_pct": 14.316,
+        "masked_area_pct": 0.798,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a single walnut",
+            "query": "a walnut",
+            "best_score_inside_region": 0.3994,
+            "best_score_anywhere": 0.3994,
+            "boxes": [
+              {
+                "score": 0.3994,
+                "box": [
+                  841.5,
+                  622.0,
+                  939.9,
+                  711.9
+                ]
+              },
+              {
+                "score": 0.0909,
+                "box": [
+                  415.8,
+                  661.8,
+                  461.3,
+                  699.3
+                ]
+              },
+              {
+                "score": 0.0609,
+                "box": [
+                  298.7,
+                  703.4,
+                  344.0,
+                  727.8
+                ]
+              },
+              {
+                "score": 0.0603,
+                "box": [
+                  465.4,
+                  678.6,
+                  533.1,
+                  733.8
+                ]
+              },
+              {
+                "score": 0.0575,
+                "box": [
+                  196.5,
+                  642.9,
+                  432.3,
+                  828.7
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a single walnut?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:12+00:00",
+        "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+        "unchanged": {
+          "question": "Apart from a single walnut, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    }
+  ]
+}

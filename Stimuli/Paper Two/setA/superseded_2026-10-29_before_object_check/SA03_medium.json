@@ -1,0 +1,327 @@
+{
+  "scene": "SA03",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA03_medium_c01.png",
+  "raw_file": "SA03_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a dog running beside the two children. Change nothing else.",
+  "input_file": "SA03_source.png",
+  "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:46:58+00:00",
+  "seconds": 79.1,
+  "usage": {
+    "input_tokens": 1555,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 19
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "f1a2a071072a40369ddfe3007ca54cdbc04c0f1b4914a72808f0c28b888ffe91",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.524,
+    "widened_area_pct": 5.273,
+    "masked_area_pct": 0.524,
+    "size_rule": "medium: at least 2 x the accepted small's 0.13 percent and at least 0.5 percent",
+    "size_min_pct": 0.5,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a dog running beside the two children",
+        "query": "a dog",
+        "best_score_inside_region": 0.5838,
+        "best_score_anywhere": 0.5838,
+        "boxes": [
+          {
+            "score": 0.5838,
+            "box": [
+              918.2,
+              707.2,
+              1047.1,
+              825.9
+            ]
+          },
+          {
+            "score": 0.0683,
+            "box": [
+              991.6,
+              727.8,
+              1055.4,
+              821.1
+            ]
+          },
+          {
+            "score": 0.0629,
+            "box": [
+              914.7,
+              715.9,
+              1049.8,
+              833.6
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a dog running beside the two children?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:54:47+00:00",
+    "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+    "spill": {
+      "spill_pct": 0.0109,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 4.052,
+      "boxes_used": {
+        "a dog running beside the two children": [
+          [
+            918.2,
+            707.2,
+            1047.1,
+            825.9
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "650b620708da34b40eb9b3d59198bae5629cb9ef14e32764d8c4622a4fb5263a",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.524,
+        "widened_area_pct": 5.273,
+        "masked_area_pct": 0.524,
+        "size_rule": "medium: at least 2 x the accepted small's 0.13 percent and at least 0.5 percent",
+        "size_min_pct": 0.5,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog running beside the two children",
+            "query": "a dog",
+            "best_score_inside_region": 0.5838,
+            "best_score_anywhere": 0.5838,
+            "boxes": [
+              {
+                "score": 0.5838,
+                "box": [
+                  918.2,
+                  707.2,
+                  1047.1,
+                  825.9
+                ]
+              },
+              {
+                "score": 0.0683,
+                "box": [
+                  991.6,
+                  727.8,
+                  1055.4,
+                  821.1
+                ]
+              },
+              {
+                "score": 0.0629,
+                "box": [
+                  914.7,
+                  715.9,
+                  1049.8,
+                  833.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog running beside the two children?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:02:37+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.524,
+        "widened_area_pct": 5.273,
+        "masked_area_pct": 0.524,
+        "size_rule": "medium: at least 2 x the accepted small's 0.13 percent and at least 0.5 percent",
+        "size_min_pct": 0.5,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog running beside the two children",
+            "query": "a dog",
+            "best_score_inside_region": 0.5838,
+            "best_score_anywhere": 0.5838,
+            "boxes": [
+              {
+                "score": 0.5838,
+                "box": [
+                  918.2,
+                  707.2,
+                  1047.1,
+                  825.9
+                ]
+              },
+              {
+                "score": 0.0683,
+                "box": [
+                  991.6,
+                  727.8,
+                  1055.4,
+                  821.1
+                ]
+              },
+              {
+                "score": 0.0629,
+                "box": [
+                  914.7,
+                  715.9,
+                  1049.8,
+                  833.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog running beside the two children?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:56+00:00",
+        "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+        "unchanged": {
+          "question": "Apart from a dog running beside the two children, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    }
+  ]
+}

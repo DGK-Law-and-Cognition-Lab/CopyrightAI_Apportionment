@@ -1,0 +1,874 @@
+SA02_source_c01.png 1536x1024 85.2s $0.1654
+SA03_source_c01.png 1536x1024 100.3s $0.1654
+SA04_source_c01.png 1536x1024 90.6s $0.1655
+SA05_source_c01.png 1536x1024 90.7s $0.1655
+SA06_source_c01.png 1536x1024 95.7s $0.1655
+SA07_source_c01.png 1536x1024 86.4s $0.1655
+SA08_source_c01.png 1536x1024 96.2s $0.1655
+SA09_source_c01.png 1536x1024 107.3s $0.1654
+SA10_source_c01.png 1536x1024 102.8s $0.1655
+{'mine': 14.1299, 'other': 29.5004, 'combined': 43.6303}
+  SA01_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA01 source candidate 1
+  SA03_source_c01.png: detector True, description False -> fail
+  SA02_source_c01.png: detector True, description False -> fail
+  SA04_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA04 source candidate 1
+  SA05_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA05 source candidate 1
+  SA06_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA06 source candidate 1
+  SA07_source_c01.png: detector True, description False -> fail
+  SA03_source_c02.png: detector True, description False -> fail
+  SA02_source_c02.png: detector True, description True -> PASS
+ACCEPTED SA02 source candidate 2
+  SA08_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA08 source candidate 1
+  SA09_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA09 source candidate 1
+  SA07_source_c02.png: detector True, description True -> PASS
+ACCEPTED SA07 source candidate 2
+  SA03_source_c03.png: detector True, description True -> PASS
+ACCEPTED SA03 source candidate 3
+  SA10_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA10 source candidate 1
+{'mine': 14.8631, 'other': 34.5456, 'combined': 49.4087}
+{'raw_file': 'SA01_small_c01_raw.png', 'model': 'gpt-image-2-2026-04-21', 'width': 1536, 'height': 1024, 'seconds': 73.9, 'usage': {'input_tokens': 1553, 'input_tokens_details': {'image_tokens': 1536, 'text_tokens': 17}, 'output_tokens': 5488, 'output_tokens_details': {'image_tokens': 5488, 'text_tokens': 0}, 'total_tokens': 7041}, 'estimated_usd': 0.177, 'request_errors': []}
+{'mine': 15.0401, 'other': 35.6661, 'combined': 50.7062}
+SA01_medium_c01_raw.png $0.177
+SA02_small_c01_raw.png $0.177
+SA02_medium_c01_raw.png $0.177
+SA03_small_c01_raw.png $0.177
+SA03_medium_c01_raw.png $0.177
+SA04_small_c01_raw.png $0.177
+SA04_medium_c01_raw.png $0.177
+SA05_small_c01_raw.png $0.177
+SA05_medium_c01_raw.png $0.177
+SA06_small_c01_raw.png $0.177
+SA06_medium_c01_raw.png $0.177
+SA07_small_c01_raw.png $0.177
+SA07_medium_c01_raw.png $0.177
+SA08_small_c01_raw.png $0.177
+SA08_medium_c01_raw.png $0.1771
+SA09_small_c01_raw.png $0.177
+SA09_medium_c01_raw.png $0.177
+SA10_small_c01_raw.png $0.177
+SA10_medium_c01_raw.png $0.177
+{'mine': 18.4032, 'other': 40.4353, 'combined': 58.8385}
+difference threshold 38.1 (median 9.49, MAD 5.51); speck size 110 px (515926 groups); widening radius 64 px
+  SA06_small_c01.png: area 0.314% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA06 small candidate 1 area 0.314%
+  SA02_small_c01.png: area 2.171% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA02 small candidate 1 area 2.171%
+  SA01_small_c01.png: area 0.127% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA01 small candidate 1 area 0.127%
+  SA06_medium_c01.png: area 0.607% (min 0.628), detector True, description True -> fail
+  SA02_medium_c01.png: area 4.723% (min 4.342), detector True, description True -> PASS
+ACCEPTED SA02 medium candidate 1 area 4.723%
+  SA01_medium_c01.png: area 2.72% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA01 medium candidate 1 area 2.72%
+  SA06_medium_c02.png: area 1.095% (min 0.628), detector True, description True -> PASS
+ACCEPTED SA06 medium candidate 2 area 1.095%
+  SA02_large_c01.png: area 12.97% (min 9.446), detector True, description False -> fail
+  SA01_large_c01.png: area 9.725% (min 5.44), detector True, description True -> PASS
+ACCEPTED SA01 large candidate 1 area 9.725%
+  SA07_small_c01.png: area 0.798% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA07 small candidate 1 area 0.798%
+  SA07_medium_c01.png: area 3.961% (min 1.596), detector True, description True -> PASS
+ACCEPTED SA07 medium candidate 1 area 3.961%
+  SA06_large_c01.png: area 13.948% (min 2.19), detector True, description True -> PASS
+ACCEPTED SA06 large candidate 1 area 13.948%
+  SA02_large_c02.png: area 10.412% (min 9.446), detector True, description False -> fail
+  SA03_small_c01.png: area 0.091% (min 0.1), detector True, description True -> fail
+  SA07_large_c01.png: area 11.463% (min 7.922), detector True, description True -> PASS
+ACCEPTED SA07 large candidate 1 area 11.463%
+  SA08_small_c01.png: area 0.056% (min 0.1), detector True, description True -> fail
+  SA03_small_c02.png: area 0.036% (min 0.1), detector True, description True -> fail
+  SA02_large_c03.png: area 15.761% (min 9.446), detector True, description True -> PASS
+ACCEPTED SA02 large candidate 3 area 15.761%
+  SA04_small_c01.png: area 1.12% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA04 small candidate 1 area 1.12%
+  SA04_medium_c01.png: area 1.599% (min 2.24), detector True, description True -> fail
+  SA08_small_c02.png: area 0.01% (min 0.1), detector False, description False -> fail
+  SA03_small_c03.png: area 0.13% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA03 small candidate 3 area 0.13%
+  SA03_medium_c01.png: area 0.524% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA03 medium candidate 1 area 0.524%
+  SA04_medium_c02.png: area 1.376% (min 2.24), detector True, description True -> fail
+  SA08_small_c03.png: area 0.032% (min 0.1), detector True, description True -> fail
+  SA03_large_c01.png: area 4.551% (min 1.048), detector True, description True -> PASS
+ACCEPTED SA03 large candidate 1 area 4.551%
+  SA09_small_c01.png: area 0.906% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA09 small candidate 1 area 0.906%
+  SA04_medium_c03.png: area 0.601% (min 2.24), detector True, description True -> fail
+  SA09_medium_c01.png: area 2.373% (min 1.812), detector True, description True -> PASS
+ACCEPTED SA09 medium candidate 1 area 2.373%
+  SA08_small_c04.png: area 0.024% (min 0.1), detector True, description True -> fail
+  SA04_medium_c04.png: area 1.072% (min 2.24), detector True, description True -> fail
+  SA09_large_c01.png: area 8.142% (min 4.746), detector True, description True -> PASS
+ACCEPTED SA09 large candidate 1 area 8.142%
+  SA08_small_c05.png: area 0.037% (min 0.1), detector True, description True -> fail
+  SA05_small_c01.png: area 0.179% (min 0.1), detector True, description False -> fail
+  SA04_medium_c05.png: area 0.8% (min 2.24), detector True, description True -> fail
+  SA08_small_c06.png: area 0.033% (min 0.1), detector True, description True -> fail
+  SA05_small_c02.png: area 0.308% (min 0.1), detector True, description False -> fail
+  SA04_medium_c06.png: area 0.897% (min 2.24), detector True, description True -> fail
+  SA08_small_c07.png: area 0.029% (min 0.1), detector True, description True -> fail
+  SA05_small_c03.png: area 0.387% (min 0.1), detector True, description False -> fail
+  SA04_medium_c07.png: area 0.942% (min 2.24), detector True, description True -> fail
+  SA08_small_c08.png: area 0.021% (min 0.1), detector True, description True -> fail
+  SA05_small_c04.png: area 0.4% (min 0.1), detector True, description False -> fail
+  SA04_medium_c08.png: area 2.167% (min 2.24), detector True, description True -> fail
+  SA05_small_c05.png: area 0.132% (min 0.1), detector True, description False -> fail
+  SA08_small_c09.png: area 0.031% (min 0.1), detector True, description True -> fail
+  SA04_medium_c09.png: area 1.79% (min 2.24), detector True, description True -> fail
+  SA05_small_c06.png: area 0.334% (min 0.1), detector True, description False -> fail
+  SA08_small_c10.png: area 0.062% (min 0.1), detector True, description True -> fail
+  SA04_medium_c10.png: area 1.289% (min 2.24), detector True, description True -> fail
+  SA05_small_c07.png: area 0.144% (min 0.1), detector True, description False -> fail
+  SA08_small_c11.png: area 0.037% (min 0.1), detector True, description True -> fail
+  SA04_medium_c11.png: area 0.534% (min 2.24), detector True, description True -> fail
+  SA05_small_c08.png: area 1.58% (min 0.1), detector True, description False -> fail
+  SA08_small_c12.png: area 0.289% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA08 small candidate 12 area 0.289%
+  SA08_medium_c01.png: area 6.634% (min 0.578), detector True, description True -> PASS
+ACCEPTED SA08 medium candidate 1 area 6.634%
+  SA04_medium_c12.png: area 1.126% (min 2.24), detector True, description True -> fail
+  SA05_small_c09.png: area 0.378% (min 0.1), detector True, description False -> fail
+  SA08_large_c01.png: area 8.126% (min 13.268), detector True, description True -> fail
+  SA04_medium_c13.png: area 0.865% (min 2.24), detector True, description True -> fail
+  SA05_small_c10.png: area 0.336% (min 0.1), detector True, description False -> fail
+  SA04_medium_c14.png: area 1.755% (min 2.24), detector True, description True -> fail
+  SA08_large_c02.png: area 8.829% (min 13.268), detector True, description True -> fail
+  SA05_small_c11.png: area 0.265% (min 0.1), detector True, description False -> fail
+  SA04_medium_c15.png: area 1.175% (min 2.24), detector True, description True -> fail
+  SA05_small_c12.png: area 0.448% (min 0.1), detector True, description False -> fail
+  SA08_large_c03.png: area 8.969% (min 13.268), detector True, description True -> fail
+  SA04_medium_c16.png: area 1.532% (min 2.24), detector True, description True -> fail
+  SA05_small_c13.png: area 0.381% (min 0.1), detector True, description False -> fail
+  SA08_large_c04.png: area 8.327% (min 13.268), detector True, description True -> fail
+  SA04_medium_c17.png: area 1.394% (min 2.24), detector True, description True -> fail
+  SA05_small_c14.png: area 0.514% (min 0.1), detector True, description False -> fail
+  SA08_large_c05.png: area 11.695% (min 13.268), detector True, description True -> fail
+  SA04_medium_c18.png: area 0.753% (min 2.24), detector True, description True -> fail
+  SA05_small_c15.png: area 0.359% (min 0.1), detector True, description False -> fail
+  SA08_large_c06.png: area 8.325% (min 13.268), detector True, description True -> fail
+  SA04_medium_c19.png: area 0.786% (min 2.24), detector True, description True -> fail
+  SA05_small_c16.png: area 0.479% (min 0.1), detector True, description False -> fail
+  SA08_large_c07.png: area 8.449% (min 13.268), detector True, description True -> fail
+  SA04_medium_c20.png: area 1.255% (min 2.24), detector True, description True -> fail
+REVISION SA04 medium: Add a dog asleep on the rug in front of the man, clearly visible. Change nothing else.
+  SA05_small_c17.png: area 0.412% (min 0.1), detector True, description False -> fail
+  SA08_large_c08.png: area 7.888% (min 13.268), detector True, description True -> fail
+  SA04_medium_c21.png: area 2.064% (min 2.24), detector True, description True -> fail
+  SA05_small_c18.png: area 0.366% (min 0.1), detector True, description False -> fail
+  SA08_large_c09.png: area 8.52% (min 13.268), detector True, description True -> fail
+  SA04_medium_c22.png: area 1.261% (min 2.24), detector True, description True -> fail
+  SA05_small_c19.png: area 0.297% (min 0.1), detector True, description False -> fail
+  SA08_large_c10.png: area 9.099% (min 13.268), detector True, description True -> fail
+  SA04_medium_c23.png: area 1.791% (min 2.24), detector True, description True -> fail
+  SA05_small_c20.png: area 0.356% (min 0.1), detector True, description False -> fail
+REVISION SA05 small: Add a single lemon on the ground, clearly visible. Change nothing else.
+  SA08_large_c11.png: area 10.602% (min 13.268), detector True, description True -> fail
+  SA04_medium_c24.png: area 0.796% (min 2.24), detector True, description True -> fail
+  SA05_small_c21.png: area 0.486% (min 0.1), detector True, description False -> fail
+  SA08_large_c12.png: area 8.103% (min 13.268), detector True, description True -> fail
+  SA04_medium_c25.png: area 0.634% (min 2.24), detector True, description True -> fail
+  SA05_small_c22.png: area 0.371% (min 0.1), detector True, description False -> fail
+  SA08_large_c13.png: area 9.547% (min 13.268), detector True, description True -> fail
+  SA04_medium_c26.png: area 0.634% (min 2.24), detector True, description True -> fail
+  SA05_small_c23.png: area 0.363% (min 0.1), detector True, description False -> fail
+  SA08_large_c14.png: area 8.004% (min 13.268), detector True, description True -> fail
+  SA04_medium_c27.png: area 1.019% (min 2.24), detector True, description True -> fail
+  SA05_small_c24.png: area 0.447% (min 0.1), detector True, description False -> fail
+  SA08_large_c15.png: area 8.234% (min 13.268), detector True, description True -> fail
+  SA04_medium_c28.png: area 0.738% (min 2.24), detector True, description True -> fail
+  SA05_small_c25.png: area 0.366% (min 0.1), detector True, description False -> fail
+  SA08_large_c16.png: area 9.302% (min 13.268), detector True, description True -> fail
+  SA04_medium_c29.png: area 0.779% (min 2.24), detector True, description True -> fail
+  SA05_small_c26.png: area 0.224% (min 0.1), detector True, description False -> fail
+  SA08_large_c17.png: area 9.433% (min 13.268), detector True, description True -> fail
+  SA05_small_c27.png: area 0.152% (min 0.1), detector True, description False -> fail
+  SA04_medium_c30.png: area 1.222% (min 2.24), detector True, description True -> fail
+  SA08_large_c18.png: area 9.176% (min 13.268), detector True, description True -> fail
+  SA05_small_c28.png: area 0.352% (min 0.1), detector True, description False -> fail
+  SA04_medium_c31.png: area 1.159% (min 2.24), detector True, description True -> fail
+  SA08_large_c19.png: area 7.68% (min 13.268), detector True, description True -> fail
+--- 2026-10-27T23:48:59Z: run stopped by the agent at a combined $92.27 of the $100 cap, before the remaining searches (SA04 medium, SA05 small, SA08 large in revision or near it; SA10 not started) used the rest of the shared budget; three in-flight edits logged as billed ---
+--- 2026-10-28T00:13:52Z: resumed after David's decisions (cap $130; SA05 replaced by SA-R1): SA04 medium continues, SA08 large continues, SA10 judged and continued, SA-R1 made ---
+SA05 is replaced by SA-R1; making the reserve's files
+  SA08_large_c20.png: area 9.974% (min 13.268), detector True, description True -> fail
+REVISION SA08 large: Add a snowman, and a row of lanterns along the houses, clearly visible. Change nothing else.
+  SA04_medium_c32.png: area 0.805% (min 2.24), detector True, description True -> fail
+  SA-R1_source_c01.png: detector True, description True -> PASS
+ACCEPTED SA-R1 source candidate 1
+  SA08_large_c21.png: area 9.807% (min 13.268), detector True, description True -> fail
+  SA04_medium_c33.png: area 1.891% (min 2.24), detector True, description True -> fail
+  SA-R1_small_c01.png: area 1.267% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R1 small candidate 1 area 1.267%
+  SA04_medium_c34.png: area 1.108% (min 2.24), detector True, description True -> fail
+  SA08_large_c22.png: area 8.718% (min 13.268), detector True, description True -> fail
+  SA-R1_medium_c01.png: area 8.547% (min 2.534), detector True, description True -> PASS
+ACCEPTED SA-R1 medium candidate 1 area 8.547%
+  SA04_medium_c35.png: area 0.959% (min 2.24), detector True, description True -> fail
+  SA08_large_c23.png: area 9.59% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c01.png: area 15.803% (min 17.094), detector False, description False -> fail
+  SA04_medium_c36.png: area 1.249% (min 2.24), detector True, description True -> fail
+  SA08_large_c24.png: area 8.2% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c02.png: area 14.143% (min 17.094), detector False, description False -> fail
+  SA04_medium_c37.png: area 0.535% (min 2.24), detector True, description True -> fail
+  SA08_large_c25.png: area 8.29% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c03.png: area 14.568% (min 17.094), detector True, description False -> fail
+  SA04_medium_c38.png: area 0.591% (min 2.24), detector True, description True -> fail
+  SA08_large_c26.png: area 9.012% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c04.png: area 15.432% (min 17.094), detector False, description False -> fail
+  SA04_medium_c39.png: area 1.443% (min 2.24), detector True, description True -> fail
+  SA08_large_c27.png: area 10.459% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c05.png: area 15.817% (min 17.094), detector False, description False -> fail
+  SA04_medium_c40.png: area 1.825% (min 2.24), detector True, description True -> fail
+FAILED SA04 medium: 20 tries and 20 revised tries; the scene goes to its reserve
+SA04 failed at medium; its reserve SA-R1 is already used for SA05
+  SA10_small_c01.png: area 0.822% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA10 small candidate 1 area 0.822%
+  SA08_large_c28.png: area 8.597% (min 13.268), detector True, description True -> fail
+  SA10_medium_c01.png: area 0.672% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c06.png: area 13.287% (min 17.094), detector False, description False -> fail
+  SA08_large_c29.png: area 9.681% (min 13.268), detector True, description True -> fail
+  SA10_medium_c02.png: area 0.684% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c07.png: area 14.711% (min 17.094), detector False, description False -> fail
+  SA10_medium_c03.png: area 0.734% (min 1.644), detector True, description True -> fail
+  SA08_large_c30.png: area 8.678% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c08.png: area 16.431% (min 17.094), detector False, description False -> fail
+  SA10_medium_c04.png: area 0.767% (min 1.644), detector True, description True -> fail
+  SA08_large_c31.png: area 8.073% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c09.png: area 15.552% (min 17.094), detector False, description False -> fail
+  SA10_medium_c05.png: area 0.672% (min 1.644), detector True, description True -> fail
+  SA08_large_c32.png: area 8.683% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c10.png: area 13.999% (min 17.094), detector False, description False -> fail
+  SA10_medium_c06.png: area 0.722% (min 1.644), detector True, description True -> fail
+  SA08_large_c33.png: area 8.702% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c11.png: area 13.815% (min 17.094), detector True, description False -> fail
+  SA10_medium_c07.png: area 0.754% (min 1.644), detector True, description True -> fail
+  SA08_large_c34.png: area 9.855% (min 13.268), detector True, description True -> fail
+  SA10_medium_c08.png: area 0.785% (min 1.644), detector True, description True -> fail
+  SA08_large_c35.png: area 9.46% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c12.png: area 12.924% (min 17.094), detector False, description False -> fail
+  SA10_medium_c09.png: area 0.733% (min 1.644), detector True, description True -> fail
+  SA08_large_c36.png: area 9.013% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c13.png: area 13.744% (min 17.094), detector False, description False -> fail
+  SA10_medium_c10.png: area 0.737% (min 1.644), detector True, description True -> fail
+  SA08_large_c37.png: area 8.548% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c14.png: area 13.816% (min 17.094), detector False, description False -> fail
+  SA10_medium_c11.png: area 0.682% (min 1.644), detector True, description True -> fail
+  SA08_large_c38.png: area 8.441% (min 13.268), detector True, description True -> fail
+  SA-R1_large_c15.png: area 14.593% (min 17.094), detector False, description False -> fail
+  SA10_medium_c12.png: area 0.726% (min 1.644), detector True, description True -> fail
+  SA08_large_c39.png: area 8.562% (min 13.268), detector True, description True -> fail
+  SA10_medium_c13.png: area 0.725% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c16.png: area 16.495% (min 17.094), detector False, description False -> fail
+  SA08_large_c40.png: area 9.352% (min 13.268), detector True, description True -> fail
+FAILED SA08 large: 20 tries and 20 revised tries; the scene goes to its reserve
+RESERVE SA-R2 replaces SA08 (failed at large)
+  SA10_medium_c14.png: area 0.71% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c17.png: area 14.454% (min 17.094), detector False, description False -> fail
+  SA-R2_source_c01.png: detector True, description False -> fail
+  SA10_medium_c15.png: area 0.657% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c18.png: area 13.659% (min 17.094), detector False, description False -> fail
+  SA10_medium_c16.png: area 0.681% (min 1.644), detector True, description True -> fail
+  SA-R2_source_c02.png: detector True, description True -> PASS
+ACCEPTED SA-R2 source candidate 2
+  SA-R1_large_c19.png: area 14.935% (min 17.094), detector False, description False -> fail
+  SA10_medium_c17.png: area 0.79% (min 1.644), detector True, description True -> fail
+  SA-R2_small_c01.png: area 1.825% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R2 small candidate 1 area 1.825%
+  SA-R1_large_c20.png: area 15.945% (min 17.094), detector False, description False -> fail
+REVISION SA-R1 large: Add a dress form beside the table, and a cat asleep on the floor, clearly visible. Change nothing else.
+  SA10_medium_c18.png: area 0.892% (min 1.644), detector True, description True -> fail
+  SA-R2_medium_c01.png: area 3.435% (min 3.65), detector True, description True -> fail
+  SA-R1_large_c21.png: area 13.915% (min 17.094), detector False, description False -> fail
+  SA10_medium_c19.png: area 0.615% (min 1.644), detector True, description True -> fail
+  SA-R2_medium_c02.png: area 3.866% (min 3.65), detector True, description True -> PASS
+ACCEPTED SA-R2 medium candidate 2 area 3.866%
+  SA-R1_large_c22.png: area 14.979% (min 17.094), detector True, description False -> fail
+  SA10_medium_c20.png: area 0.739% (min 1.644), detector True, description True -> fail
+REVISION SA10 medium: Add a small sailboat in the open sea, clearly visible. Change nothing else.
+  SA-R2_large_c01.png: area 11.845% (min 7.732), detector True, description True -> PASS
+ACCEPTED SA-R2 large candidate 1 area 11.845%
+  SA-R1_large_c23.png: area 12.374% (min 17.094), detector True, description False -> fail
+  SA10_medium_c21.png: area 0.865% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c24.png: area 15.089% (min 17.094), detector False, description False -> fail
+  SA10_medium_c22.png: area 0.774% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c25.png: area 13.538% (min 17.094), detector False, description False -> fail
+  SA10_medium_c23.png: area 0.764% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c26.png: area 13.31% (min 17.094), detector False, description False -> fail
+  SA10_medium_c24.png: area 0.746% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c27.png: area 14.224% (min 17.094), detector True, description False -> fail
+  SA10_medium_c25.png: area 0.717% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c28.png: area 17.939% (min 17.094), detector True, description False -> fail
+  SA10_medium_c26.png: area 0.697% (min 1.644), detector True, description True -> fail
+  SA10_medium_c27.png: area 0.717% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c29.png: area 17.839% (min 17.094), detector False, description False -> fail
+  SA10_medium_c28.png: area 0.714% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c30.png: area 15.031% (min 17.094), detector False, description False -> fail
+  SA10_medium_c29.png: area 0.714% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c31.png: area 14.38% (min 17.094), detector False, description False -> fail
+  SA10_medium_c30.png: area 0.804% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c32.png: area 13.577% (min 17.094), detector False, description False -> fail
+  SA10_medium_c31.png: area 0.708% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c33.png: area 17.57% (min 17.094), detector False, description False -> fail
+  SA10_medium_c32.png: area 0.832% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c34.png: area 14.134% (min 17.094), detector True, description False -> fail
+  SA10_medium_c33.png: area 0.754% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c35.png: area 15.078% (min 17.094), detector False, description False -> fail
+  SA10_medium_c34.png: area 0.802% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c36.png: area 15.67% (min 17.094), detector False, description False -> fail
+  SA10_medium_c35.png: area 0.78% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c37.png: area 13.634% (min 17.094), detector False, description False -> fail
+  SA10_medium_c36.png: area 0.806% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c38.png: area 14.916% (min 17.094), detector False, description True -> fail
+  SA10_medium_c37.png: area 0.792% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c39.png: area 16.304% (min 17.094), detector False, description False -> fail
+  SA10_medium_c38.png: area 0.708% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c40.png: area 13.329% (min 17.094), detector False, description False -> fail
+FAILED SA-R1 large: 20 tries and 20 revised tries; the scene goes to its reserve
+RESERVE SA-R1 FAILED at large; no reserve of its kind is left
+  SA10_medium_c39.png: area 0.795% (min 1.644), detector True, description True -> fail
+  SA10_medium_c40.png: area 0.819% (min 1.644), detector True, description True -> fail
+FAILED SA10 medium: 20 tries and 20 revised tries; the scene goes to its reserve
+SA10 failed at medium; its reserve SA-R2 is already used for SA08
+{'mine': 58.1914, 'other': 61.7781, 'combined': 119.9695}
+--- 2026-10-28T19:14:04Z: phrase amendments of 28 October 2026 (SA04 medium, SA10 medium, SA-R1 large); cap $160; searches afresh under the same rules ---
+SA05 is replaced by SA-R1; making the reserve's files
+  SA04_medium_c41.png: area 1.053% (min 2.24), detector True, description True -> fail
+  SA10_medium_c41.png: area 0.716% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c41.png: area 30.781% (min 17.094), detector True, description False -> fail
+  SA04_medium_c42.png: area 1.058% (min 2.24), detector True, description True -> fail
+  SA10_medium_c42.png: area 0.729% (min 1.644), detector True, description True -> fail
+  SA-R1_large_c42.png: area 30.088% (min 17.094), detector True, description True -> PASS
+ACCEPTED SA-R1 large candidate 42 area 30.088%
+  SA04_medium_c43.png: area 1.28% (min 2.24), detector True, description True -> fail
+  SA10_medium_c43.png: area 0.732% (min 1.644), detector True, description True -> fail
+  SA04_medium_c44.png: area 1.523% (min 2.24), detector True, description True -> fail
+  SA10_medium_c44.png: area 0.807% (min 1.644), detector True, description True -> fail
+  SA04_medium_c45.png: area 1.538% (min 2.24), detector True, description True -> fail
+  SA10_medium_c45.png: area 0.784% (min 1.644), detector True, description True -> fail
+  SA04_medium_c46.png: area 1.774% (min 2.24), detector True, description True -> fail
+  SA10_medium_c46.png: area 0.769% (min 1.644), detector True, description True -> fail
+  SA04_medium_c47.png: area 2.631% (min 2.24), detector True, description True -> PASS
+ACCEPTED SA04 medium candidate 47 area 2.631%
+  SA10_medium_c47.png: area 0.907% (min 1.644), detector True, description True -> fail
+  SA04_large_c01.png: area 3.227% (min 5.262), detector True, description True -> fail
+  SA10_medium_c48.png: area 0.898% (min 1.644), detector True, description True -> fail
+  SA04_large_c02.png: area 3.483% (min 5.262), detector True, description True -> fail
+  SA10_medium_c49.png: area 0.945% (min 1.644), detector True, description True -> fail
+  SA04_large_c03.png: area 3.745% (min 5.262), detector False, description True -> fail
+  SA10_medium_c50.png: area 0.913% (min 1.644), detector True, description True -> fail
+  SA04_large_c04.png: area 3.455% (min 5.262), detector True, description True -> fail
+  SA10_medium_c51.png: area 0.666% (min 1.644), detector True, description True -> fail
+  SA04_large_c05.png: area 3.636% (min 5.262), detector False, description True -> fail
+  SA10_medium_c52.png: area 0.708% (min 1.644), detector True, description True -> fail
+  SA04_large_c06.png: area 4.471% (min 5.262), detector True, description True -> fail
+  SA10_medium_c53.png: area 0.884% (min 1.644), detector True, description True -> fail
+  SA04_large_c07.png: area 3.219% (min 5.262), detector True, description True -> fail
+  SA10_medium_c54.png: area 0.746% (min 1.644), detector True, description True -> fail
+  SA04_large_c08.png: area 3.145% (min 5.262), detector True, description True -> fail
+  SA10_medium_c55.png: area 0.952% (min 1.644), detector True, description True -> fail
+  SA04_large_c09.png: area 3.538% (min 5.262), detector False, description True -> fail
+  SA10_medium_c56.png: area 0.763% (min 1.644), detector True, description True -> fail
+  SA04_large_c10.png: area 3.702% (min 5.262), detector False, description True -> fail
+  SA10_medium_c57.png: area 0.754% (min 1.644), detector True, description True -> fail
+  SA04_large_c11.png: area 3.124% (min 5.262), detector True, description True -> fail
+  SA04_large_c12.png: area 4.277% (min 5.262), detector False, description True -> fail
+  SA04_large_c13.png: area 3.397% (min 5.262), detector False, description True -> fail
+  SA04_large_c14.png: area 4.017% (min 5.262), detector True, description True -> fail
+  SA10_medium_c58.png: area 0.705% (min 1.644), detector True, description True -> fail
+  SA04_large_c15.png: area 3.381% (min 5.262), detector True, description True -> fail
+  SA10_medium_c59.png: area 0.804% (min 1.644), detector True, description True -> fail
+  SA04_large_c16.png: area 3.115% (min 5.262), detector False, description True -> fail
+  SA10_medium_c60.png: area 0.819% (min 1.644), detector True, description True -> fail
+REVISION SA10 medium: Add a sailboat in the open sea, clearly visible. Change nothing else.
+  SA04_large_c17.png: area 3.242% (min 5.262), detector True, description True -> fail
+  SA10_medium_c61.png: area 0.853% (min 1.644), detector True, description True -> fail
+  SA10_medium_c62.png: area 0.856% (min 1.644), detector True, description True -> fail
+  SA04_large_c18.png: area 3.308% (min 5.262), detector True, description True -> fail
+  SA10_medium_c63.png: area 0.726% (min 1.644), detector True, description True -> fail
+  SA04_large_c19.png: area 5.045% (min 5.262), detector True, description True -> fail
+  SA10_medium_c64.png: area 0.972% (min 1.644), detector True, description True -> fail
+  SA04_large_c20.png: area 3.211% (min 5.262), detector True, description True -> fail
+REVISION SA04 large: Add a side table with a vase, and a candlestick, clearly visible. Change nothing else.
+  SA10_medium_c65.png: area 0.834% (min 1.644), detector True, description True -> fail
+  SA04_large_c21.png: area 3.524% (min 5.262), detector False, description True -> fail
+  SA10_medium_c66.png: area 0.857% (min 1.644), detector True, description True -> fail
+  SA04_large_c22.png: area 4.515% (min 5.262), detector True, description True -> fail
+  SA10_medium_c67.png: area 0.731% (min 1.644), detector True, description True -> fail
+  SA04_large_c23.png: area 3.074% (min 5.262), detector False, description True -> fail
+  SA10_medium_c68.png: area 0.775% (min 1.644), detector True, description True -> fail
+  SA04_large_c24.png: area 3.339% (min 5.262), detector False, description True -> fail
+  SA10_medium_c69.png: area 0.785% (min 1.644), detector True, description True -> fail
+  SA04_large_c25.png: area 4.584% (min 5.262), detector True, description True -> fail
+  SA10_medium_c70.png: area 0.839% (min 1.644), detector True, description True -> fail
+  SA04_large_c26.png: area 3.084% (min 5.262), detector False, description True -> fail
+  SA10_medium_c71.png: area 0.904% (min 1.644), detector True, description True -> fail
+  SA04_large_c27.png: area 3.912% (min 5.262), detector True, description True -> fail
+  SA10_medium_c72.png: area 0.849% (min 1.644), detector True, description True -> fail
+  SA04_large_c28.png: area 5.364% (min 5.262), detector True, description True -> PASS
+ACCEPTED SA04 large candidate 28 area 5.364%
+  SA10_medium_c73.png: area 0.832% (min 1.644), detector True, description True -> fail
+  SA10_medium_c74.png: area 0.789% (min 1.644), detector True, description True -> fail
+  SA10_medium_c75.png: area 0.982% (min 1.644), detector True, description True -> fail
+  SA10_medium_c76.png: area 0.972% (min 1.644), detector True, description True -> fail
+  SA10_medium_c77.png: area 0.742% (min 1.644), detector True, description True -> fail
+  SA10_medium_c78.png: area 0.845% (min 1.644), detector True, description True -> fail
+  SA10_medium_c79.png: area 0.862% (min 1.644), detector True, description True -> fail
+  SA10_medium_c80.png: area 0.876% (min 1.644), detector True, description True -> fail
+FAILED SA10 medium: 20 tries and 20 revised tries; the scene goes to its reserve
+SA10 failed at medium; its reserve SA-R2 is already used for SA08
+{'mine': 72.0996, 'other': 61.7781, 'combined': 133.8777}
+--- 2026-10-29T06:26:41Z: unchanged-elsewhere check added (28 Oct 2026) and SA10 medium reworded to 'a large sailing ship in the open sea': every addition in use re-judged in candidate order, searches continued under the rescue rule ---
+  SA06_small_c01.png: area 0.314% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA06 small candidate 1 area 0.314%
+  SA02_small_c01.png: area 2.171% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA02 small candidate 1 area 2.171%
+  SA06_medium_c01.png: area 0.607% (min 0.628), detector True, description True -> fail
+  SA01_small_c01.png: area 0.127% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA01 small candidate 1 area 0.127%
+  SA02_medium_c01.png: area 4.723% (min 4.342), detector True, description True -> PASS
+ACCEPTED SA02 medium candidate 1 area 4.723%
+  SA06_medium_c02.png: area 1.095% (min 0.628), detector True, description True -> PASS
+ACCEPTED SA06 medium candidate 2 area 1.095%
+  SA02_large_c01.png: area 12.97% (min 9.446), detector True, description False -> fail
+  SA01_medium_c01.png: area 2.72% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA01 medium candidate 1 area 2.72%
+  SA02_large_c02.png: area 10.412% (min 9.446), detector True, description False -> fail
+  SA06_large_c01.png: area 13.948% (min 2.19), detector True, description True -> PASS
+ACCEPTED SA06 large candidate 1 area 13.948%
+  SA01_large_c01.png: area 9.725% (min 5.44), detector True, description True -> PASS
+ACCEPTED SA01 large candidate 1 area 9.725%
+  SA03_small_c01.png: area 0.091% (min 0.1), detector True, description True -> fail
+  SA07_small_c01.png: area 0.798% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA07 small candidate 1 area 0.798%
+  SA02_large_c03.png: area 15.761% (min 9.446), detector True, description True -> PASS
+ACCEPTED SA02 large candidate 3 area 15.761%
+SA08 is replaced by SA-R2; making the reserve's files
+  SA03_small_c02.png: area 0.036% (min 0.1), detector True, description True -> fail
+  SA07_medium_c01.png: area 3.961% (min 1.596), detector True, description True -> PASS
+ACCEPTED SA07 medium candidate 1 area 3.961%
+  SA-R2_small_c01.png: area 1.825% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R2 small candidate 1 area 1.825%
+  SA03_small_c03.png: area 0.13% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA03 small candidate 3 area 0.13%
+  SA-R2_medium_c01.png: area 3.435% (min 3.65), detector True, description True -> fail
+  SA07_large_c01.png: area 11.463% (min 7.922), detector True, description True -> PASS
+ACCEPTED SA07 large candidate 1 area 11.463%
+  SA03_medium_c01.png: area 0.524% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA03 medium candidate 1 area 0.524%
+  SA-R2_medium_c02.png: area 3.866% (min 3.65), detector True, description True -> PASS
+ACCEPTED SA-R2 medium candidate 2 area 3.866%
+  SA03_large_c01.png: area 4.551% (min 1.048), detector True, description True -> PASS
+ACCEPTED SA03 large candidate 1 area 4.551%
+  SA04_small_c01.png: area 1.12% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA04 small candidate 1 area 1.12%
+  SA-R2_large_c01.png: area 11.845% (min 7.732), detector True, description True -> PASS
+ACCEPTED SA-R2 large candidate 1 area 11.845%
+SA05 is replaced by SA-R1; making the reserve's files
+  SA04_medium_c41.png: area 1.053% (min 2.24), detector True, description True -> fail
+  SA09_small_c01.png: area 0.906% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA09 small candidate 1 area 0.906%
+  SA04_medium_c42.png: area 1.058% (min 2.24), detector True, description True -> fail
+  SA-R1_small_c01.png: area 1.267% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R1 small candidate 1 area 1.267%
+  SA04_medium_c43.png: area 1.28% (min 2.24), detector True, description True -> fail
+  SA09_medium_c01.png: area 2.373% (min 1.812), detector True, description True -> PASS
+ACCEPTED SA09 medium candidate 1 area 2.373%
+  SA04_medium_c44.png: area 1.523% (min 2.24), detector True, description True -> fail
+  SA-R1_medium_c01.png: area 8.547% (min 2.534), detector True, description True -> PASS
+ACCEPTED SA-R1 medium candidate 1 area 8.547%
+  SA04_medium_c45.png: area 1.538% (min 2.24), detector True, description True -> fail
+  SA09_large_c01.png: area 8.142% (min 4.746), detector True, description True -> PASS
+ACCEPTED SA09 large candidate 1 area 8.142%
+  SA-R1_large_c41.png: area 30.781% (min 17.094), detector True, description False -> fail
+  SA04_medium_c46.png: area 1.774% (min 2.24), detector True, description True -> fail
+  SA10_small_c01.png: area 0.822% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA10 small candidate 1 area 0.822%
+  SA-R1_large_c42.png: area 30.088% (min 17.094), detector True, description True -> PASS
+ACCEPTED SA-R1 large candidate 42 area 30.088%
+  SA04_medium_c47.png: area 2.631% (min 2.24), detector True, description True -> PASS
+ACCEPTED SA04 medium candidate 47 area 2.631%
+  SA04_large_c01.png: area 3.227% (min 5.262), detector True, description True -> fail
+  SA04_large_c02.png: area 3.483% (min 5.262), detector True, description True -> fail
+  SA04_large_c03.png: area 3.745% (min 5.262), detector False, description True -> fail
+  SA04_large_c04.png: area 3.455% (min 5.262), detector True, description True -> fail
+  SA04_large_c05.png: area 3.636% (min 5.262), detector False, description True -> fail
+  SA04_large_c06.png: area 4.471% (min 5.262), detector True, description True -> fail
+  SA04_large_c07.png: area 3.219% (min 5.262), detector True, description True -> fail
+  SA04_large_c08.png: area 3.145% (min 5.262), detector True, description True -> fail
+  SA04_large_c09.png: area 3.538% (min 5.262), detector False, description True -> fail
+  SA04_large_c10.png: area 3.702% (min 5.262), detector False, description True -> fail
+  SA04_large_c11.png: area 3.124% (min 5.262), detector True, description True -> fail
+  SA04_large_c12.png: area 4.277% (min 5.262), detector False, description True -> fail
+  SA04_large_c13.png: area 3.397% (min 5.262), detector False, description True -> fail
+  SA04_large_c14.png: area 4.017% (min 5.262), detector True, description True -> fail
+  SA04_large_c15.png: area 3.381% (min 5.262), detector True, description True -> fail
+  SA04_large_c16.png: area 3.115% (min 5.262), detector False, description True -> fail
+  SA04_large_c17.png: area 3.242% (min 5.262), detector True, description True -> fail
+  SA10_medium_c81.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA04_large_c18.png: area 3.308% (min 5.262), detector True, description True -> fail
+  SA04_large_c19.png: area 5.045% (min 5.262), detector True, description True -> fail
+  SA04_large_c20.png: area 3.211% (min 5.262), detector True, description True -> fail
+  SA04_large_c21.png: area 3.524% (min 5.262), detector False, description True -> fail
+  SA04_large_c22.png: area 4.515% (min 5.262), detector True, description True -> fail
+  SA04_large_c23.png: area 3.074% (min 5.262), detector False, description True -> fail
+  SA04_large_c24.png: area 3.339% (min 5.262), detector False, description True -> fail
+  SA04_large_c25.png: area 4.584% (min 5.262), detector True, description True -> fail
+  SA04_large_c26.png: area 3.084% (min 5.262), detector False, description True -> fail
+  SA04_large_c27.png: area 3.912% (min 5.262), detector True, description True -> fail
+  SA04_large_c28.png: area 5.364% (min 5.262), detector True, description True -> PASS
+ACCEPTED SA04 large candidate 28 area 5.364%
+  SA10_medium_c82.png: area 1.433% (min 1.644), detector True, description True -> fail
+  SA10_medium_c83.png: area 1.402% (min 1.644), detector True, description True -> fail
+  SA10_medium_c84.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA10_medium_c85.png: area 2.269% (min 1.644), detector True, description True -> PASS
+ACCEPTED SA10 medium candidate 85 area 2.269%
+  SA10_large_c01.png: area 4.682% (min 4.538), detector True, description True -> PASS
+ACCEPTED SA10 large candidate 1 area 4.682%
+{'mine': 73.2874, 'other': 61.7781, 'combined': 135.0655}
+--- 2026-10-29T06:53:03Z: spill check (cut 0.765 percent) replaces the unchanged-elsewhere question; every addition in use re-judged in candidate order, searches continued under the rescue rule ---
+  SA06_small_c01.png: area 0.314% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA06 small candidate 1 area 0.314%
+  SA02_small_c01.png: area 2.171% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA02 small candidate 1 area 2.171%
+  SA01_small_c01.png: area 0.127% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA01 small candidate 1 area 0.127%
+  SA06_medium_c01.png: area 0.607% (min 0.628), detector True, description True -> fail
+  SA02_medium_c01.png: area 4.723% (min 4.342), detector True, description True -> PASS
+ACCEPTED SA02 medium candidate 1 area 4.723%
+  SA01_medium_c01.png: area 2.72% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA01 medium candidate 1 area 2.72%
+  SA06_medium_c02.png: area 1.095% (min 0.628), detector True, description True -> PASS
+ACCEPTED SA06 medium candidate 2 area 1.095%
+  SA02_large_c01.png: area 12.97% (min 9.446), detector True, description False -> fail
+  SA01_large_c01.png: area 9.725% (min 5.44), detector True, description True -> PASS
+ACCEPTED SA01 large candidate 1 area 9.725%
+  SA06_large_c01.png: area 13.948% (min 2.19), detector True, description True -> PASS
+ACCEPTED SA06 large candidate 1 area 13.948%
+  SA02_large_c02.png: area 10.412% (min 9.446), detector True, description False -> fail
+  SA07_small_c01.png: area 0.798% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA07 small candidate 1 area 0.798%
+  SA03_small_c01.png: area 0.091% (min 0.1), detector True, description True -> fail
+  SA02_large_c03.png: area 15.761% (min 9.446), detector True, description True -> PASS
+ACCEPTED SA02 large candidate 3 area 15.761%
+SA08 is replaced by SA-R2; making the reserve's files
+  SA07_medium_c01.png: area 3.961% (min 1.596), detector True, description True -> PASS
+ACCEPTED SA07 medium candidate 1 area 3.961%
+  SA03_small_c02.png: area 0.036% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c01.png: area 1.825% (min 0.1), detector True, description True -> fail
+  SA07_large_c01.png: area 11.463% (min 7.922), detector True, description True -> fail
+  SA03_small_c03.png: area 0.13% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA03 small candidate 3 area 0.13%
+  SA03_medium_c01.png: area 0.524% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA03 medium candidate 1 area 0.524%
+  SA03_large_c01.png: area 4.551% (min 1.048), detector True, description True -> PASS
+ACCEPTED SA03 large candidate 1 area 4.551%
+  SA04_small_c01.png: area 1.12% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA04 small candidate 1 area 1.12%
+  SA04_medium_c41.png: area 1.053% (min 2.24), detector True, description True -> fail
+  SA04_medium_c42.png: area 1.058% (min 2.24), detector True, description True -> fail
+  SA04_medium_c43.png: area 1.28% (min 2.24), detector True, description True -> fail
+  SA04_medium_c44.png: area 1.523% (min 2.24), detector True, description True -> fail
+  SA04_medium_c45.png: area 1.538% (min 2.24), detector True, description True -> fail
+  SA04_medium_c46.png: area 1.774% (min 2.24), detector True, description True -> fail
+  SA04_medium_c47.png: area 2.631% (min 2.24), detector True, description True -> PASS
+ACCEPTED SA04 medium candidate 47 area 2.631%
+  SA04_large_c01.png: area 3.227% (min 5.262), detector True, description True -> fail
+  SA04_large_c02.png: area 3.483% (min 5.262), detector True, description True -> fail
+  SA04_large_c03.png: area 3.745% (min 5.262), detector False, description True -> fail
+  SA04_large_c04.png: area 3.455% (min 5.262), detector True, description True -> fail
+  SA04_large_c05.png: area 3.636% (min 5.262), detector False, description True -> fail
+  SA04_large_c06.png: area 4.471% (min 5.262), detector True, description True -> fail
+  SA04_large_c07.png: area 3.219% (min 5.262), detector True, description True -> fail
+  SA04_large_c08.png: area 3.145% (min 5.262), detector True, description True -> fail
+  SA04_large_c09.png: area 3.538% (min 5.262), detector False, description True -> fail
+  SA04_large_c10.png: area 3.702% (min 5.262), detector False, description True -> fail
+  SA04_large_c11.png: area 3.124% (min 5.262), detector True, description True -> fail
+  SA04_large_c12.png: area 4.277% (min 5.262), detector False, description True -> fail
+  SA-R2_small_c02.png: area 1.802% (min 0.1), detector True, description True -> fail
+  SA04_large_c13.png: area 3.397% (min 5.262), detector False, description True -> fail
+  SA04_large_c14.png: area 4.017% (min 5.262), detector True, description True -> fail
+  SA04_large_c15.png: area 3.381% (min 5.262), detector True, description True -> fail
+  SA04_large_c16.png: area 3.115% (min 5.262), detector False, description True -> fail
+  SA07_large_c02.png: area 10.459% (min 7.922), detector True, description True -> PASS
+ACCEPTED SA07 large candidate 2 area 10.459%
+  SA04_large_c17.png: area 3.242% (min 5.262), detector True, description True -> fail
+  SA09_small_c01.png: area 0.906% (min 0.1), detector True, description True -> fail
+  SA04_large_c18.png: area 3.308% (min 5.262), detector True, description True -> fail
+  SA04_large_c19.png: area 5.045% (min 5.262), detector True, description True -> fail
+  SA04_large_c20.png: area 3.211% (min 5.262), detector True, description True -> fail
+  SA04_large_c21.png: area 3.524% (min 5.262), detector False, description True -> fail
+  SA04_large_c22.png: area 4.515% (min 5.262), detector True, description True -> fail
+  SA04_large_c23.png: area 3.074% (min 5.262), detector False, description True -> fail
+  SA04_large_c24.png: area 3.339% (min 5.262), detector False, description True -> fail
+  SA04_large_c25.png: area 4.584% (min 5.262), detector True, description True -> fail
+  SA04_large_c26.png: area 3.084% (min 5.262), detector False, description True -> fail
+  SA04_large_c27.png: area 3.912% (min 5.262), detector True, description True -> fail
+  SA04_large_c28.png: area 5.364% (min 5.262), detector True, description True -> PASS
+ACCEPTED SA04 large candidate 28 area 5.364%
+SA05 is replaced by SA-R1; making the reserve's files
+  SA-R1_small_c01.png: area 1.267% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R1 small candidate 1 area 1.267%
+  SA-R1_medium_c01.png: area 8.547% (min 2.534), detector True, description True -> fail
+  SA-R2_small_c03.png: area 1.731% (min 0.1), detector True, description True -> fail
+  SA09_small_c02.png: area 0.997% (min 0.1), detector True, description True -> fail
+  SA-R1_medium_c02.png: area 6.86% (min 2.534), detector True, description True -> PASS
+ACCEPTED SA-R1 medium candidate 2 area 6.86%
+  SA-R2_small_c04.png: area 1.658% (min 0.1), detector True, description True -> fail
+  SA09_small_c03.png: area 1.088% (min 0.1), detector True, description True -> fail
+  SA-R1_large_c43.png: area 29.453% (min 13.72), detector True, description True -> PASS
+ACCEPTED SA-R1 large candidate 43 area 29.453%
+  SA10_small_c01.png: area 0.822% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA10 small candidate 1 area 0.822%
+  SA10_medium_c81.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA-R2_small_c05.png: area 1.689% (min 0.1), detector True, description True -> fail
+  SA10_medium_c82.png: area 1.433% (min 1.644), detector True, description True -> fail
+  SA10_medium_c83.png: area 1.402% (min 1.644), detector True, description True -> fail
+  SA10_medium_c84.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA10_medium_c85.png: area 2.269% (min 1.644), detector True, description True -> PASS
+ACCEPTED SA10 medium candidate 85 area 2.269%
+  SA10_large_c01.png: area 4.682% (min 4.538), detector True, description True -> PASS
+ACCEPTED SA10 large candidate 1 area 4.682%
+  SA09_small_c04.png: area 1.029% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c06.png: area 1.731% (min 0.1), detector True, description True -> fail
+  SA09_small_c05.png: area 0.941% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA09 small candidate 5 area 0.941%
+  SA09_medium_c01.png: area 2.373% (min 1.882), detector True, description True -> fail
+  SA-R2_small_c07.png: area 1.588% (min 0.1), detector True, description True -> fail
+  SA09_medium_c02.png: area 2.276% (min 1.882), detector True, description True -> fail
+  SA-R2_small_c08.png: area 1.826% (min 0.1), detector True, description True -> fail
+  SA09_medium_c03.png: area 2.294% (min 1.882), detector True, description True -> fail
+  SA-R2_small_c09.png: area 1.723% (min 0.1), detector True, description True -> fail
+  SA09_medium_c04.png: area 2.493% (min 1.882), detector True, description True -> fail
+  SA-R2_small_c10.png: area 1.744% (min 0.1), detector True, description True -> fail
+  SA09_medium_c05.png: area 1.896% (min 1.882), detector True, description True -> PASS
+ACCEPTED SA09 medium candidate 5 area 1.896%
+  SA-R2_small_c11.png: area 1.696% (min 0.1), detector True, description True -> fail
+  SA09_large_c02.png: area 6.868% (min 3.792), detector True, description True -> PASS
+ACCEPTED SA09 large candidate 2 area 6.868%
+  SA-R2_small_c12.png: area 1.74% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c13.png: area 1.735% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c14.png: area 1.827% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c15.png: area 1.831% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c16.png: area 1.87% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c17.png: area 1.708% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c18.png: area 1.824% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c19.png: area 1.551% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c20.png: area 1.691% (min 0.1), detector True, description True -> fail
+REVISION SA-R2 small: Add a milk churn beside the hay wagon, clearly visible. Change nothing else.
+  SA-R2_small_c21.png: area 1.77% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c22.png: area 1.654% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c23.png: area 2.061% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c24.png: area 1.621% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c25.png: area 2.06% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c26.png: area 2.096% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c27.png: area 1.885% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c28.png: area 1.895% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c29.png: area 1.891% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c30.png: area 2.155% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c31.png: area 1.944% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c32.png: area 1.978% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c33.png: area 1.646% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c34.png: area 2.203% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c35.png: area 1.86% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c36.png: area 2.182% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c37.png: area 1.79% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c38.png: area 1.971% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c39.png: area 1.786% (min 0.1), detector True, description True -> fail
+  SA-R2_small_c40.png: area 1.915% (min 0.1), detector True, description True -> fail
+FAILED SA-R2 small: 20 tries and 20 revised tries; the scene goes to its reserve
+RESERVE SA-R2 FAILED at small; no reserve of its kind is left
+{'mine': 82.455, 'other': 61.7781, 'combined': 144.2331}
+--- 2026-10-29T08:05:23Z: object-position check replaces the spill check (29 Oct 2026); every addition in use re-judged in candidate order, SA-R2 small first; searches continued under the rescue rule ---
+SA08 is replaced by SA-R2; making the reserve's files
+  SA-R2_small_c01.png: area 1.825% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R2 small candidate 1 area 1.825%
+  SA06_small_c01.png: area 0.314% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA06 small candidate 1 area 0.314%
+  SA01_small_c01.png: area 0.127% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA01 small candidate 1 area 0.127%
+  SA-R2_medium_c01.png: area 3.435% (min 3.65), detector True, description True -> fail
+  SA06_medium_c01.png: area 0.607% (min 0.628), detector True, description True -> fail
+  SA01_medium_c01.png: area 2.72% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA01 medium candidate 1 area 2.72%
+  SA01_large_c01.png: area 9.725% (min 5.44), detector True, description True -> PASS
+ACCEPTED SA01 large candidate 1 area 9.725%
+  SA06_medium_c02.png: area 1.095% (min 0.628), detector True, description True -> PASS
+ACCEPTED SA06 medium candidate 2 area 1.095%
+  SA-R2_medium_c02.png: area 3.866% (min 3.65), detector True, description True -> PASS
+ACCEPTED SA-R2 medium candidate 2 area 3.866%
+  SA06_large_c01.png: area 13.948% (min 2.19), detector True, description True -> PASS
+ACCEPTED SA06 large candidate 1 area 13.948%
+  SA02_small_c01.png: area 2.171% (min 0.1), detector True, description True -> fail
+  SA-R2_large_c01.png: area 11.845% (min 7.732), detector True, description True -> PASS
+ACCEPTED SA-R2 large candidate 1 area 11.845%
+  SA07_small_c01.png: area 0.798% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA07 small candidate 1 area 0.798%
+  SA03_small_c01.png: area 0.091% (min 0.1), detector True, description True -> fail
+  SA07_medium_c01.png: area 3.961% (min 1.596), detector True, description True -> PASS
+ACCEPTED SA07 medium candidate 1 area 3.961%
+  SA03_small_c02.png: area 0.036% (min 0.1), detector True, description True -> fail
+  SA07_large_c01.png: area 11.463% (min 7.922), detector True, description True -> PASS
+ACCEPTED SA07 large candidate 1 area 11.463%
+  SA03_small_c03.png: area 0.13% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA03 small candidate 3 area 0.13%
+  SA04_small_c01.png: area 1.12% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA04 small candidate 1 area 1.12%
+  SA02_small_c02.png: area 2.361% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA02 small candidate 2 area 2.361%
+  SA04_medium_c41.png: area 1.053% (min 2.24), detector True, description True -> fail
+  SA03_medium_c01.png: area 0.524% (min 0.5), detector True, description True -> PASS
+ACCEPTED SA03 medium candidate 1 area 0.524%
+  SA02_medium_c01.png: area 4.723% (min 4.722), detector True, description True -> PASS
+ACCEPTED SA02 medium candidate 1 area 4.723%
+  SA04_medium_c42.png: area 1.058% (min 2.24), detector True, description True -> fail
+  SA03_large_c01.png: area 4.551% (min 1.048), detector True, description True -> PASS
+ACCEPTED SA03 large candidate 1 area 4.551%
+  SA02_large_c01.png: area 12.97% (min 9.446), detector True, description False -> fail
+  SA04_medium_c43.png: area 1.28% (min 2.24), detector True, description True -> fail
+  SA09_small_c01.png: area 0.906% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA09 small candidate 1 area 0.906%
+  SA02_large_c02.png: area 10.412% (min 9.446), detector True, description False -> fail
+  SA04_medium_c44.png: area 1.523% (min 2.24), detector True, description True -> fail
+  SA09_medium_c01.png: area 2.373% (min 1.812), detector True, description True -> PASS
+ACCEPTED SA09 medium candidate 1 area 2.373%
+  SA02_large_c03.png: area 15.761% (min 9.446), detector True, description True -> fail
+  SA04_medium_c45.png: area 1.538% (min 2.24), detector True, description True -> fail
+  SA04_medium_c46.png: area 1.774% (min 2.24), detector True, description True -> fail
+  SA04_medium_c47.png: area 2.631% (min 2.24), detector True, description True -> fail
+  SA09_large_c03.png: area 6.435% (min 4.746), detector True, description True -> PASS
+ACCEPTED SA09 large candidate 3 area 6.435%
+SA05 is replaced by SA-R1; making the reserve's files
+  SA02_large_c04.png: area 13.468% (min 9.446), detector True, description False -> fail
+  SA-R1_small_c01.png: area 1.267% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA-R1 small candidate 1 area 1.267%
+  SA04_medium_c48.png: area 1.281% (min 2.24), detector True, description True -> fail
+  SA-R1_medium_c01.png: area 8.547% (min 2.534), detector True, description True -> PASS
+ACCEPTED SA-R1 medium candidate 1 area 8.547%
+  SA02_large_c05.png: area 14.675% (min 9.446), detector True, description False -> fail
+  SA04_medium_c49.png: area 1.868% (min 2.24), detector True, description True -> fail
+  SA-R1_large_c44.png: area 27.066% (min 17.094), detector True, description True -> fail
+  SA02_large_c06.png: area 15.831% (min 9.446), detector True, description True -> fail
+  SA04_medium_c50.png: area 1.037% (min 2.24), detector True, description True -> fail
+  SA-R1_large_c45.png: area 30.933% (min 17.094), detector True, description True -> fail
+  SA04_medium_c51.png: area 1.995% (min 2.24), detector True, description True -> fail
+  SA02_large_c07.png: area 14.534% (min 9.446), detector True, description True -> fail
+  SA-R1_large_c46.png: area 26.791% (min 17.094), detector True, description True -> fail
+  SA04_medium_c52.png: area 1.331% (min 2.24), detector True, description True -> fail
+  SA02_large_c08.png: area 14.738% (min 9.446), detector True, description True -> PASS
+ACCEPTED SA02 large candidate 8 area 14.738%
+  SA-R1_large_c47.png: area 33.383% (min 17.094), detector True, description True -> fail
+  SA10_small_c01.png: area 0.822% (min 0.1), detector True, description True -> PASS
+ACCEPTED SA10 small candidate 1 area 0.822%
+  SA10_medium_c81.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA10_medium_c82.png: area 1.433% (min 1.644), detector True, description True -> fail
+  SA10_medium_c83.png: area 1.402% (min 1.644), detector True, description True -> fail
+  SA10_medium_c84.png: area 1.372% (min 1.644), detector True, description True -> fail
+  SA04_medium_c53.png: area 0.874% (min 2.24), detector True, description True -> fail
+  SA10_medium_c85.png: area 2.269% (min 1.644), detector True, description True -> PASS
+ACCEPTED SA10 medium candidate 85 area 2.269%
+  SA10_large_c01.png: area 4.682% (min 4.538), detector True, description True -> PASS
+ACCEPTED SA10 large candidate 1 area 4.682%
+  SA-R1_large_c48.png: area 23.93% (min 17.094), detector True, description True -> PASS
+ACCEPTED SA-R1 large candidate 48 area 23.93%
+  SA04_medium_c54.png: area 0.918% (min 2.24), detector True, description True -> fail
+  SA04_medium_c55.png: area 2.057% (min 2.24), detector True, description True -> fail
+  SA04_medium_c56.png: area 1.895% (min 2.24), detector True, description True -> fail
+  SA04_medium_c57.png: area 0.69% (min 2.24), detector True, description True -> fail
+  SA04_medium_c58.png: area 0.862% (min 2.24), detector True, description True -> fail
+  SA04_medium_c59.png: area 1.404% (min 2.24), detector True, description True -> fail
+  SA04_medium_c60.png: area 2.046% (min 2.24), detector True, description True -> fail
+REVISION SA04 medium: Add a large dog asleep on the rug in front of the man, clearly visible. Change nothing else.
+  SA04_medium_c61.png: area 1.84% (min 2.24), detector True, description True -> fail
+  SA04_medium_c62.png: area 1.274% (min 2.24), detector True, description True -> fail
+  SA04_medium_c63.png: area 2.212% (min 2.24), detector True, description True -> fail
+  SA04_medium_c64.png: area 1.444% (min 2.24), detector True, description True -> fail
+  SA04_medium_c65.png: area 1.356% (min 2.24), detector True, description True -> fail
+  SA04_medium_c66.png: area 0.545% (min 2.24), detector True, description True -> fail
+  SA04_medium_c67.png: area 2.018% (min 2.24), detector True, description True -> fail
+  SA04_medium_c68.png: area 1.108% (min 2.24), detector True, description True -> fail
+  SA04_medium_c69.png: area 1.639% (min 2.24), detector True, description True -> fail
+  SA04_medium_c70.png: area 1.539% (min 2.24), detector True, description True -> fail
+  SA04_medium_c71.png: area 1.451% (min 2.24), detector True, description True -> fail
+  SA04_medium_c72.png: area 1.434% (min 2.24), detector True, description True -> fail
+  SA04_medium_c73.png: area 2.48% (min 2.24), detector True, description True -> PASS
+ACCEPTED SA04 medium candidate 73 area 2.48%
+  SA04_large_c29.png: area 3.515% (min 4.96), detector True, description True -> fail
+  SA04_large_c30.png: area 3.29% (min 4.96), detector True, description True -> fail
+  SA04_large_c31.png: area 3.228% (min 4.96), detector False, description True -> fail
+  SA04_large_c32.png: area 2.944% (min 4.96), detector False, description True -> fail
+  SA04_large_c33.png: area 3.643% (min 4.96), detector True, description True -> fail
+  SA04_large_c34.png: area 3.459% (min 4.96), detector False, description True -> fail
+  SA04_large_c35.png: area 3.533% (min 4.96), detector True, description True -> fail
+  SA04_large_c36.png: area 3.134% (min 4.96), detector False, description True -> fail
+  SA04_large_c37.png: area 2.759% (min 4.96), detector True, description True -> fail
+  SA04_large_c38.png: area 5.055% (min 4.96), detector False, description True -> fail
+  SA04_large_c39.png: area 3.471% (min 4.96), detector True, description True -> fail
+  SA04_large_c40.png: area 3.686% (min 4.96), detector True, description True -> fail
+  SA04_large_c41.png: area 2.803% (min 4.96), detector False, description True -> fail
+  SA04_large_c42.png: area 3.08% (min 4.96), detector True, description True -> fail
+  SA04_large_c43.png: area 3.3% (min 4.96), detector False, description True -> fail
+  SA04_large_c44.png: area 3.13% (min 4.96), detector True, description True -> fail
+  SA04_large_c45.png: area 3.177% (min 4.96), detector False, description True -> fail
+  SA04_large_c46.png: area 3.453% (min 4.96), detector True, description True -> fail
+  SA04_large_c47.png: area 3.053% (min 4.96), detector False, description True -> fail
+  SA04_large_c48.png: area 2.732% (min 4.96), detector True, description True -> fail
+REVISION SA04 large: Add a side table with a vase, and a candlestick, clearly visible. Change nothing else.
+  SA04_large_c49.png: area 3.511% (min 4.96), detector True, description True -> fail
+  SA04_large_c50.png: area 3.723% (min 4.96), detector True, description True -> fail
+  SA04_large_c51.png: area 3.673% (min 4.96), detector True, description True -> fail
+  SA04_large_c52.png: area 2.701% (min 4.96), detector False, description True -> fail
+  SA04_large_c53.png: area 3.592% (min 4.96), detector True, description True -> fail
+  SA04_large_c54.png: area 3.481% (min 4.96), detector False, description True -> fail
+  SA04_large_c55.png: area 3.352% (min 4.96), detector False, description True -> fail
+  SA04_large_c56.png: area 6.025% (min 4.96), detector True, description True -> fail
+  SA04_large_c57.png: area 5.223% (min 4.96), detector True, description True -> fail
+  SA04_large_c58.png: area 3.623% (min 4.96), detector True, description True -> fail
+  SA04_large_c59.png: area 3.235% (min 4.96), detector True, description True -> fail
+  SA04_large_c60.png: area 3.976% (min 4.96), detector True, description True -> fail
+  SA04_large_c61.png: area 5.14% (min 4.96), detector True, description True -> fail
+  SA04_large_c62.png: area 5.574% (min 4.96), detector True, description True -> fail
+  SA04_large_c63.png: area 3.813% (min 4.96), detector True, description True -> fail
+  SA04_large_c64.png: area 5.451% (min 4.96), detector True, description True -> fail
+  SA04_large_c65.png: area 5.359% (min 4.96), detector True, description True -> fail
+  SA04_large_c66.png: area 3.432% (min 4.96), detector True, description True -> fail
+  SA04_large_c67.png: area 5.966% (min 4.96), detector True, description True -> PASS
+ACCEPTED SA04 large candidate 67 area 5.966%
+{'mine': 96.4179, 'other': 61.7781, 'combined': 158.196}
+  SA04_large_c68.png: area 2.813% (min 4.96), detector False, description True -> fail
+  SA04_large_c69.png: area 2.822% (min 4.96), detector False, description False -> fail
+  SA04_large_c70.png: area 2.895% (min 4.96), detector True, description False -> fail
+  SA04_large_c71.png: area 2.993% (min 4.96), detector False, description False -> fail
+  SA04_large_c72.png: area 3.012% (min 4.96), detector False, description True -> fail
+  SA04_large_c73.png: area 2.886% (min 4.96), detector False, description False -> fail
+  SA04_large_c74.png: area 2.696% (min 4.96), detector False, description False -> fail
+  SA04_large_c75.png: area 3.277% (min 4.96), detector False, description False -> fail
+  SA04_large_c76.png: area 2.895% (min 4.96), detector False, description True -> fail
+  SA04_large_c77.png: area 3.241% (min 4.96), detector True, description False -> fail
+  SA04_large_c78.png: area 3.119% (min 4.96), detector True, description False -> fail
+  SA04_large_c79.png: area 2.937% (min 4.96), detector False, description False -> fail
+  SA04_large_c80.png: area 2.954% (min 4.96), detector False, description True -> fail
+  SA04_large_c81.png: area 2.858% (min 4.96), detector False, description True -> fail
+  SA04_large_c82.png: area 3.448% (min 4.96), detector False, description True -> fail
+  SA04_large_c83.png: area 2.538% (min 4.96), detector False, description False -> fail
+  SA04_large_c84.png: area 2.74% (min 4.96), detector False, description False -> fail
+BUDGET STOP during SA04: Soft stop: Set A spending 99.52 + in flight 0.00 + next call 0.50 would pass $100.00
+STOPPED: Soft stop: Set A spending 99.52 + in flight 0.00 + next call 0.50 would pass $100.00
+{'mine': 99.517, 'other': 61.7781, 'combined': 161.2951}
+  SA04_large_c85.png: area 3.274% (min 4.96), detector True, description True -> fail
+  SA04_large_c86.png: area 4.21% (min 4.96), detector True, description True -> fail
+  SA04_large_c87.png: area 3.322% (min 4.96), detector True, description True -> fail
+  SA04_large_c88.png: area 3.901% (min 4.96), detector True, description True -> fail
+  SA04_large_c89.png: area 4.186% (min 4.96), detector False, description True -> fail
+  SA04_large_c90.png: area 3.231% (min 4.96), detector True, description True -> fail
+  SA04_large_c91.png: area 3.283% (min 4.96), detector True, description True -> fail
+  SA04_large_c92.png: area 3.808% (min 4.96), detector True, description True -> fail
+  SA04_large_c93.png: area 5.058% (min 4.96), detector True, description True -> PASS
+ACCEPTED SA04 large candidate 93 area 5.058%
+{'mine': 101.1577, 'other': 61.7781, 'combined': 162.9358}

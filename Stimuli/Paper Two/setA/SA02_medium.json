@@ -1,0 +1,477 @@
+{
+  "scene": "SA02",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA02_medium_c01.png",
+  "raw_file": "SA02_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a dog lying on the empty dock to the man's right. Change nothing else.",
+  "input_file": "SA02_source.png",
+  "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:45:39+00:00",
+  "seconds": 76.5,
+  "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 23
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7047
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "eb492a89a99f6a108242907883e66415b41e1750ae68422ad41ecf58e7018055",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 4.723,
+    "widened_area_pct": 39.495,
+    "masked_area_pct": 4.723,
+    "size_rule": "medium: at least 2 x the accepted small's 2.361 percent and at least 0.5 percent",
+    "size_min_pct": 4.722,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a dog lying on the empty dock to the man's right",
+        "query": "a dog",
+        "best_score_inside_region": 0.5504,
+        "best_score_anywhere": 0.5504,
+        "boxes": [
+          {
+            "score": 0.5504,
+            "box": [
+              1046.6,
+              414.1,
+              1383.7,
+              695.0
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a dog lying on the dock to the man's right?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:09:56+00:00",
+    "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+    "object_position": {
+      "trackable": [
+        "a crate",
+        "a coil",
+        "a rope",
+        "a dock",
+        "a harbor",
+        "a rowboat"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a crate",
+          "in_input": true,
+          "input_box": [
+            73.2,
+            459.6,
+            494.3,
+            769.9
+          ],
+          "input_score": 0.4744,
+          "output_box": [
+            73.8,
+            459.6,
+            494.3,
+            773.0
+          ],
+          "output_score": 0.4883,
+          "iou": 0.989,
+          "pass": true
+        },
+        {
+          "object": "a coil",
+          "in_input": true,
+          "input_box": [
+            142.5,
+            769.7,
+            528.5,
+            945.7
+          ],
+          "input_score": 0.1619,
+          "output_box": [
+            142.7,
+            755.3,
+            524.3,
+            935.0
+          ],
+          "output_score": 0.1915,
+          "iou": 0.859,
+          "pass": true
+        },
+        {
+          "object": "a rope",
+          "in_input": true,
+          "input_box": [
+            142.5,
+            769.7,
+            528.5,
+            945.7
+          ],
+          "input_score": 0.571,
+          "output_box": [
+            142.7,
+            755.3,
+            524.3,
+            935.0
+          ],
+          "output_score": 0.6081,
+          "iou": 0.859,
+          "pass": true
+        },
+        {
+          "object": "a dock",
+          "in_input": true,
+          "input_box": [
+            946.8,
+            240.6,
+            1536.0,
+            815.0
+          ],
+          "input_score": 0.2937,
+          "output_box": [
+            938.1,
+            240.5,
+            1536.0,
+            821.5
+          ],
+          "output_score": 0.2579,
+          "iou": 0.974,
+          "pass": true
+        },
+        {
+          "object": "a harbor",
+          "in_input": true,
+          "input_box": [
+            475.3,
+            0.0,
+            1536.0,
+            871.7
+          ],
+          "input_score": 0.2611,
+          "output_box": [
+            515.3,
+            0.0,
+            1536.0,
+            863.8
+          ],
+          "output_score": 0.1891,
+          "iou": 0.954,
+          "pass": true
+        },
+        {
+          "object": "a rowboat",
+          "in_input": true,
+          "input_box": [
+            126.2,
+            96.8,
+            586.6,
+            357.3
+          ],
+          "input_score": 0.6383,
+          "output_box": [
+            126.9,
+            96.9,
+            585.7,
+            357.4
+          ],
+          "output_score": 0.6532,
+          "iou": 0.996,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "7e6375ad9d84979d551f03e267efd8ebda43e9edad5b0ae9670fe6a46f2ac0e3",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 4.723,
+        "widened_area_pct": 39.495,
+        "masked_area_pct": 4.723,
+        "size_rule": "medium: at least 2 x the accepted small's 2.171 percent and at least 0.5 percent",
+        "size_min_pct": 4.342,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog lying on the empty dock to the man's right",
+            "query": "a dog",
+            "best_score_inside_region": 0.5504,
+            "best_score_anywhere": 0.5504,
+            "boxes": [
+              {
+                "score": 0.5504,
+                "box": [
+                  1046.6,
+                  414.1,
+                  1383.7,
+                  695.0
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog lying on the dock to the man's right?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:55:32+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 4.723,
+        "widened_area_pct": 39.495,
+        "masked_area_pct": 4.723,
+        "size_rule": "medium: at least 2 x the accepted small's 2.171 percent and at least 0.5 percent",
+        "size_min_pct": 4.342,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog lying on the empty dock to the man's right",
+            "query": "a dog",
+            "best_score_inside_region": 0.5504,
+            "best_score_anywhere": 0.5504,
+            "boxes": [
+              {
+                "score": 0.5504,
+                "box": [
+                  1046.6,
+                  414.1,
+                  1383.7,
+                  695.0
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog lying on the dock to the man's right?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:27:29+00:00",
+        "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+        "unchanged": {
+          "question": "Apart from a dog lying on the empty dock to the man's right, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 4.723,
+        "widened_area_pct": 39.495,
+        "masked_area_pct": 4.723,
+        "size_rule": "medium: at least 2 x the accepted small's 2.171 percent and at least 0.5 percent",
+        "size_min_pct": 4.342,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog lying on the empty dock to the man's right",
+            "query": "a dog",
+            "best_score_inside_region": 0.5504,
+            "best_score_anywhere": 0.5504,
+            "boxes": [
+              {
+                "score": 0.5504,
+                "box": [
+                  1046.6,
+                  414.1,
+                  1383.7,
+                  695.0
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog lying on the dock to the man's right?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:53:41+00:00",
+        "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+        "spill": {
+          "spill_pct": 0.5582,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 12.118,
+          "boxes_used": {
+            "a dog lying on the empty dock to the man's right": [
+              [
+                1046.6,
+                414.1,
+                1383.7,
+                695.0
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "scene": "SA08",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA08_medium_c01.png",
+  "raw_file": "SA08_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a horse-drawn sled on the open right side of the street. Change nothing else.",
+  "input_file": "SA08_source.png",
+  "input_sha256": "7eb5d3dcc42c1f8cac66962e8b329c1d70c4faa18ef748d740688d7185bb80dd",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:50:41+00:00",
+  "seconds": 75.7,
+  "usage": {
+    "input_tokens": 1561,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 25
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7049
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "b1f63ce73ef463424929189892829de9029100b224e65ee3467af1509edc4567",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 6.634,
+    "widened_area_pct": 14.016,
+    "masked_area_pct": 6.634,
+    "size_rule": "medium: at least 2 x the accepted small's 0.289 percent and at least 0.5 percent",
+    "size_min_pct": 0.578,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a horse-drawn sled on the open right side of the street",
+        "query": "a horse-drawn sled",
+        "best_score_inside_region": 0.5672,
+        "best_score_anywhere": 0.5672,
+        "boxes": [
+          {
+            "score": 0.5672,
+            "box": [
+              1111.3,
+              703.2,
+              1471.5,
+              937.3
+            ]
+          },
+          {
+            "score": 0.4316,
+            "box": [
+              924.7,
+              620.5,
+              1466.8,
+              939.6
+            ]
+          },
+          {
+            "score": 0.2972,
+            "box": [
+              932.0,
+              607.7,
+              1185.8,
+              838.5
+            ]
+          },
+          {
+            "score": 0.2102,
+            "box": [
+              32.5,
+              629.6,
+              483.4,
+              908.3
+            ]
+          },
+          {
+            "score": 0.177,
+            "box": [
+              982.6,
+              690.9,
+              1350.8,
+              938.6
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a horse-drawn sled on the right side of the street?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T23:18:33+00:00",
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "e3da3524a6c5d910f9e1bd7d26c5039abc3f12889f4cd19a5696e3fcb47e5f5d"
+}

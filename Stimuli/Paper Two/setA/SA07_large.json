@@ -1,0 +1,1046 @@
+{
+  "scene": "SA07",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA07_large_c01.png",
+  "raw_file": "SA07_large_c01_raw.png",
+  "prompt_or_instruction": "Add a bowl of grapes, and a candlestick. Change nothing else.",
+  "input_file": "SA07_medium.png",
+  "input_sha256": "bab535898d71cb206e26aace95b824a6e11d1324be3968dce0a9b3477fdfc262",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:59:40+00:00",
+  "seconds": 76.9,
+  "usage": {
+    "input_tokens": 1557,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 21
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7045
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "faf3231a32fbe149cbe4eff2963aa58fd4190e951e8ef1f2c8ebc84b0d925d04",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 11.722,
+    "widened_area_pct": 28.733,
+    "masked_area_pct": 11.463,
+    "size_rule": "large: at least 2 x the accepted medium's 3.961 percent",
+    "size_min_pct": 7.922,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a pear on the bare right side of the table",
+        "query": "a pear",
+        "best_score_inside_region": 0.6305,
+        "best_score_anywhere": 0.6305,
+        "boxes": [
+          {
+            "score": 0.6305,
+            "box": [
+              1254.8,
+              388.8,
+              1498.2,
+              757.7
+            ]
+          },
+          {
+            "score": 0.073,
+            "box": [
+              1251.8,
+              461.6,
+              1495.3,
+              757.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a bowl of grapes",
+        "query": "a bowl of grapes",
+        "best_score_inside_region": 0.5054,
+        "best_score_anywhere": 0.5054,
+        "boxes": [
+          {
+            "score": 0.5054,
+            "box": [
+              883.0,
+              341.0,
+              1179.3,
+              586.3
+            ]
+          },
+          {
+            "score": 0.1493,
+            "box": [
+              815.8,
+              450.1,
+              865.3,
+              503.2
+            ]
+          },
+          {
+            "score": 0.1492,
+            "box": [
+              930.5,
+              548.5,
+              992.3,
+              587.4
+            ]
+          },
+          {
+            "score": 0.1459,
+            "box": [
+              868.3,
+              435.2,
+              912.6,
+              478.8
+            ]
+          },
+          {
+            "score": 0.1456,
+            "box": [
+              856.1,
+              539.5,
+              905.7,
+              577.7
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a candlestick",
+        "query": "a candlestick",
+        "best_score_inside_region": 0.4091,
+        "best_score_anywhere": 0.4091,
+        "boxes": [
+          {
+            "score": 0.4091,
+            "box": [
+              1163.1,
+              143.8,
+              1327.8,
+              525.5
+            ]
+          },
+          {
+            "score": 0.3194,
+            "box": [
+              1206.2,
+              61.0,
+              1283.2,
+              197.5
+            ]
+          },
+          {
+            "score": 0.172,
+            "box": [
+              1165.4,
+              40.5,
+              1338.1,
+              533.1
+            ]
+          },
+          {
+            "score": 0.0806,
+            "box": [
+              1204.1,
+              38.8,
+              1281.9,
+              197.8
+            ]
+          },
+          {
+            "score": 0.0795,
+            "box": [
+              1234.3,
+              37.6,
+              1248.1,
+              91.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a pear on the right side of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a bowl of grapes?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a candlestick?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:08:41+00:00",
+    "medium_mask_pixels_inside_large_mask": 176506,
+    "input_sha256": "bab535898d71cb206e26aace95b824a6e11d1324be3968dce0a9b3477fdfc262",
+    "object_position": {
+      "trackable": [
+        "a bread",
+        "a cheese",
+        "a half",
+        "a knife",
+        "a wood"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a bread",
+          "in_input": true,
+          "input_box": [
+            57.5,
+            383.1,
+            534.9,
+            704.8
+          ],
+          "input_score": 0.5818,
+          "output_box": [
+            57.6,
+            382.7,
+            535.3,
+            706.3
+          ],
+          "output_score": 0.5616,
+          "iou": 0.993,
+          "pass": true
+        },
+        {
+          "object": "a cheese",
+          "in_input": true,
+          "input_box": [
+            453.8,
+            508.8,
+            715.5,
+            710.8
+          ],
+          "input_score": 0.6021,
+          "output_box": [
+            451.9,
+            502.3,
+            706.3,
+            712.7
+          ],
+          "output_score": 0.5979,
+          "iou": 0.921,
+          "pass": true
+        },
+        {
+          "object": "a half",
+          "in_input": true,
+          "input_box": [
+            57.5,
+            383.1,
+            534.9,
+            704.8
+          ],
+          "input_score": 0.3121,
+          "output_box": [
+            57.6,
+            382.7,
+            535.3,
+            706.3
+          ],
+          "output_score": 0.3125,
+          "iou": 0.993,
+          "pass": true
+        },
+        {
+          "object": "a knife",
+          "in_input": true,
+          "input_box": [
+            223.4,
+            670.0,
+            780.8,
+            931.1
+          ],
+          "input_score": 0.6095,
+          "output_box": [
+            228.4,
+            695.6,
+            776.7,
+            930.9
+          ],
+          "output_score": 0.5832,
+          "iou": 0.886,
+          "pass": true
+        },
+        {
+          "object": "a wood",
+          "in_input": true,
+          "input_box": [
+            0.0,
+            459.3,
+            1131.5,
+            1021.9
+          ],
+          "input_score": 0.3502,
+          "output_box": [
+            0.0,
+            448.4,
+            1110.5,
+            1021.6
+          ],
+          "output_score": 0.3864,
+          "iou": 0.963,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "25bba3387bdb8373a08b9a363a11536757b604b6406eff57eb748d29e48f39f1",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 11.722,
+        "widened_area_pct": 28.733,
+        "masked_area_pct": 11.463,
+        "size_rule": "large: at least 2 x the accepted medium's 3.961 percent",
+        "size_min_pct": 7.922,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.6305,
+            "best_score_anywhere": 0.6305,
+            "boxes": [
+              {
+                "score": 0.6305,
+                "box": [
+                  1254.8,
+                  388.8,
+                  1498.2,
+                  757.7
+                ]
+              },
+              {
+                "score": 0.073,
+                "box": [
+                  1251.8,
+                  461.6,
+                  1495.3,
+                  757.5
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a bowl of grapes",
+            "query": "a bowl of grapes",
+            "best_score_inside_region": 0.5054,
+            "best_score_anywhere": 0.5054,
+            "boxes": [
+              {
+                "score": 0.5054,
+                "box": [
+                  883.0,
+                  341.0,
+                  1179.3,
+                  586.3
+                ]
+              },
+              {
+                "score": 0.1493,
+                "box": [
+                  815.8,
+                  450.1,
+                  865.3,
+                  503.2
+                ]
+              },
+              {
+                "score": 0.1492,
+                "box": [
+                  930.5,
+                  548.5,
+                  992.3,
+                  587.4
+                ]
+              },
+              {
+                "score": 0.1459,
+                "box": [
+                  868.3,
+                  435.2,
+                  912.6,
+                  478.8
+                ]
+              },
+              {
+                "score": 0.1456,
+                "box": [
+                  856.1,
+                  539.5,
+                  905.7,
+                  577.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a candlestick",
+            "query": "a candlestick",
+            "best_score_inside_region": 0.4091,
+            "best_score_anywhere": 0.4091,
+            "boxes": [
+              {
+                "score": 0.4091,
+                "box": [
+                  1163.1,
+                  143.8,
+                  1327.8,
+                  525.5
+                ]
+              },
+              {
+                "score": 0.3194,
+                "box": [
+                  1206.2,
+                  61.0,
+                  1283.2,
+                  197.5
+                ]
+              },
+              {
+                "score": 0.172,
+                "box": [
+                  1165.4,
+                  40.5,
+                  1338.1,
+                  533.1
+                ]
+              },
+              {
+                "score": 0.0806,
+                "box": [
+                  1204.1,
+                  38.8,
+                  1281.9,
+                  197.8
+                ]
+              },
+              {
+                "score": 0.0795,
+                "box": [
+                  1234.3,
+                  37.6,
+                  1248.1,
+                  91.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a bowl of grapes?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a candlestick?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:00:08+00:00",
+        "medium_mask_pixels_inside_large_mask": 176506,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 11.722,
+        "widened_area_pct": 28.733,
+        "masked_area_pct": 11.463,
+        "size_rule": "large: at least 2 x the accepted medium's 3.961 percent",
+        "size_min_pct": 7.922,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.6305,
+            "best_score_anywhere": 0.6305,
+            "boxes": [
+              {
+                "score": 0.6305,
+                "box": [
+                  1254.8,
+                  388.8,
+                  1498.2,
+                  757.7
+                ]
+              },
+              {
+                "score": 0.073,
+                "box": [
+                  1251.8,
+                  461.6,
+                  1495.3,
+                  757.5
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a bowl of grapes",
+            "query": "a bowl of grapes",
+            "best_score_inside_region": 0.5054,
+            "best_score_anywhere": 0.5054,
+            "boxes": [
+              {
+                "score": 0.5054,
+                "box": [
+                  883.0,
+                  341.0,
+                  1179.3,
+                  586.3
+                ]
+              },
+              {
+                "score": 0.1493,
+                "box": [
+                  815.8,
+                  450.1,
+                  865.3,
+                  503.2
+                ]
+              },
+              {
+                "score": 0.1492,
+                "box": [
+                  930.5,
+                  548.5,
+                  992.3,
+                  587.4
+                ]
+              },
+              {
+                "score": 0.1459,
+                "box": [
+                  868.3,
+                  435.2,
+                  912.6,
+                  478.8
+                ]
+              },
+              {
+                "score": 0.1456,
+                "box": [
+                  856.1,
+                  539.5,
+                  905.7,
+                  577.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a candlestick",
+            "query": "a candlestick",
+            "best_score_inside_region": 0.4091,
+            "best_score_anywhere": 0.4091,
+            "boxes": [
+              {
+                "score": 0.4091,
+                "box": [
+                  1163.1,
+                  143.8,
+                  1327.8,
+                  525.5
+                ]
+              },
+              {
+                "score": 0.3194,
+                "box": [
+                  1206.2,
+                  61.0,
+                  1283.2,
+                  197.5
+                ]
+              },
+              {
+                "score": 0.172,
+                "box": [
+                  1165.4,
+                  40.5,
+                  1338.1,
+                  533.1
+                ]
+              },
+              {
+                "score": 0.0806,
+                "box": [
+                  1204.1,
+                  38.8,
+                  1281.9,
+                  197.8
+                ]
+              },
+              {
+                "score": 0.0795,
+                "box": [
+                  1234.3,
+                  37.6,
+                  1248.1,
+                  91.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a bowl of grapes?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a candlestick?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:44+00:00",
+        "medium_mask_pixels_inside_large_mask": 176506,
+        "input_sha256": "bab535898d71cb206e26aace95b824a6e11d1324be3968dce0a9b3477fdfc262",
+        "unchanged": {
+          "question": "Apart from a pear on the bare right side of the table, a bowl of grapes, and a candlestick, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 11.722,
+        "widened_area_pct": 28.733,
+        "masked_area_pct": 11.463,
+        "size_rule": "large: at least 2 x the accepted medium's 3.961 percent",
+        "size_min_pct": 7.922,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.6305,
+            "best_score_anywhere": 0.6305,
+            "boxes": [
+              {
+                "score": 0.6305,
+                "box": [
+                  1254.8,
+                  388.8,
+                  1498.2,
+                  757.7
+                ]
+              },
+              {
+                "score": 0.073,
+                "box": [
+                  1251.8,
+                  461.6,
+                  1495.3,
+                  757.5
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a bowl of grapes",
+            "query": "a bowl of grapes",
+            "best_score_inside_region": 0.5054,
+            "best_score_anywhere": 0.5054,
+            "boxes": [
+              {
+                "score": 0.5054,
+                "box": [
+                  883.0,
+                  341.0,
+                  1179.3,
+                  586.3
+                ]
+              },
+              {
+                "score": 0.1493,
+                "box": [
+                  815.8,
+                  450.1,
+                  865.3,
+                  503.2
+                ]
+              },
+              {
+                "score": 0.1492,
+                "box": [
+                  930.5,
+                  548.5,
+                  992.3,
+                  587.4
+                ]
+              },
+              {
+                "score": 0.1459,
+                "box": [
+                  868.3,
+                  435.2,
+                  912.6,
+                  478.8
+                ]
+              },
+              {
+                "score": 0.1456,
+                "box": [
+                  856.1,
+                  539.5,
+                  905.7,
+                  577.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a candlestick",
+            "query": "a candlestick",
+            "best_score_inside_region": 0.4091,
+            "best_score_anywhere": 0.4091,
+            "boxes": [
+              {
+                "score": 0.4091,
+                "box": [
+                  1163.1,
+                  143.8,
+                  1327.8,
+                  525.5
+                ]
+              },
+              {
+                "score": 0.3194,
+                "box": [
+                  1206.2,
+                  61.0,
+                  1283.2,
+                  197.5
+                ]
+              },
+              {
+                "score": 0.172,
+                "box": [
+                  1165.4,
+                  40.5,
+                  1338.1,
+                  533.1
+                ]
+              },
+              {
+                "score": 0.0806,
+                "box": [
+                  1204.1,
+                  38.8,
+                  1281.9,
+                  197.8
+                ]
+              },
+              {
+                "score": 0.0795,
+                "box": [
+                  1234.3,
+                  37.6,
+                  1248.1,
+                  91.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a bowl of grapes?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a candlestick?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:39+00:00",
+        "medium_mask_pixels_inside_large_mask": 176506,
+        "input_sha256": "bab535898d71cb206e26aace95b824a6e11d1324be3968dce0a9b3477fdfc262",
+        "spill": {
+          "spill_pct": 0.8935,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 26.556,
+          "boxes_used": {
+            "a pear on the bare right side of the table": [
+              [
+                1254.8,
+                388.8,
+                1498.2,
+                757.7
+              ]
+            ],
+            "a bowl of grapes": [
+              [
+                883.0,
+                341.0,
+                1179.3,
+                586.3
+              ],
+              [
+                815.8,
+                450.1,
+                865.3,
+                503.2
+              ],
+              [
+                930.5,
+                548.5,
+                992.3,
+                587.4
+              ]
+            ],
+            "a candlestick": [
+              [
+                1163.1,
+                143.8,
+                1327.8,
+                525.5
+              ],
+              [
+                1206.2,
+                61.0,
+                1283.2,
+                197.5
+              ],
+              [
+                1165.4,
+                40.5,
+                1338.1,
+                533.1
+              ]
+            ]
+          }
+        },
+        "spill_pass": false,
+        "pass": false
+      },
+      "accepted": false,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

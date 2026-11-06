@@ -1,0 +1,134 @@
+{
+  "scene": "SA06",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA06_source_c01.png",
+  "prompt_or_instruction": "A rowboat pulled up on a riverbank. The boat lies diagonally across the foreground with two long wooden oars resting across its seats in plain view, and the river curves away to the right past an empty stretch of water. Soft greens, pale blue, and ochre. Early evening, with the low sun behind the trees. Outdoor oil sketch with broken color. Calm and still. Standing height, looking slightly down. Willow trees and, in the middle distance, a small arched stone bridge clearly visible across the river. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:31:31+00:00",
+  "seconds": 95.7,
+  "usage": {
+    "input_tokens": 169,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 169
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5657
+  },
+  "estimated_usd": 0.1655,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "an oar",
+        "boxes_at_or_above_cut": 6,
+        "needed": 2,
+        "best_score": 0.4247,
+        "boxes": [
+          {
+            "score": 0.4247,
+            "box": [
+              750.1,
+              649.8,
+              1032.7,
+              922.4
+            ]
+          },
+          {
+            "score": 0.4187,
+            "box": [
+              555.2,
+              559.5,
+              815.8,
+              798.9
+            ]
+          },
+          {
+            "score": 0.3294,
+            "box": [
+              859.9,
+              804.5,
+              1016.4,
+              919.2
+            ]
+          },
+          {
+            "score": 0.2969,
+            "box": [
+              792.9,
+              821.2,
+              921.7,
+              957.4
+            ]
+          },
+          {
+            "score": 0.2119,
+            "box": [
+              812.8,
+              806.6,
+              1022.6,
+              983.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Are there two oars resting across the boat's seats?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there an empty stretch of water, with no boats or birds on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:38:52+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

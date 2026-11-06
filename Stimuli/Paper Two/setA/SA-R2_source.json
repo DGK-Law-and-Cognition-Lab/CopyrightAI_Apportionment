@@ -1,0 +1,188 @@
+{
+  "scene": "SA-R2",
+  "kind": "source",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA-R2_source_c02.png",
+  "prompt_or_instruction": "An old wooden barn beside a hayfield in late summer. The barn stands in the left third, a hay wagon and a wooden ladder stand in front of it, and the field to the right is open. Golden yellows, faded reds, and pale blue. Warm late-afternoon sun from the right. Impressionist painting with thick, broken strokes. Warm and unhurried. Eye level, from the edge of the field. Rolling hills and a line of poplar trees. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:49:52+00:00",
+  "seconds": 98.1,
+  "usage": {
+    "input_tokens": 159,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 159
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5647
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a hay wagon",
+        "boxes_at_or_above_cut": 4,
+        "needed": 1,
+        "best_score": 0.5781,
+        "boxes": [
+          {
+            "score": 0.5781,
+            "box": [
+              3.4,
+              491.2,
+              518.5,
+              799.0
+            ]
+          },
+          {
+            "score": 0.3099,
+            "box": [
+              5.0,
+              497.2,
+              503.8,
+              687.2
+            ]
+          },
+          {
+            "score": 0.2024,
+            "box": [
+              221.3,
+              628.8,
+              493.4,
+              799.4
+            ]
+          },
+          {
+            "score": 0.1716,
+            "box": [
+              4.7,
+              422.9,
+              595.6,
+              792.0
+            ]
+          },
+          {
+            "score": 0.1669,
+            "box": [
+              0.8,
+              62.0,
+              702.0,
+              761.4
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a ladder",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.7772,
+        "boxes": [
+          {
+            "score": 0.7772,
+            "box": [
+              469.2,
+              452.4,
+              606.9,
+              765.0
+            ]
+          },
+          {
+            "score": 0.1708,
+            "box": [
+              657.9,
+              571.3,
+              709.0,
+              696.1
+            ]
+          },
+          {
+            "score": 0.0568,
+            "box": [
+              494.0,
+              445.0,
+              721.6,
+              766.3
+            ]
+          },
+          {
+            "score": 0.0518,
+            "box": [
+              194.0,
+              423.4,
+              632.4,
+              492.0
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a hay wagon?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a wooden ladder?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the field to the right of the barn open, with nothing in it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-28T00:50:06+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

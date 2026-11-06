@@ -1,0 +1,134 @@
+{
+  "scene": "SA01",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA01_source_c01.png",
+  "prompt_or_instruction": "A woman reading a letter at a kitchen table. She sits in the left third of the frame, a teapot and a cup stand near her right hand, and the far end of the table is bare. Muted ochres and soft sage greens. Morning light falls from a window on the right. Oil painting with loose, visible brushwork. Quiet and absorbed. Eye level, three-quarter view. A plain plaster wall with a copper pot hanging from a hook. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:28:19+00:00",
+  "seconds": 95.8,
+  "usage": {
+    "input_tokens": 156,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 156
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5644
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "aeba9c1a70f12c4250d1679519c29d5bd1e4c7d201e973b754b092a69180f297",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a teapot",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.4215,
+        "boxes": [
+          {
+            "score": 0.4215,
+            "box": [
+              739.1,
+              617.2,
+              844.7,
+              784.0
+            ]
+          },
+          {
+            "score": 0.0556,
+            "box": [
+              726.0,
+              615.7,
+              837.3,
+              786.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a cup",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.2256,
+        "boxes": [
+          {
+            "score": 0.2256,
+            "box": [
+              638.8,
+              710.7,
+              739.0,
+              798.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a teapot on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a cup on the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the far end of the table bare, with nothing on it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:37:22+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

@@ -1,0 +1,197 @@
+{
+  "scene": "SA08",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA08_source_c01.png",
+  "prompt_or_instruction": "A snowy village street at dusk, with no one in sight. The street recedes to the center between rows of houses, a hand cart and a lamp post stand on the left, and the right side of the street is open. Blue-violet snow and warm yellow windows. Dusk, with lamplight glowing in the windows. Tonal oil painting with soft edges. Hushed and cold. Eye level, from the middle of the street. A church steeple against a fading sky. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:32:57+00:00",
+  "seconds": 96.2,
+  "usage": {
+    "input_tokens": 163,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 163
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5651
+  },
+  "estimated_usd": 0.1655,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "7eb5d3dcc42c1f8cac66962e8b329c1d70c4faa18ef748d740688d7185bb80dd",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a hand cart",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.4021,
+        "boxes": [
+          {
+            "score": 0.4021,
+            "box": [
+              32.9,
+              629.7,
+              483.2,
+              910.7
+            ]
+          },
+          {
+            "score": 0.1045,
+            "box": [
+              373.4,
+              646.3,
+              484.3,
+              861.0
+            ]
+          },
+          {
+            "score": 0.0804,
+            "box": [
+              118.1,
+              630.5,
+              477.9,
+              878.2
+            ]
+          },
+          {
+            "score": 0.0623,
+            "box": [
+              17.8,
+              688.4,
+              254.9,
+              902.1
+            ]
+          },
+          {
+            "score": 0.0622,
+            "box": [
+              22.7,
+              234.4,
+              478.3,
+              935.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a lamp post",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.6179,
+        "boxes": [
+          {
+            "score": 0.6179,
+            "box": [
+              205.7,
+              210.8,
+              298.0,
+              872.3
+            ]
+          },
+          {
+            "score": 0.1741,
+            "box": [
+              228.2,
+              415.7,
+              271.9,
+              869.0
+            ]
+          },
+          {
+            "score": 0.1181,
+            "box": [
+              205.1,
+              208.2,
+              297.7,
+              387.2
+            ]
+          },
+          {
+            "score": 0.0902,
+            "box": [
+              22.7,
+              234.4,
+              478.3,
+              935.5
+            ]
+          },
+          {
+            "score": 0.0856,
+            "box": [
+              205.2,
+              212.3,
+              300.6,
+              876.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a hand cart?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a lamp post?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the right side of the street open, with nothing standing in it?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:40:41+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

@@ -1,0 +1,113 @@
+{
+  "scene": "SA08",
+  "kind": "small",
+  "candidate": 12,
+  "revision": 0,
+  "file": "SA08_small_c12.png",
+  "raw_file": "SA08_small_c12_raw.png",
+  "prompt_or_instruction": "Add a bird on a rooftop. Change nothing else.",
+  "input_file": "SA08_source.png",
+  "input_sha256": "7eb5d3dcc42c1f8cac66962e8b329c1d70c4faa18ef748d740688d7185bb80dd",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T23:18:00+00:00",
+  "seconds": 77.0,
+  "usage": {
+    "input_tokens": 1553,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 17
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7041
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "bd4f0806dde1bcad2251b0d1c4f181ad295083753a61c4817d01613034b9fb5b",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.289,
+    "widened_area_pct": 2.673,
+    "masked_area_pct": 0.289,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a bird on a rooftop",
+        "query": "a bird",
+        "best_score_inside_region": 0.6067,
+        "best_score_anywhere": 0.6067,
+        "boxes": [
+          {
+            "score": 0.6067,
+            "box": [
+              360.0,
+              33.1,
+              409.5,
+              65.6
+            ]
+          },
+          {
+            "score": 0.0631,
+            "box": [
+              359.6,
+              33.0,
+              410.3,
+              66.4
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a bird on a rooftop?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T23:18:17+00:00",
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "58468bab159a937dda47dfa55ee41a9fbc89606a1d81ba0676a9518be995cca8"
+}

@@ -1,0 +1,241 @@
+{
+  "scene": "SA09",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA09_small_c01.png",
+  "raw_file": "SA09_small_c01_raw.png",
+  "prompt_or_instruction": "Add a butterfly over the path. Change nothing else.",
+  "input_file": "SA09_source.png",
+  "input_sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:51:48+00:00",
+  "seconds": 74.0,
+  "usage": {
+    "input_tokens": 1553,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 17
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7041
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "46d0e2f374477d79241ccfc52176205120f4b5b842d53231b2989ca9ba0b7032",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.906,
+    "widened_area_pct": 48.932,
+    "masked_area_pct": 0.906,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a butterfly over the path",
+        "query": "a butterfly",
+        "best_score_inside_region": 0.8301,
+        "best_score_anywhere": 0.8301,
+        "boxes": [
+          {
+            "score": 0.8301,
+            "box": [
+              1197.7,
+              800.0,
+              1238.3,
+              833.4
+            ]
+          },
+          {
+            "score": 0.1249,
+            "box": [
+              1197.8,
+              801.8,
+              1238.0,
+              834.4
+            ]
+          },
+          {
+            "score": 0.0698,
+            "box": [
+              1213.9,
+              803.1,
+              1238.3,
+              832.5
+            ]
+          },
+          {
+            "score": 0.0669,
+            "box": [
+              1198.4,
+              799.9,
+              1217.2,
+              831.9
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a butterfly over the path?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:29:51+00:00",
+    "input_sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01",
+    "unchanged": {
+      "question": "Apart from a butterfly over the path, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "f5d81704f7d6f1d4ca28da59c61832e7d525f56dbe14e93e923c7e42723debfa",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.906,
+        "widened_area_pct": 48.932,
+        "masked_area_pct": 0.906,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a butterfly over the path",
+            "query": "a butterfly",
+            "best_score_inside_region": 0.8301,
+            "best_score_anywhere": 0.8301,
+            "boxes": [
+              {
+                "score": 0.8301,
+                "box": [
+                  1197.7,
+                  800.0,
+                  1238.3,
+                  833.4
+                ]
+              },
+              {
+                "score": 0.1249,
+                "box": [
+                  1197.8,
+                  801.8,
+                  1238.0,
+                  834.4
+                ]
+              },
+              {
+                "score": 0.0698,
+                "box": [
+                  1213.9,
+                  803.1,
+                  1238.3,
+                  832.5
+                ]
+              },
+              {
+                "score": 0.0669,
+                "box": [
+                  1198.4,
+                  799.9,
+                  1217.2,
+                  831.9
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a butterfly over the path?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:04:29+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

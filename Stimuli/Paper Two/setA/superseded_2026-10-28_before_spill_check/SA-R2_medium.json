@@ -1,0 +1,259 @@
+{
+  "scene": "SA-R2",
+  "kind": "medium",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA-R2_medium_c02.png",
+  "raw_file": "SA-R2_medium_c02_raw.png",
+  "prompt_or_instruction": "Add a haystack on the open right side of the field. Change nothing else.",
+  "input_file": "SA-R2_source.png",
+  "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:54:15+00:00",
+  "seconds": 75.4,
+  "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 23
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7047
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "257753ef4d3d2e7c3d375b5e190cc3690784aae58580b2875f1cb2dcd00c5e51",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 3.866,
+    "widened_area_pct": 42.586,
+    "masked_area_pct": 3.866,
+    "size_rule": "medium: at least 2 x the accepted small's 1.825 percent and at least 0.5 percent",
+    "size_min_pct": 3.65,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a haystack on the open right side of the field",
+        "query": "a haystack",
+        "best_score_inside_region": 0.6056,
+        "best_score_anywhere": 0.6056,
+        "boxes": [
+          {
+            "score": 0.6056,
+            "box": [
+              1063.8,
+              587.8,
+              1387.2,
+              770.3
+            ]
+          },
+          {
+            "score": 0.3544,
+            "box": [
+              8.0,
+              495.4,
+              500.7,
+              684.9
+            ]
+          },
+          {
+            "score": 0.1915,
+            "box": [
+              862.1,
+              779.8,
+              1533.3,
+              1024.0
+            ]
+          },
+          {
+            "score": 0.1003,
+            "box": [
+              848.3,
+              713.2,
+              1054.6,
+              841.4
+            ]
+          },
+          {
+            "score": 0.0984,
+            "box": [
+              846.6,
+              717.6,
+              1069.4,
+              784.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a haystack on the right side of the field?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:29:02+00:00",
+    "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+    "unchanged": {
+      "question": "Apart from a haystack on the open right side of the field, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "db392631e061e1d29c496d1d9ee9f46755bc09249f7dc324577b020aed4cb1fb",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.866,
+        "widened_area_pct": 42.586,
+        "masked_area_pct": 3.866,
+        "size_rule": "medium: at least 2 x the accepted small's 1.825 percent and at least 0.5 percent",
+        "size_min_pct": 3.65,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a haystack on the open right side of the field",
+            "query": "a haystack",
+            "best_score_inside_region": 0.6056,
+            "best_score_anywhere": 0.6056,
+            "boxes": [
+              {
+                "score": 0.6056,
+                "box": [
+                  1063.8,
+                  587.8,
+                  1387.2,
+                  770.3
+                ]
+              },
+              {
+                "score": 0.3544,
+                "box": [
+                  8.0,
+                  495.4,
+                  500.7,
+                  684.9
+                ]
+              },
+              {
+                "score": 0.1915,
+                "box": [
+                  862.1,
+                  779.8,
+                  1533.3,
+                  1024.0
+                ]
+              },
+              {
+                "score": 0.1003,
+                "box": [
+                  848.3,
+                  713.2,
+                  1054.6,
+                  841.4
+                ]
+              },
+              {
+                "score": 0.0984,
+                "box": [
+                  846.6,
+                  717.6,
+                  1069.4,
+                  784.7
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a haystack on the right side of the field?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T00:54:25+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

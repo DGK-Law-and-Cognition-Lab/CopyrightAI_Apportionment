@@ -1,0 +1,1049 @@
+{
+  "scene": "SA03",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA03_large_c01.png",
+  "raw_file": "SA03_large_c01_raw.png",
+  "prompt_or_instruction": "Add a picnic blanket with a basket, and a second kite. Change nothing else.",
+  "input_file": "SA03_medium.png",
+  "input_sha256": "650b620708da34b40eb9b3d59198bae5629cb9ef14e32764d8c4622a4fb5263a",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T23:03:53+00:00",
+  "seconds": 75.8,
+  "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 23
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7047
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "b7828b9675f07c6be4d3729621bdc7c1cc0beee79952d8dfbf154c21f4de16ba",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 3.929,
+    "widened_area_pct": 15.088,
+    "masked_area_pct": 4.551,
+    "size_rule": "large: at least 2 x the accepted medium's 0.524 percent",
+    "size_min_pct": 1.048,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a dog running beside the two children",
+        "query": "a dog",
+        "best_score_inside_region": 0.5351,
+        "best_score_anywhere": 0.5351,
+        "boxes": [
+          {
+            "score": 0.5351,
+            "box": [
+              906.4,
+              705.6,
+              1046.1,
+              829.7
+            ]
+          },
+          {
+            "score": 0.1015,
+            "box": [
+              988.7,
+              728.3,
+              1052.6,
+              817.7
+            ]
+          },
+          {
+            "score": 0.0627,
+            "box": [
+              908.6,
+              719.5,
+              1051.4,
+              834.7
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a picnic blanket with a basket",
+        "query": "a picnic blanket",
+        "best_score_inside_region": 0.4979,
+        "best_score_anywhere": 0.4979,
+        "boxes": [
+          {
+            "score": 0.4979,
+            "box": [
+              829.9,
+              858.7,
+              1328.4,
+              1001.7
+            ]
+          },
+          {
+            "score": 0.0641,
+            "box": [
+              804.4,
+              848.6,
+              1309.9,
+              987.6
+            ]
+          },
+          {
+            "score": 0.0592,
+            "box": [
+              1179.9,
+              656.8,
+              1293.2,
+              784.3
+            ]
+          },
+          {
+            "score": 0.0546,
+            "box": [
+              1091.7,
+              863.5,
+              1322.8,
+              942.2
+            ]
+          },
+          {
+            "score": 0.0521,
+            "box": [
+              970.2,
+              843.7,
+              1062.0,
+              871.8
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a second kite",
+        "query": "a kite",
+        "best_score_inside_region": 0.4943,
+        "best_score_anywhere": 0.5469,
+        "boxes": [
+          {
+            "score": 0.5469,
+            "box": [
+              206.4,
+              54.2,
+              383.9,
+              177.6
+            ]
+          },
+          {
+            "score": 0.4943,
+            "box": [
+              491.8,
+              309.0,
+              582.5,
+              433.4
+            ]
+          },
+          {
+            "score": 0.386,
+            "box": [
+              494.5,
+              308.9,
+              672.1,
+              549.8
+            ]
+          },
+          {
+            "score": 0.288,
+            "box": [
+              148.0,
+              52.9,
+              388.1,
+              365.3
+            ]
+          },
+          {
+            "score": 0.2856,
+            "box": [
+              141.1,
+              167.3,
+              217.8,
+              361.6
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a dog running beside the two children?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a picnic blanket with a basket?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Does the image show a second kite?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:10:12+00:00",
+    "medium_mask_pixels_inside_large_mask": 58037,
+    "input_sha256": "650b620708da34b40eb9b3d59198bae5629cb9ef14e32764d8c4622a4fb5263a",
+    "object_position": {
+      "trackable": [
+        "a cloud",
+        "a farmhouse"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a cloud",
+          "in_input": true,
+          "input_box": [
+            1342.4,
+            583.8,
+            1529.0,
+            699.6
+          ],
+          "input_score": 0.2623,
+          "output_box": [
+            1341.5,
+            583.7,
+            1529.7,
+            702.2
+          ],
+          "output_score": 0.2889,
+          "iou": 0.969,
+          "pass": true
+        },
+        {
+          "object": "a farmhouse",
+          "in_input": true,
+          "input_box": [
+            128.8,
+            765.3,
+            396.9,
+            835.0
+          ],
+          "input_score": 0.486,
+          "output_box": [
+            128.9,
+            765.6,
+            396.3,
+            833.7
+          ],
+          "output_score": 0.471,
+          "iou": 0.974,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "16502b1b6cebf0babd6d03ca2ddc3b9d25e643248e3e2ca6296ef7f7f02dca7e",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.929,
+        "widened_area_pct": 15.088,
+        "masked_area_pct": 4.551,
+        "size_rule": "large: at least 2 x the accepted medium's 0.524 percent",
+        "size_min_pct": 1.048,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog running beside the two children",
+            "query": "a dog",
+            "best_score_inside_region": 0.5351,
+            "best_score_anywhere": 0.5351,
+            "boxes": [
+              {
+                "score": 0.5351,
+                "box": [
+                  906.4,
+                  705.6,
+                  1046.1,
+                  829.7
+                ]
+              },
+              {
+                "score": 0.1015,
+                "box": [
+                  988.7,
+                  728.3,
+                  1052.6,
+                  817.7
+                ]
+              },
+              {
+                "score": 0.0627,
+                "box": [
+                  908.6,
+                  719.5,
+                  1051.4,
+                  834.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a picnic blanket with a basket",
+            "query": "a picnic blanket",
+            "best_score_inside_region": 0.4979,
+            "best_score_anywhere": 0.4979,
+            "boxes": [
+              {
+                "score": 0.4979,
+                "box": [
+                  829.9,
+                  858.7,
+                  1328.4,
+                  1001.7
+                ]
+              },
+              {
+                "score": 0.0641,
+                "box": [
+                  804.4,
+                  848.6,
+                  1309.9,
+                  987.6
+                ]
+              },
+              {
+                "score": 0.0592,
+                "box": [
+                  1179.9,
+                  656.8,
+                  1293.2,
+                  784.3
+                ]
+              },
+              {
+                "score": 0.0546,
+                "box": [
+                  1091.7,
+                  863.5,
+                  1322.8,
+                  942.2
+                ]
+              },
+              {
+                "score": 0.0521,
+                "box": [
+                  970.2,
+                  843.7,
+                  1062.0,
+                  871.8
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second kite",
+            "query": "a kite",
+            "best_score_inside_region": 0.4943,
+            "best_score_anywhere": 0.5469,
+            "boxes": [
+              {
+                "score": 0.5469,
+                "box": [
+                  206.4,
+                  54.2,
+                  383.9,
+                  177.6
+                ]
+              },
+              {
+                "score": 0.4943,
+                "box": [
+                  491.8,
+                  309.0,
+                  582.5,
+                  433.4
+                ]
+              },
+              {
+                "score": 0.386,
+                "box": [
+                  494.5,
+                  308.9,
+                  672.1,
+                  549.8
+                ]
+              },
+              {
+                "score": 0.288,
+                "box": [
+                  148.0,
+                  52.9,
+                  388.1,
+                  365.3
+                ]
+              },
+              {
+                "score": 0.2856,
+                "box": [
+                  141.1,
+                  167.3,
+                  217.8,
+                  361.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog running beside the two children?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a picnic blanket with a basket?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Does the image show a second kite?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:04:13+00:00",
+        "medium_mask_pixels_inside_large_mask": 58037,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.929,
+        "widened_area_pct": 15.088,
+        "masked_area_pct": 4.551,
+        "size_rule": "large: at least 2 x the accepted medium's 0.524 percent",
+        "size_min_pct": 1.048,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog running beside the two children",
+            "query": "a dog",
+            "best_score_inside_region": 0.5351,
+            "best_score_anywhere": 0.5351,
+            "boxes": [
+              {
+                "score": 0.5351,
+                "box": [
+                  906.4,
+                  705.6,
+                  1046.1,
+                  829.7
+                ]
+              },
+              {
+                "score": 0.1015,
+                "box": [
+                  988.7,
+                  728.3,
+                  1052.6,
+                  817.7
+                ]
+              },
+              {
+                "score": 0.0627,
+                "box": [
+                  908.6,
+                  719.5,
+                  1051.4,
+                  834.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a picnic blanket with a basket",
+            "query": "a picnic blanket",
+            "best_score_inside_region": 0.4979,
+            "best_score_anywhere": 0.4979,
+            "boxes": [
+              {
+                "score": 0.4979,
+                "box": [
+                  829.9,
+                  858.7,
+                  1328.4,
+                  1001.7
+                ]
+              },
+              {
+                "score": 0.0641,
+                "box": [
+                  804.4,
+                  848.6,
+                  1309.9,
+                  987.6
+                ]
+              },
+              {
+                "score": 0.0592,
+                "box": [
+                  1179.9,
+                  656.8,
+                  1293.2,
+                  784.3
+                ]
+              },
+              {
+                "score": 0.0546,
+                "box": [
+                  1091.7,
+                  863.5,
+                  1322.8,
+                  942.2
+                ]
+              },
+              {
+                "score": 0.0521,
+                "box": [
+                  970.2,
+                  843.7,
+                  1062.0,
+                  871.8
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second kite",
+            "query": "a kite",
+            "best_score_inside_region": 0.4943,
+            "best_score_anywhere": 0.5469,
+            "boxes": [
+              {
+                "score": 0.5469,
+                "box": [
+                  206.4,
+                  54.2,
+                  383.9,
+                  177.6
+                ]
+              },
+              {
+                "score": 0.4943,
+                "box": [
+                  491.8,
+                  309.0,
+                  582.5,
+                  433.4
+                ]
+              },
+              {
+                "score": 0.386,
+                "box": [
+                  494.5,
+                  308.9,
+                  672.1,
+                  549.8
+                ]
+              },
+              {
+                "score": 0.288,
+                "box": [
+                  148.0,
+                  52.9,
+                  388.1,
+                  365.3
+                ]
+              },
+              {
+                "score": 0.2856,
+                "box": [
+                  141.1,
+                  167.3,
+                  217.8,
+                  361.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog running beside the two children?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a picnic blanket with a basket?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a second kite?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:29:14+00:00",
+        "medium_mask_pixels_inside_large_mask": 58037,
+        "input_sha256": "650b620708da34b40eb9b3d59198bae5629cb9ef14e32764d8c4622a4fb5263a",
+        "unchanged": {
+          "question": "Apart from a dog running beside the two children, a picnic blanket with a basket, and a second kite, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.929,
+        "widened_area_pct": 15.088,
+        "masked_area_pct": 4.551,
+        "size_rule": "large: at least 2 x the accepted medium's 0.524 percent",
+        "size_min_pct": 1.048,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a dog running beside the two children",
+            "query": "a dog",
+            "best_score_inside_region": 0.5351,
+            "best_score_anywhere": 0.5351,
+            "boxes": [
+              {
+                "score": 0.5351,
+                "box": [
+                  906.4,
+                  705.6,
+                  1046.1,
+                  829.7
+                ]
+              },
+              {
+                "score": 0.1015,
+                "box": [
+                  988.7,
+                  728.3,
+                  1052.6,
+                  817.7
+                ]
+              },
+              {
+                "score": 0.0627,
+                "box": [
+                  908.6,
+                  719.5,
+                  1051.4,
+                  834.7
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a picnic blanket with a basket",
+            "query": "a picnic blanket",
+            "best_score_inside_region": 0.4979,
+            "best_score_anywhere": 0.4979,
+            "boxes": [
+              {
+                "score": 0.4979,
+                "box": [
+                  829.9,
+                  858.7,
+                  1328.4,
+                  1001.7
+                ]
+              },
+              {
+                "score": 0.0641,
+                "box": [
+                  804.4,
+                  848.6,
+                  1309.9,
+                  987.6
+                ]
+              },
+              {
+                "score": 0.0592,
+                "box": [
+                  1179.9,
+                  656.8,
+                  1293.2,
+                  784.3
+                ]
+              },
+              {
+                "score": 0.0546,
+                "box": [
+                  1091.7,
+                  863.5,
+                  1322.8,
+                  942.2
+                ]
+              },
+              {
+                "score": 0.0521,
+                "box": [
+                  970.2,
+                  843.7,
+                  1062.0,
+                  871.8
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "element": "a second kite",
+            "query": "a kite",
+            "best_score_inside_region": 0.4943,
+            "best_score_anywhere": 0.5469,
+            "boxes": [
+              {
+                "score": 0.5469,
+                "box": [
+                  206.4,
+                  54.2,
+                  383.9,
+                  177.6
+                ]
+              },
+              {
+                "score": 0.4943,
+                "box": [
+                  491.8,
+                  309.0,
+                  582.5,
+                  433.4
+                ]
+              },
+              {
+                "score": 0.386,
+                "box": [
+                  494.5,
+                  308.9,
+                  672.1,
+                  549.8
+                ]
+              },
+              {
+                "score": 0.288,
+                "box": [
+                  148.0,
+                  52.9,
+                  388.1,
+                  365.3
+                ]
+              },
+              {
+                "score": 0.2856,
+                "box": [
+                  141.1,
+                  167.3,
+                  217.8,
+                  361.6
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a dog running beside the two children?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a picnic blanket with a basket?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Does the image show a second kite?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:52+00:00",
+        "medium_mask_pixels_inside_large_mask": 58037,
+        "input_sha256": "650b620708da34b40eb9b3d59198bae5629cb9ef14e32764d8c4622a4fb5263a",
+        "spill": {
+          "spill_pct": 0.0306,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 37.233,
+          "boxes_used": {
+            "a dog running beside the two children": [
+              [
+                906.4,
+                705.6,
+                1046.1,
+                829.7
+              ]
+            ],
+            "a picnic blanket with a basket": [
+              [
+                829.9,
+                858.7,
+                1328.4,
+                1001.7
+              ]
+            ],
+            "a second kite": [
+              [
+                491.8,
+                309.0,
+                582.5,
+                433.4
+              ],
+              [
+                494.5,
+                308.9,
+                672.1,
+                549.8
+              ],
+              [
+                583.2,
+                444.0,
+                671.3,
+                549.5
+              ],
+              [
+                622.2,
+                468.5,
+                637.0,
+                487.5
+              ],
+              [
+                218.2,
+                52.8,
+                727.9,
+                562.8
+              ],
+              [
+                625.1,
+                470.3,
+                677.3,
+                551.7
+              ],
+              [
+                658.4,
+                526.1,
+                682.7,
+                555.0
+              ],
+              [
+                569.6,
+                425.0,
+                590.5,
+                442.2
+              ],
+              [
+                590.2,
+                455.4,
+                609.4,
+                472.7
+              ],
+              [
+                618.3,
+                465.1,
+                671.3,
+                547.8
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

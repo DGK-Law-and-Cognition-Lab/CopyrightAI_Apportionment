@@ -1,0 +1,259 @@
+{
+  "scene": "SA09",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA09_medium_c01.png",
+  "raw_file": "SA09_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a watering can on the path. Change nothing else.",
+  "input_file": "SA09_source.png",
+  "input_sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:51:56+00:00",
+  "seconds": 75.0,
+  "usage": {
+    "input_tokens": 1554,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 18
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7042
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "0dcbfe4e1463faf68cc7f38e237d7581ba86f3610ca0a36f024063a0c00fa89f",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.373,
+    "widened_area_pct": 65.82,
+    "masked_area_pct": 2.373,
+    "size_rule": "medium: at least 2 x the accepted small's 0.906 percent and at least 0.5 percent",
+    "size_min_pct": 1.812,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a watering can on the path",
+        "query": "a watering can",
+        "best_score_inside_region": 0.6308,
+        "best_score_anywhere": 0.6308,
+        "boxes": [
+          {
+            "score": 0.6308,
+            "box": [
+              945.2,
+              778.0,
+              1150.8,
+              945.0
+            ]
+          },
+          {
+            "score": 0.1007,
+            "box": [
+              946.8,
+              797.6,
+              1081.1,
+              944.6
+            ]
+          },
+          {
+            "score": 0.0871,
+            "box": [
+              208.4,
+              815.2,
+              383.2,
+              1000.0
+            ]
+          },
+          {
+            "score": 0.0682,
+            "box": [
+              1067.8,
+              797.8,
+              1156.9,
+              896.0
+            ]
+          },
+          {
+            "score": 0.0583,
+            "box": [
+              946.6,
+              776.7,
+              1078.3,
+              941.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a watering can on the path?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:30:14+00:00",
+    "input_sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01",
+    "unchanged": {
+      "question": "Apart from a watering can on the path, is everything that was in the first image still in the same place and unchanged in the second image?",
+      "answer": "yes",
+      "raw": [
+        "yes"
+      ],
+      "model_reported": "gpt-5.1-2025-11-13",
+      "calls": 1,
+      "images": "first = the edit's input, second = the composited file"
+    },
+    "unchanged_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "63b4ceac88c371527e581ecf095fd9f56c3f7998cd908ada5e41be1b86c11f2a",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.373,
+        "widened_area_pct": 65.82,
+        "masked_area_pct": 2.373,
+        "size_rule": "medium: at least 2 x the accepted small's 0.906 percent and at least 0.5 percent",
+        "size_min_pct": 1.812,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a watering can on the path",
+            "query": "a watering can",
+            "best_score_inside_region": 0.6308,
+            "best_score_anywhere": 0.6308,
+            "boxes": [
+              {
+                "score": 0.6308,
+                "box": [
+                  945.2,
+                  778.0,
+                  1150.8,
+                  945.0
+                ]
+              },
+              {
+                "score": 0.1007,
+                "box": [
+                  946.8,
+                  797.6,
+                  1081.1,
+                  944.6
+                ]
+              },
+              {
+                "score": 0.0871,
+                "box": [
+                  208.4,
+                  815.2,
+                  383.2,
+                  1000.0
+                ]
+              },
+              {
+                "score": 0.0682,
+                "box": [
+                  1067.8,
+                  797.8,
+                  1156.9,
+                  896.0
+                ]
+              },
+              {
+                "score": 0.0583,
+                "box": [
+                  946.6,
+                  776.7,
+                  1078.3,
+                  941.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a watering can on the path?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:04:51+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    }
+  ]
+}

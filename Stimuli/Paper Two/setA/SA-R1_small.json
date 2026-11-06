@@ -1,0 +1,471 @@
+{
+  "scene": "SA-R1",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA-R1_small_c01.png",
+  "raw_file": "SA-R1_small_c01_raw.png",
+  "prompt_or_instruction": "Add a teacup on a saucer beside the scissors. Change nothing else.",
+  "input_file": "SA-R1_source.png",
+  "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:16:59+00:00",
+  "seconds": 74.4,
+  "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 23
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7047
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "d013841f8389ee1af0a0a6ae0db92278925bca718c4540b1832b848107096e17",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 1.267,
+    "widened_area_pct": 5.734,
+    "masked_area_pct": 1.267,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a teacup on a saucer beside the scissors",
+        "query": "a teacup",
+        "best_score_inside_region": 0.5328,
+        "best_score_anywhere": 0.5328,
+        "boxes": [
+          {
+            "score": 0.5328,
+            "box": [
+              418.6,
+              798.6,
+              577.6,
+              909.5
+            ]
+          },
+          {
+            "score": 0.0967,
+            "box": [
+              614.3,
+              805.3,
+              669.5,
+              902.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a teacup on a saucer beside the scissors?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:13:55+00:00",
+    "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+    "object_position": {
+      "trackable": [
+        "a scissor",
+        "a spool",
+        "a thread",
+        "a picture"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a scissor",
+          "in_input": true,
+          "input_box": [
+            742.6,
+            890.7,
+            957.9,
+            978.5
+          ],
+          "input_score": 0.7506,
+          "output_box": [
+            746.5,
+            893.7,
+            949.2,
+            979.8
+          ],
+          "output_score": 0.7138,
+          "iou": 0.897,
+          "pass": true
+        },
+        {
+          "object": "a spool",
+          "in_input": true,
+          "input_box": [
+            614.2,
+            805.1,
+            670.0,
+            901.3
+          ],
+          "input_score": 0.5036,
+          "output_box": [
+            614.3,
+            805.3,
+            669.5,
+            902.2
+          ],
+          "output_score": 0.1835,
+          "iou": 0.978,
+          "pass": true
+        },
+        {
+          "object": "a thread",
+          "in_input": true,
+          "input_box": [
+            614.2,
+            805.1,
+            670.0,
+            901.3
+          ],
+          "input_score": 0.2682,
+          "output_box": [
+            614.3,
+            805.3,
+            669.5,
+            902.2
+          ],
+          "output_score": 0.2495,
+          "iou": 0.978,
+          "pass": true
+        },
+        {
+          "object": "a picture",
+          "in_input": true,
+          "input_box": [
+            452.1,
+            52.5,
+            646.6,
+            299.6
+          ],
+          "input_score": 0.2156,
+          "output_box": [
+            452.1,
+            52.4,
+            647.0,
+            299.7
+          ],
+          "output_score": 0.2245,
+          "iou": 0.997,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "cd4866e0e0281c6697f3e5bb372b0d095a6877f56ae61745010d2c569c3f6453",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.267,
+        "widened_area_pct": 5.734,
+        "masked_area_pct": 1.267,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a teacup on a saucer beside the scissors",
+            "query": "a teacup",
+            "best_score_inside_region": 0.5328,
+            "best_score_anywhere": 0.5328,
+            "boxes": [
+              {
+                "score": 0.5328,
+                "box": [
+                  418.6,
+                  798.6,
+                  577.6,
+                  909.5
+                ]
+              },
+              {
+                "score": 0.0967,
+                "box": [
+                  614.3,
+                  805.3,
+                  669.5,
+                  902.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a teacup on a saucer beside the scissors?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T00:17:15+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.267,
+        "widened_area_pct": 5.734,
+        "masked_area_pct": 1.267,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a teacup on a saucer beside the scissors",
+            "query": "a teacup",
+            "best_score_inside_region": 0.5328,
+            "best_score_anywhere": 0.5328,
+            "boxes": [
+              {
+                "score": 0.5328,
+                "box": [
+                  418.6,
+                  798.6,
+                  577.6,
+                  909.5
+                ]
+              },
+              {
+                "score": 0.0967,
+                "box": [
+                  614.3,
+                  805.3,
+                  669.5,
+                  902.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a teacup on a saucer beside the scissors?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:30:04+00:00",
+        "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+        "unchanged": {
+          "question": "Apart from a teacup on a saucer beside the scissors, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.267,
+        "widened_area_pct": 5.734,
+        "masked_area_pct": 1.267,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a teacup on a saucer beside the scissors",
+            "query": "a teacup",
+            "best_score_inside_region": 0.5328,
+            "best_score_anywhere": 0.5328,
+            "boxes": [
+              {
+                "score": 0.5328,
+                "box": [
+                  418.6,
+                  798.6,
+                  577.6,
+                  909.5
+                ]
+              },
+              {
+                "score": 0.0967,
+                "box": [
+                  614.3,
+                  805.3,
+                  669.5,
+                  902.2
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a teacup on a saucer beside the scissors?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:57:39+00:00",
+        "input_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686",
+        "spill": {
+          "spill_pct": 0.0029,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 4.395,
+          "boxes_used": {
+            "a teacup on a saucer beside the scissors": [
+              [
+                418.6,
+                798.6,
+                577.6,
+                909.5
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

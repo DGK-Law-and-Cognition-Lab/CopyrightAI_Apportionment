@@ -1,0 +1,273 @@
+{
+  "scene": "SA02",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA02_small_c01.png",
+  "raw_file": "SA02_small_c01_raw.png",
+  "prompt_or_instruction": "Add a gull standing on the wooden crate. Change nothing else.",
+  "input_file": "SA02_source.png",
+  "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:45:39+00:00",
+  "seconds": 76.6,
+  "usage": {
+    "input_tokens": 1555,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 19
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "8e8b0aee915dde791a053db83b01c2385697306fe86487320466005336c25e48",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.171,
+    "widened_area_pct": 43.101,
+    "masked_area_pct": 2.171,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a gull standing on the wooden crate",
+        "query": "a gull",
+        "best_score_inside_region": 0.5346,
+        "best_score_anywhere": 0.5346,
+        "boxes": [
+          {
+            "score": 0.5346,
+            "box": [
+              181.0,
+              336.5,
+              467.8,
+              554.0
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a gull standing on the wooden crate?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T06:53:25+00:00",
+    "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+    "spill": {
+      "spill_pct": 0.6763,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 9.129,
+      "boxes_used": {
+        "a gull standing on the wooden crate": [
+          [
+            181.0,
+            336.5,
+            467.8,
+            554.0
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "083a2c31f392b335bc8f442f6ad6ba528000847c140fb349e5f40e89f6330781",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.171,
+        "widened_area_pct": 43.101,
+        "masked_area_pct": 2.171,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a gull standing on the wooden crate",
+            "query": "a gull",
+            "best_score_inside_region": 0.5346,
+            "best_score_anywhere": 0.5346,
+            "boxes": [
+              {
+                "score": 0.5346,
+                "box": [
+                  181.0,
+                  336.5,
+                  467.8,
+                  554.0
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a gull standing on the wooden crate?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:54:57+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 2.171,
+        "widened_area_pct": 43.101,
+        "masked_area_pct": 2.171,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a gull standing on the wooden crate",
+            "query": "a gull",
+            "best_score_inside_region": 0.5346,
+            "best_score_anywhere": 0.5346,
+            "boxes": [
+              {
+                "score": 0.5346,
+                "box": [
+                  181.0,
+                  336.5,
+                  467.8,
+                  554.0
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a gull standing on the wooden crate?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:27:09+00:00",
+        "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+        "unchanged": {
+          "question": "Apart from a gull standing on the wooden crate, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    }
+  ]
+}

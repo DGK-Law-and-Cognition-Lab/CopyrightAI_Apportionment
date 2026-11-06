@@ -1,0 +1,170 @@
+{
+  "scene": "SA03",
+  "kind": "source",
+  "candidate": 3,
+  "revision": 0,
+  "file": "SA03_source_c03.png",
+  "prompt_or_instruction": "Two children flying a kite on a grassy hill. The children stand small in the lower right, the kite flies high in the upper left, and a wide band of empty sky fills the middle. Bright cerulean, grass green, and white. Bright afternoon sun from the left. Impressionist painting with short, dabbed strokes. Breezy and joyful. Low angle, looking up the slope. Scattered clouds and a small farmhouse on a distant ridge. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:41:23+00:00",
+  "seconds": 96.8,
+  "usage": {
+    "input_tokens": 154,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 154
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5642
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a child",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.4215,
+        "boxes": [
+          {
+            "score": 0.4215,
+            "box": [
+              1036.9,
+              579.5,
+              1139.0,
+              800.5
+            ]
+          },
+          {
+            "score": 0.413,
+            "box": [
+              1154.9,
+              605.7,
+              1287.5,
+              779.1
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a kite",
+        "boxes_at_or_above_cut": 4,
+        "needed": 1,
+        "best_score": 0.5349,
+        "boxes": [
+          {
+            "score": 0.5349,
+            "box": [
+              201.9,
+              54.4,
+              384.8,
+              177.8
+            ]
+          },
+          {
+            "score": 0.3812,
+            "box": [
+              147.7,
+              53.7,
+              391.7,
+              363.5
+            ]
+          },
+          {
+            "score": 0.2418,
+            "box": [
+              199.2,
+              53.4,
+              720.9,
+              515.0
+            ]
+          },
+          {
+            "score": 0.1803,
+            "box": [
+              141.0,
+              162.8,
+              218.0,
+              360.2
+            ]
+          },
+          {
+            "score": 0.1195,
+            "box": [
+              0.0,
+              0.0,
+              1042.7,
+              768.1
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Are there two children?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a kite flying in the sky?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a wide band of empty sky in the middle of the image?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:42:08+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

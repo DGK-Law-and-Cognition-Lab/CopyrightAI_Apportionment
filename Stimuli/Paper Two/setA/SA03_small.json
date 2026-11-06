@@ -1,0 +1,465 @@
+{
+  "scene": "SA03",
+  "kind": "small",
+  "candidate": 3,
+  "revision": 0,
+  "file": "SA03_small_c03.png",
+  "raw_file": "SA03_small_c03_raw.png",
+  "prompt_or_instruction": "Add a bird flying in the open sky. Change nothing else.",
+  "input_file": "SA03_source.png",
+  "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T23:02:09+00:00",
+  "seconds": 73.4,
+  "usage": {
+    "input_tokens": 1555,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 19
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "b23eb70406cdf9cd7db9384f36472f7e9e561f9b7ed918f53e238a3130f76620",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.13,
+    "widened_area_pct": 5.368,
+    "masked_area_pct": 0.13,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a bird flying in the open sky",
+        "query": "a bird",
+        "best_score_inside_region": 0.6033,
+        "best_score_anywhere": 0.6033,
+        "boxes": [
+          {
+            "score": 0.6033,
+            "box": [
+              834.8,
+              196.5,
+              891.3,
+              294.0
+            ]
+          },
+          {
+            "score": 0.0827,
+            "box": [
+              839.0,
+              196.3,
+              886.3,
+              246.4
+            ]
+          },
+          {
+            "score": 0.059,
+            "box": [
+              827.4,
+              194.0,
+              889.0,
+              294.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a bird flying in the sky?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:08:53+00:00",
+    "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+    "object_position": {
+      "trackable": [
+        "a cloud",
+        "a farmhouse"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a cloud",
+          "in_input": true,
+          "input_box": [
+            1342.4,
+            583.4,
+            1530.1,
+            701.6
+          ],
+          "input_score": 0.2502,
+          "output_box": [
+            1342.2,
+            583.3,
+            1530.1,
+            701.6
+          ],
+          "output_score": 0.2489,
+          "iou": 0.998,
+          "pass": true
+        },
+        {
+          "object": "a farmhouse",
+          "in_input": true,
+          "input_box": [
+            128.9,
+            764.8,
+            397.2,
+            835.3
+          ],
+          "input_score": 0.4886,
+          "output_box": [
+            128.8,
+            764.9,
+            397.0,
+            835.2
+          ],
+          "output_score": 0.4874,
+          "iou": 0.996,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "5e8ea357edf8ffc869597ea3c4032d9b606595869f40abf7a2c24747b110d775",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.13,
+        "widened_area_pct": 5.368,
+        "masked_area_pct": 0.13,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a bird flying in the open sky",
+            "query": "a bird",
+            "best_score_inside_region": 0.6033,
+            "best_score_anywhere": 0.6033,
+            "boxes": [
+              {
+                "score": 0.6033,
+                "box": [
+                  834.8,
+                  196.5,
+                  891.3,
+                  294.0
+                ]
+              },
+              {
+                "score": 0.0827,
+                "box": [
+                  839.0,
+                  196.3,
+                  886.3,
+                  246.4
+                ]
+              },
+              {
+                "score": 0.059,
+                "box": [
+                  827.4,
+                  194.0,
+                  889.0,
+                  294.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a bird flying in the sky?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T23:02:25+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.13,
+        "widened_area_pct": 5.368,
+        "masked_area_pct": 0.13,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a bird flying in the open sky",
+            "query": "a bird",
+            "best_score_inside_region": 0.6033,
+            "best_score_anywhere": 0.6033,
+            "boxes": [
+              {
+                "score": 0.6033,
+                "box": [
+                  834.8,
+                  196.5,
+                  891.3,
+                  294.0
+                ]
+              },
+              {
+                "score": 0.0827,
+                "box": [
+                  839.0,
+                  196.3,
+                  886.3,
+                  246.4
+                ]
+              },
+              {
+                "score": 0.059,
+                "box": [
+                  827.4,
+                  194.0,
+                  889.0,
+                  294.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a bird flying in the sky?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:40+00:00",
+        "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+        "unchanged": {
+          "question": "Apart from a bird flying in the open sky, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.13,
+        "widened_area_pct": 5.368,
+        "masked_area_pct": 0.13,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a bird flying in the open sky",
+            "query": "a bird",
+            "best_score_inside_region": 0.6033,
+            "best_score_anywhere": 0.6033,
+            "boxes": [
+              {
+                "score": 0.6033,
+                "box": [
+                  834.8,
+                  196.5,
+                  891.3,
+                  294.0
+                ]
+              },
+              {
+                "score": 0.0827,
+                "box": [
+                  839.0,
+                  196.3,
+                  886.3,
+                  246.4
+                ]
+              },
+              {
+                "score": 0.059,
+                "box": [
+                  827.4,
+                  194.0,
+                  889.0,
+                  294.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a bird flying in the sky?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:43+00:00",
+        "input_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415",
+        "spill": {
+          "spill_pct": 0.0314,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 2.673,
+          "boxes_used": {
+            "a bird flying in the open sky": [
+              [
+                834.8,
+                196.5,
+                891.3,
+                294.0
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

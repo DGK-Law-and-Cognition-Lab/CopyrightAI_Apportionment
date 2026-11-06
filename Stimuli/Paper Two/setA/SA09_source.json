@@ -1,0 +1,170 @@
+{
+  "scene": "SA09",
+  "kind": "source",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA09_source_c01.png",
+  "prompt_or_instruction": "A wooden bench under a flowering cherry tree in a garden. The bench sits in the lower left with a clay flowerpot beside it, the tree arches across the top, and the path to the right is empty. Pinks, whites, and fresh greens. Dappled spring sunlight. Impressionist painting with short brushstrokes. Gentle and airy. Eye level. A low stone wall with an iron gate. Painterly and hand-made in feel: uneven brush marks, varied paint thickness, small imperfections and a muted, slightly faded palette. Not glossy, not airbrushed, not photorealistic, no digital sheen. No text, lettering, signature, watermark, or frame.",
+  "input_file": "",
+  "input_sha256": "",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/generations (JSON)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:33:18+00:00",
+  "seconds": 107.3,
+  "usage": {
+    "input_tokens": 145,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 145
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 5633
+  },
+  "estimated_usd": 0.1654,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "detections": [
+      {
+        "query": "a wooden bench",
+        "boxes_at_or_above_cut": 1,
+        "needed": 1,
+        "best_score": 0.6374,
+        "boxes": [
+          {
+            "score": 0.6374,
+            "box": [
+              272.8,
+              531.1,
+              742.7,
+              889.5
+            ]
+          },
+          {
+            "score": 0.057,
+            "box": [
+              295.9,
+              476.1,
+              639.7,
+              570.3
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "query": "a flowerpot",
+        "boxes_at_or_above_cut": 2,
+        "needed": 1,
+        "best_score": 0.4615,
+        "boxes": [
+          {
+            "score": 0.4615,
+            "box": [
+              207.6,
+              814.2,
+              383.2,
+              1000.7
+            ]
+          },
+          {
+            "score": 0.1849,
+            "box": [
+              5.3,
+              816.1,
+              194.2,
+              972.0
+            ]
+          },
+          {
+            "score": 0.0954,
+            "box": [
+              1339.8,
+              431.9,
+              1414.1,
+              463.2
+            ]
+          },
+          {
+            "score": 0.0794,
+            "box": [
+              3.2,
+              757.5,
+              437.9,
+              985.8
+            ]
+          },
+          {
+            "score": 0.0765,
+            "box": [
+              0.2,
+              882.6,
+              91.1,
+              970.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Is there a wooden bench?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is there a clay flowerpot beside the bench?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the path empty?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:41:26+00:00",
+    "pass": true
+  },
+  "accepted": true
+}

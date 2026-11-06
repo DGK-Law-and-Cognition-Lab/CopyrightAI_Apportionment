@@ -1,0 +1,507 @@
+{
+  "scene": "SA-R2",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA-R2_small_c01.png",
+  "raw_file": "SA-R2_small_c01_raw.png",
+  "prompt_or_instruction": "Add a milk churn beside the hay wagon. Change nothing else.",
+  "input_file": "SA-R2_source.png",
+  "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-28T00:51:25+00:00",
+  "seconds": 79.2,
+  "usage": {
+    "input_tokens": 1555,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 19
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "a4bea6546213c330abbe751844becfb8cc25fe68d3a15de4cd44e7126f63d92f",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 1.825,
+    "widened_area_pct": 36.546,
+    "masked_area_pct": 1.825,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a milk churn beside the hay wagon",
+        "query": "a milk churn",
+        "best_score_inside_region": 0.4899,
+        "best_score_anywhere": 0.4899,
+        "boxes": [
+          {
+            "score": 0.4899,
+            "box": [
+              353.1,
+              712.2,
+              441.2,
+              827.6
+            ]
+          },
+          {
+            "score": 0.0676,
+            "box": [
+              358.9,
+              693.8,
+              435.3,
+              750.1
+            ]
+          },
+          {
+            "score": 0.0625,
+            "box": [
+              351.3,
+              703.0,
+              440.5,
+              822.4
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a milk churn beside the hay wagon?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:05:32+00:00",
+    "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+    "object_position": {
+      "trackable": [
+        "a barn",
+        "a wagon",
+        "a hill",
+        "a tree"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a barn",
+          "in_input": true,
+          "input_box": [
+            0.8,
+            62.0,
+            702.0,
+            761.4
+          ],
+          "input_score": 0.6254,
+          "output_box": [
+            0.3,
+            61.2,
+            701.7,
+            758.2
+          ],
+          "output_score": 0.6181,
+          "iou": 0.993,
+          "pass": true
+        },
+        {
+          "object": "a wagon",
+          "in_input": true,
+          "input_box": [
+            3.4,
+            491.2,
+            518.5,
+            799.0
+          ],
+          "input_score": 0.6388,
+          "output_box": [
+            4.3,
+            493.3,
+            509.6,
+            801.4
+          ],
+          "output_score": 0.4437,
+          "iou": 0.967,
+          "pass": true
+        },
+        {
+          "object": "a hill",
+          "in_input": true,
+          "input_box": [
+            844.5,
+            418.5,
+            1525.5,
+            641.1
+          ],
+          "input_score": 0.4151,
+          "output_box": [
+            845.5,
+            419.3,
+            1525.3,
+            641.8
+          ],
+          "output_score": 0.4163,
+          "iou": 0.992,
+          "pass": true
+        },
+        {
+          "object": "a tree",
+          "in_input": true,
+          "input_box": [
+            903.2,
+            374.7,
+            974.0,
+            667.7
+          ],
+          "input_score": 0.372,
+          "output_box": [
+            903.0,
+            375.3,
+            974.6,
+            665.5
+          ],
+          "output_score": 0.3731,
+          "iou": 0.979,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "75681e31aa5381606e905f13dbe071860ee95bda6178a033cd140fd74b3927a0",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.825,
+        "widened_area_pct": 36.546,
+        "masked_area_pct": 1.825,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a milk churn beside the hay wagon",
+            "query": "a milk churn",
+            "best_score_inside_region": 0.4899,
+            "best_score_anywhere": 0.4899,
+            "boxes": [
+              {
+                "score": 0.4899,
+                "box": [
+                  353.1,
+                  712.2,
+                  441.2,
+                  827.6
+                ]
+              },
+              {
+                "score": 0.0676,
+                "box": [
+                  358.9,
+                  693.8,
+                  435.3,
+                  750.1
+                ]
+              },
+              {
+                "score": 0.0625,
+                "box": [
+                  351.3,
+                  703.0,
+                  440.5,
+                  822.4
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a milk churn beside the hay wagon?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T00:51:34+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.825,
+        "widened_area_pct": 36.546,
+        "masked_area_pct": 1.825,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a milk churn beside the hay wagon",
+            "query": "a milk churn",
+            "best_score_inside_region": 0.4899,
+            "best_score_anywhere": 0.4899,
+            "boxes": [
+              {
+                "score": 0.4899,
+                "box": [
+                  353.1,
+                  712.2,
+                  441.2,
+                  827.6
+                ]
+              },
+              {
+                "score": 0.0676,
+                "box": [
+                  358.9,
+                  693.8,
+                  435.3,
+                  750.1
+                ]
+              },
+              {
+                "score": 0.0625,
+                "box": [
+                  351.3,
+                  703.0,
+                  440.5,
+                  822.4
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a milk churn beside the hay wagon?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:35+00:00",
+        "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+        "unchanged": {
+          "question": "Apart from a milk churn beside the hay wagon, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 1.825,
+        "widened_area_pct": 36.546,
+        "masked_area_pct": 1.825,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a milk churn beside the hay wagon",
+            "query": "a milk churn",
+            "best_score_inside_region": 0.4899,
+            "best_score_anywhere": 0.4899,
+            "boxes": [
+              {
+                "score": 0.4899,
+                "box": [
+                  353.1,
+                  712.2,
+                  441.2,
+                  827.6
+                ]
+              },
+              {
+                "score": 0.0676,
+                "box": [
+                  358.9,
+                  693.8,
+                  435.3,
+                  750.1
+                ]
+              },
+              {
+                "score": 0.0625,
+                "box": [
+                  351.3,
+                  703.0,
+                  440.5,
+                  822.4
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a milk churn beside the hay wagon?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:34+00:00",
+        "input_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652",
+        "spill": {
+          "spill_pct": 0.9367,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 3.366,
+          "boxes_used": {
+            "a milk churn beside the hay wagon": [
+              [
+                353.1,
+                712.2,
+                441.2,
+                827.6
+              ]
+            ]
+          }
+        },
+        "spill_pass": false,
+        "pass": false
+      },
+      "accepted": false,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

@@ -1,0 +1,2471 @@
+{
+ "written_utc": "2026-10-27T22:26:42+00:00",
+ "note": "Rules written 27 October 2026 before any GPT Image 2 candidate was judged. Each number is computed by its rule from this model's first candidates and then frozen; none is relative to other candidates and none is changed after it is written.",
+ "image_model": "gpt-image-2-2026-04-21, chosen by David G. Kamper on 27 October 2026 (prompt bank, 'The models'); source prompt = the eight part sentences, the Set A realism line, and the closing sentence",
+ "history": "A first run with GPT Image 2.5 Flare (../setA_superseded_flare_2026-10-27/) was stopped when David rejected that model. Its rules are kept here with three changes, all decided on 27 October 2026 before this run began: (1) the absolute bands (small 1 to 2, medium 8 to 12, large 25 to 35 percent) are replaced by within-scene ordering; (2) the element questions drop 'empty', 'bare', 'open' and 'clear' where they describe the place before the edit; (3) every file must pass the no-text question. SA10's open-area question is used in the form amended in the first run.",
+ "detector": {
+  "model": "google/owlv2-base-patch16-ensemble at revision cfd3195ba4ea9592eec887ded089f4c08eff231d, CPU, each query scored on its own (sigmoid of its logit)",
+  "score_cut_rule": "Run the detector on candidate 1 of the source of each of the ten main scenes (SA01 to SA10) with two kinds of query. Present: the scene's rearrangement-object queries (19 in all; SA06 has one query, 'an oar'). Absent: eight objects that cannot appear in a scene plausible for 1900 to 1925 (a smartphone; a laptop computer; a television set; a computer keyboard; a plastic water bottle; a jet airplane; a satellite dish; a microwave oven), the same eight for every scene (80 in all). Each query's score is its best box's score. Every observed score is a possible cut c; Youden's J(c) is the share of present scores at or above c minus the share of absent scores at or above c. c* is the smallest observed score with the largest J. The score cut is the midpoint between c* and the largest observed score below c*, rounded to three decimals. A detection counts when its score is at least the cut.",
+  "distinct_boxes_rule": "Two boxes for one query are the same object when their IoU is at least 0.5 (fixed, not set from data)."
+ },
+ "change_mask": {
+  "difference": "Per-pixel difference d: the Euclidean distance between the two images' RGB values (0 to 441), with no smoothing.",
+  "difference_threshold_rule": "Over every pixel of candidate 1 of the small and of the medium addition of each of the ten main scenes (20 raw edits, each compared with the source it was made from), take the median m and the median absolute deviation MAD of d. The threshold is m + 3.5 x MAD / 0.6745, the value at which a pixel's modified z-score (Iglewicz and Hoaglin, 1993) passes 3.5, rounded to one decimal. A pixel is marked as changed when d is above the threshold.",
+  "speck_rule": "With that threshold, find every 8-connected group of marked pixels in the same 20 edits. The speck size is the 99.9th percentile of the groups' sizes in pixels, rounded up to a whole number. Every group of at most that many pixels is a speck and is removed; then every unmarked area wholly enclosed by marked pixels is filled. The result is the cleaned change mask.",
+  "widening_rule": "With the cleaned change masks of the same 20 edits, for each whole-pixel distance k = 1, 2, ... from the mask (Euclidean distance), take the median of d over the pixels whose distance lies in (k - 1, k], pooled over the 20 edits. The widening radius is the smallest k whose ring median is at most m, the median of d over all pixels (the level of the model's re-rendering of an unchanged pixel), so the edge of the pasted region falls where the edit differs from its input no more than a typical pixel does. If no k up to 64 qualifies, the radius is 64.",
+  "widened_mask": "Every pixel within the widening radius of the cleaned mask (Euclidean distance), with enclosed holes filled.",
+  "compositing": "The accepted file takes the raw edit's pixels inside the widened mask and the input's pixels everywhere else (input = the accepted source for small and medium; the accepted, composited medium file for large).",
+  "masked_area": "Share of the image (percent of 1536 x 1024 pixels) inside the cleaned change mask of the composited file compared with the accepted source, computed with the same threshold and cleaning. For the large file this includes the medium element."
+ },
+ "acceptance": {
+  "source": "Detector: for each rearrangement-object query, at least one box scoring at least the cut (SA06, whose two objects are both oars: at least two distinct 'an oar' boxes). Description model: 'yes' to every object question, to the open-area question, and to the no-text question 'Is the image free of any visible text, letters, numbers, signatures or watermarks?'. The questions are in source_questions.",
+  "source_questions": {
+   "SA01": [
+    "Is there a teapot on the table?",
+    "Is there a cup on the table?",
+    "Is the far end of the table bare, with nothing on it?"
+   ],
+   "SA02": [
+    "Is there a wooden crate on the dock?",
+    "Is there a coil of rope on the dock?",
+    "Is there an empty stretch of dock beside the man, with nothing on it?"
+   ],
+   "SA03": [
+    "Are there two children?",
+    "Is there a kite flying in the sky?",
+    "Is there a wide band of empty sky in the middle of the image?"
+   ],
+   "SA04": [
+    "Is there a music stand?",
+    "Is there an empty wooden chair?",
+    "Is the rug in front of the man bare, with nothing on it?"
+   ],
+   "SA05": [
+    "Are there crates at one end of the counter?",
+    "Is there a basket of lemons?",
+    "Is one end of the counter bare and empty?"
+   ],
+   "SA06": [
+    "Are there two oars resting across the boat's seats?",
+    "Is there an empty stretch of water, with no boats or birds on it?"
+   ],
+   "SA07": [
+    "Is there a clay jug on the table?",
+    "Is there bread on the table?",
+    "Is the right half of the table bare wood, with nothing on it?"
+   ],
+   "SA08": [
+    "Is there a hand cart?",
+    "Is there a lamp post?",
+    "Is the right side of the street open, with nothing standing in it?"
+   ],
+   "SA09": [
+    "Is there a wooden bench?",
+    "Is there a clay flowerpot beside the bench?",
+    "Is the path empty?"
+   ],
+   "SA10": [
+    "Is there a red buoy in the water?",
+    "Is there a small ship on the horizon?",
+    "Is there an open stretch of sea in the center of the image?"
+   ],
+   "SA-R1": [
+    "Is there a pair of scissors on the table?",
+    "Is there a spool of thread on the table?",
+    "Is the left end of the table bare, with nothing on it?"
+   ],
+   "SA-R2": [
+    "Is there a hay wagon?",
+    "Is there a wooden ladder?",
+    "Is the field to the right of the barn open, with nothing in it?"
+   ]
+  },
+  "addition": "Detector: for each element the file must show (small: the small element; medium: the medium element; large: the medium element and the two further elements), a box for its query scoring at least the cut whose center lies inside the region where the file was composited from an edit (the widened mask; for large, the union of the medium's and the large's widened masks). Description model: 'yes' to the element's question (element_questions: 'Does the image show ' + the bank phrase without 'empty', 'bare', 'open' and 'clear' where they describe the place before the edit + '?') for each element, and 'yes' to the no-text question 'Is the image free of any visible text, letters, numbers, signatures or watermarks?'. Size, by within-scene ordering of the masked area (above): small at least 0.1 percent of the image; medium at least 2 times the accepted small file's masked area for the scene and at least 0.5 percent; large at least 2 times the accepted medium file's masked area. Within a scene the small file is accepted before any medium candidate is judged, and the medium before any large.",
+  "element_questions": {
+   "a spoon beside the cup": "Does the image show a spoon beside the cup?",
+   "a vase of daisies on the bare end of the table": "Does the image show a vase of daisies on the end of the table?",
+   "a loaf of bread on a board": "Does the image show a loaf of bread on a board?",
+   "a cat asleep on a stool": "Does the image show a cat asleep on a stool?",
+   "a gull standing on the wooden crate": "Does the image show a gull standing on the wooden crate?",
+   "a dog lying on the empty dock to the man's right": "Does the image show a dog lying on the dock to the man's right?",
+   "a stack of barrels": "Does the image show a stack of barrels?",
+   "a lantern on a post": "Does the image show a lantern on a post?",
+   "a bird flying in the open sky": "Does the image show a bird flying in the sky?",
+   "a dog running beside the two children": "Does the image show a dog running beside the two children?",
+   "a picnic blanket with a basket": "Does the image show a picnic blanket with a basket?",
+   "a second kite": "Does the image show a second kite?",
+   "a sheet of music on the floor": "Does the image show a sheet of music on the floor?",
+   "a dog asleep on the rug in front of the man": "Does the image show a dog asleep on the rug in front of the man?",
+   "a side table with a vase": "Does the image show a side table with a vase?",
+   "a candlestick": "Does the image show a candlestick?",
+   "a single lemon on the ground": "Does the image show a single lemon on the ground?",
+   "a basket of eggs on the empty end of the counter": "Does the image show a basket of eggs on the end of the counter?",
+   "buckets of flowers": "Does the image show buckets of flowers?",
+   "a customer with a shopping bag": "Does the image show a customer with a shopping bag?",
+   "a duck on the empty stretch of water": "Does the image show a duck on the stretch of water?",
+   "a heron standing in the shallow water": "Does the image show a heron standing in the shallow water?",
+   "a second boat": "Does the image show a second boat?",
+   "a stand of reeds": "Does the image show a stand of reeds?",
+   "a single walnut": "Does the image show a single walnut?",
+   "a pear on the bare right side of the table": "Does the image show a pear on the right side of the table?",
+   "a bowl of grapes": "Does the image show a bowl of grapes?",
+   "a bird on a rooftop": "Does the image show a bird on a rooftop?",
+   "a horse-drawn sled on the open right side of the street": "Does the image show a horse-drawn sled on the right side of the street?",
+   "a snowman": "Does the image show a snowman?",
+   "a row of lanterns along the houses": "Does the image show a row of lanterns along the houses?",
+   "a butterfly over the path": "Does the image show a butterfly over the path?",
+   "a watering can on the path": "Does the image show a watering can on the path?",
+   "a wheelbarrow": "Does the image show a wheelbarrow?",
+   "a birdbath": "Does the image show a birdbath?",
+   "a single gull": "Does the image show a single gull?",
+   "a small sailboat in the open sea": "Does the image show a small sailboat in the sea?",
+   "a rowboat": "Does the image show a rowboat?",
+   "a flare in the sky": "Does the image show a flare in the sky?",
+   "a teacup on a saucer beside the scissors": "Does the image show a teacup on a saucer beside the scissors?",
+   "a basket of folded cloth on the bare left end of the table": "Does the image show a basket of folded cloth on the left end of the table?",
+   "a dress form beside the table": "Does the image show a dress form beside the table?",
+   "a cat asleep on the floor": "Does the image show a cat asleep on the floor?",
+   "a milk churn beside the hay wagon": "Does the image show a milk churn beside the hay wagon?",
+   "a haystack on the open right side of the field": "Does the image show a haystack on the right side of the field?",
+   "a grazing horse": "Does the image show a grazing horse?",
+   "a stone water trough": "Does the image show a stone water trough?"
+  },
+  "description_model": "gpt-5.1-2025-11-13, reasoning effort none, temperature 0, at most 16 output tokens, one question per call with the instruction 'Look at the image and answer the question with exactly one word: yes or no.'; the reply must be exactly yes or no (case, spaces and a final full stop ignored); other replies are asked again, three calls at most, then recorded as invalid, which does not confirm.",
+  "order": "Candidates are numbered in the order made, per scene and file; the first that passes every check is accepted and no later candidate is judged."
+ },
+ "rescue": {
+  "count": "The 20 tries are counted per scene and per file (source, small, medium, large); only requests that return an image count as tries.",
+  "source_revision": "After 20 failed source candidates, one revision: the bank's eight sentences, then the sentence 'Make sure the image clearly shows ' + the items whose check failed in more than half of the 20 tries (objects named by their detector query, the open area by the scene's open-area phrase), joined with commas and 'and', + '.', then the closing sentence. The candidate count restarts at the next number; 20 more tries.",
+  "addition_revision": "After 20 failed candidates of an addition, one revision: 'Add ' + phrase + ', clearly visible. Change nothing else.' (for large, the phrase is the two further elements). 20 more tries.",
+  "reserve": "A scene with no passing candidate for any of its four files after the revision is replaced by the reserve of its kind (SA-R1 for a scene with a person, SA-R2 without), which takes its place in every A1 list; the reserve's four files are made by the same rules."
+ },
+ "numbers": {
+  "detector_score_cut": {
+   "value": 0.149,
+   "computed_utc": "2026-10-27T22:36:20+00:00",
+   "basis": {
+    "present_scores": [
+     0.4215,
+     0.2256,
+     0.5657,
+     0.6578,
+     0.4403,
+     0.4608,
+     0.3615,
+     0.4949,
+     0.4268,
+     0.4884,
+     0.4247,
+     0.7517,
+     0.48,
+     0.4021,
+     0.6179,
+     0.6374,
+     0.4615,
+     0.241,
+     0.6034
+    ],
+    "absent_scores": [
+     0.0094,
+     0.0161,
+     0.0096,
+     0.0154,
+     0.0247,
+     0.0042,
+     0.056,
+     0.0057,
+     0.0061,
+     0.0066,
+     0.0223,
+     0.0136,
+     0.0151,
+     0.0066,
+     0.0308,
+     0.0124,
+     0.0065,
+     0.0046,
+     0.0044,
+     0.0052,
+     0.013,
+     0.0232,
+     0.062,
+     0.002,
+     0.0074,
+     0.0716,
+     0.0374,
+     0.0357,
+     0.0368,
+     0.0065,
+     0.0181,
+     0.0087,
+     0.0092,
+     0.0074,
+     0.018,
+     0.0086,
+     0.0246,
+     0.0069,
+     0.0701,
+     0.0139,
+     0.0015,
+     0.0016,
+     0.0042,
+     0.0021,
+     0.0065,
+     0.0072,
+     0.0198,
+     0.0016,
+     0.0038,
+     0.0035,
+     0.0098,
+     0.0044,
+     0.0121,
+     0.0014,
+     0.0081,
+     0.0348,
+     0.0035,
+     0.0049,
+     0.0041,
+     0.0017,
+     0.0047,
+     0.0092,
+     0.036,
+     0.0034,
+     0.0046,
+     0.0041,
+     0.0041,
+     0.0031,
+     0.0075,
+     0.0031,
+     0.0255,
+     0.0016,
+     0.0059,
+     0.0027,
+     0.0055,
+     0.0019,
+     0.0116,
+     0.0258,
+     0.0381,
+     0.0029
+    ],
+    "youden_j": 1.0,
+    "c_star": 0.2256,
+    "largest_below_c_star": 0.0716,
+    "scores_by_query": [
+     {
+      "scene": "SA01",
+      "kind": "present",
+      "query": "a teapot",
+      "best_score": 0.4215
+     },
+     {
+      "scene": "SA01",
+      "kind": "present",
+      "query": "a cup",
+      "best_score": 0.2256
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0094
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0161
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0096
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0154
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0247
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0042
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.056
+     },
+     {
+      "scene": "SA01",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0057
+     },
+     {
+      "scene": "SA02",
+      "kind": "present",
+      "query": "a wooden crate",
+      "best_score": 0.5657
+     },
+     {
+      "scene": "SA02",
+      "kind": "present",
+      "query": "a coil of rope",
+      "best_score": 0.6578
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0061
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0066
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0223
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0136
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0151
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0066
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0308
+     },
+     {
+      "scene": "SA02",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0124
+     },
+     {
+      "scene": "SA03",
+      "kind": "present",
+      "query": "a child",
+      "best_score": 0.4403
+     },
+     {
+      "scene": "SA03",
+      "kind": "present",
+      "query": "a kite",
+      "best_score": 0.4608
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0065
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0046
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0044
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0052
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.013
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0232
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.062
+     },
+     {
+      "scene": "SA03",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.002
+     },
+     {
+      "scene": "SA04",
+      "kind": "present",
+      "query": "a music stand",
+      "best_score": 0.3615
+     },
+     {
+      "scene": "SA04",
+      "kind": "present",
+      "query": "a wooden chair",
+      "best_score": 0.4949
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0074
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0716
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0374
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0357
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0368
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0065
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0181
+     },
+     {
+      "scene": "SA04",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0087
+     },
+     {
+      "scene": "SA05",
+      "kind": "present",
+      "query": "a crate",
+      "best_score": 0.4268
+     },
+     {
+      "scene": "SA05",
+      "kind": "present",
+      "query": "a basket of lemons",
+      "best_score": 0.4884
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0092
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0074
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.018
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0086
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0246
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0069
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0701
+     },
+     {
+      "scene": "SA05",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0139
+     },
+     {
+      "scene": "SA06",
+      "kind": "present",
+      "query": "an oar",
+      "best_score": 0.4247
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0015
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0016
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0042
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0021
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0065
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0072
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0198
+     },
+     {
+      "scene": "SA06",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0016
+     },
+     {
+      "scene": "SA07",
+      "kind": "present",
+      "query": "a clay jug",
+      "best_score": 0.7517
+     },
+     {
+      "scene": "SA07",
+      "kind": "present",
+      "query": "a loaf of bread",
+      "best_score": 0.48
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0038
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0035
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0098
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0044
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0121
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0014
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0081
+     },
+     {
+      "scene": "SA07",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0348
+     },
+     {
+      "scene": "SA08",
+      "kind": "present",
+      "query": "a hand cart",
+      "best_score": 0.4021
+     },
+     {
+      "scene": "SA08",
+      "kind": "present",
+      "query": "a lamp post",
+      "best_score": 0.6179
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0035
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0049
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0041
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0017
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0047
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0092
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.036
+     },
+     {
+      "scene": "SA08",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0034
+     },
+     {
+      "scene": "SA09",
+      "kind": "present",
+      "query": "a wooden bench",
+      "best_score": 0.6374
+     },
+     {
+      "scene": "SA09",
+      "kind": "present",
+      "query": "a flowerpot",
+      "best_score": 0.4615
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0046
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0041
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0041
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0031
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0075
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0031
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0255
+     },
+     {
+      "scene": "SA09",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0016
+     },
+     {
+      "scene": "SA10",
+      "kind": "present",
+      "query": "a red buoy",
+      "best_score": 0.241
+     },
+     {
+      "scene": "SA10",
+      "kind": "present",
+      "query": "a ship",
+      "best_score": 0.6034
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a smartphone",
+      "best_score": 0.0059
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a laptop computer",
+      "best_score": 0.0027
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a television set",
+      "best_score": 0.0055
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a computer keyboard",
+      "best_score": 0.0019
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a plastic water bottle",
+      "best_score": 0.0116
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a jet airplane",
+      "best_score": 0.0258
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a satellite dish",
+      "best_score": 0.0381
+     },
+     {
+      "scene": "SA10",
+      "kind": "absent",
+      "query": "a microwave oven",
+      "best_score": 0.0029
+     }
+    ],
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)"
+   }
+  },
+  "difference_threshold": {
+   "value": 38.1,
+   "computed_utc": "2026-10-27T22:53:39+00:00",
+   "basis": {
+    "pairs": [
+     "SA01_small_c01",
+     "SA01_medium_c01",
+     "SA02_small_c01",
+     "SA02_medium_c01",
+     "SA03_small_c01",
+     "SA03_medium_c01",
+     "SA04_small_c01",
+     "SA04_medium_c01",
+     "SA05_small_c01",
+     "SA05_medium_c01",
+     "SA06_small_c01",
+     "SA06_medium_c01",
+     "SA07_small_c01",
+     "SA07_medium_c01",
+     "SA08_small_c01",
+     "SA08_medium_c01",
+     "SA09_small_c01",
+     "SA09_medium_c01",
+     "SA10_small_c01",
+     "SA10_medium_c01"
+    ],
+    "median_d": 9.4868,
+    "mad_d": 5.5132
+   }
+  },
+  "speck_px": {
+   "value": 110,
+   "computed_utc": "2026-10-27T22:53:40+00:00",
+   "basis": {
+    "groups": 515926,
+    "largest_group": 95797
+   }
+  },
+  "widening_px": {
+   "value": 64,
+   "computed_utc": "2026-10-27T22:53:48+00:00",
+   "basis": {
+    "ring_medians_by_distance": {
+     "1": 20.445,
+     "2": 17.378,
+     "3": 17.117,
+     "4": 16.432,
+     "5": 16.31,
+     "6": 16.248,
+     "7": 16.155,
+     "8": 15.843,
+     "9": 15.843,
+     "10": 15.811,
+     "11": 15.684,
+     "12": 15.652,
+     "13": 15.427,
+     "14": 15.524,
+     "15": 15.297,
+     "16": 15.166,
+     "17": 15.1,
+     "18": 15.033,
+     "19": 14.866,
+     "20": 14.866,
+     "21": 14.731,
+     "22": 14.595,
+     "23": 14.526,
+     "24": 14.457,
+     "25": 14.457,
+     "26": 14.353,
+     "27": 14.142,
+     "28": 14.142,
+     "29": 14.071,
+     "30": 14.071,
+     "31": 13.928,
+     "32": 13.928,
+     "33": 13.748,
+     "34": 13.748,
+     "35": 13.748,
+     "36": 13.748,
+     "37": 13.675,
+     "38": 13.491,
+     "39": 13.454,
+     "40": 13.454,
+     "41": 13.379,
+     "42": 13.379,
+     "43": 13.342,
+     "44": 13.191,
+     "45": 13.153,
+     "46": 13.115,
+     "47": 13.191,
+     "48": 13.038,
+     "49": 13.115,
+     "50": 12.884,
+     "51": 13.038,
+     "52": 12.884,
+     "53": 12.845,
+     "54": 12.806,
+     "55": 12.728,
+     "56": 12.728,
+     "57": 12.689,
+     "58": 12.689,
+     "59": 12.689,
+     "60": 12.53,
+     "61": 12.369,
+     "62": 12.41,
+     "63": 12.41,
+     "64": 12.369
+    },
+    "median_d_all_pixels": 9.4868
+   }
+  },
+  "spill_cut_pct": {
+   "value": 0.765,
+   "computed_utc": "2026-10-29T06:52:16+00:00",
+   "basis": {
+    "candidates": [
+     {
+      "spill_pct": 0.0083,
+      "added_element_region_pct": 3.232,
+      "input": "SA01_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a spoon beside the cup": 1
+      },
+      "file": "SA01_small_c01"
+     },
+     {
+      "spill_pct": 0.699,
+      "added_element_region_pct": 12.242,
+      "input": "SA01_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a vase of daisies on the bare end of the table": 1
+      },
+      "file": "SA01_medium_c01"
+     },
+     {
+      "spill_pct": 0.4575,
+      "added_element_region_pct": 31.167,
+      "input": "SA01_medium.png",
+      "medium_mask_from": "SA01_medium.png",
+      "boxes_used": {
+       "a vase of daisies on the bare end of the table": 1,
+       "a loaf of bread on a board": 1,
+       "a cat asleep on a stool": 1
+      },
+      "file": "SA01_large_c01"
+     },
+     {
+      "spill_pct": 0.6763,
+      "added_element_region_pct": 9.129,
+      "input": "SA02_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a gull standing on the wooden crate": 1
+      },
+      "file": "SA02_small_c01"
+     },
+     {
+      "spill_pct": 0.5582,
+      "added_element_region_pct": 12.118,
+      "input": "SA02_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a dog lying on the empty dock to the man's right": 1
+      },
+      "file": "SA02_medium_c01"
+     },
+     {
+      "spill_pct": 0.0268,
+      "added_element_region_pct": 38.621,
+      "input": "SA02_medium.png",
+      "medium_mask_from": "SA02_medium.png",
+      "boxes_used": {
+       "a dog lying on the empty dock to the man's right": 1,
+       "a stack of barrels": 4,
+       "a lantern on a post": 3
+      },
+      "file": "SA02_large_c01"
+     },
+     {
+      "spill_pct": 0.0224,
+      "added_element_region_pct": 2.352,
+      "input": "SA03_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a bird flying in the open sky": 1
+      },
+      "file": "SA03_small_c01"
+     },
+     {
+      "spill_pct": 0.0109,
+      "added_element_region_pct": 4.052,
+      "input": "SA03_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a dog running beside the two children": 1
+      },
+      "file": "SA03_medium_c01"
+     },
+     {
+      "spill_pct": 0.0306,
+      "added_element_region_pct": 37.233,
+      "input": "SA03_medium.png",
+      "medium_mask_from": "SA03_medium.png",
+      "boxes_used": {
+       "a dog running beside the two children": 1,
+       "a picnic blanket with a basket": 1,
+       "a second kite": 10
+      },
+      "file": "SA03_large_c01"
+     },
+     {
+      "spill_pct": 0.0306,
+      "added_element_region_pct": 5.416,
+      "input": "SA04_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a sheet of music on the floor": 2
+      },
+      "file": "SA04_small_c01"
+     },
+     {
+      "spill_pct": 0.0131,
+      "added_element_region_pct": 11.464,
+      "input": "SA04_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a large dog asleep on the rug in front of the man": 3
+      },
+      "file": "SA04_medium_c41"
+     },
+     {
+      "spill_pct": 0.0982,
+      "added_element_region_pct": 24.414,
+      "input": "SA04_medium.png",
+      "medium_mask_from": "SA04_medium.png",
+      "boxes_used": {
+       "a large dog asleep on the rug in front of the man": 2,
+       "a side table with a vase": 1,
+       "a candlestick": 5
+      },
+      "file": "SA04_large_c01"
+     },
+     {
+      "spill_pct": 0.1589,
+      "added_element_region_pct": 6.175,
+      "input": "SA05_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single lemon on the ground": 10
+      },
+      "file": "SA05_small_c01"
+     },
+     {
+      "spill_pct": 0.1717,
+      "added_element_region_pct": 4.477,
+      "input": "SA05_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a basket of eggs on the empty end of the counter": 1
+      },
+      "file": "SA05_medium_c01"
+     },
+     {
+      "spill_pct": 0.0401,
+      "added_element_region_pct": 2.498,
+      "input": "SA06_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a duck on the empty stretch of water": 1
+      },
+      "file": "SA06_small_c01"
+     },
+     {
+      "spill_pct": 0.1305,
+      "added_element_region_pct": 4.247,
+      "input": "SA06_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a heron standing in the shallow water": 1
+      },
+      "file": "SA06_medium_c01"
+     },
+     {
+      "spill_pct": 0.0198,
+      "added_element_region_pct": 44.141,
+      "input": "SA06_medium.png",
+      "medium_mask_from": "SA06_medium.png",
+      "boxes_used": {
+       "a heron standing in the shallow water": 1,
+       "a second boat": 8,
+       "a stand of reeds": 7
+      },
+      "file": "SA06_large_c01"
+     },
+     {
+      "spill_pct": 0.1225,
+      "added_element_region_pct": 3.146,
+      "input": "SA07_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single walnut": 1
+      },
+      "file": "SA07_small_c01"
+     },
+     {
+      "spill_pct": 0.2872,
+      "added_element_region_pct": 12.305,
+      "input": "SA07_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a pear on the bare right side of the table": 1
+      },
+      "file": "SA07_medium_c01"
+     },
+     {
+      "spill_pct": 0.8935,
+      "added_element_region_pct": 26.556,
+      "input": "SA07_medium.png",
+      "medium_mask_from": "SA07_medium.png",
+      "boxes_used": {
+       "a pear on the bare right side of the table": 1,
+       "a bowl of grapes": 3,
+       "a candlestick": 3
+      },
+      "file": "SA07_large_c01"
+     },
+     {
+      "spill_pct": 0.0,
+      "added_element_region_pct": 1.86,
+      "input": "SA08_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a bird on a rooftop": 1
+      },
+      "file": "SA08_small_c01"
+     },
+     {
+      "spill_pct": 0.0,
+      "added_element_region_pct": 19.543,
+      "input": "SA08_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a horse-drawn sled on the open right side of the street": 4
+      },
+      "file": "SA08_medium_c01"
+     },
+     {
+      "spill_pct": 0.0197,
+      "added_element_region_pct": 29.71,
+      "input": "SA08_medium.png",
+      "medium_mask_from": "SA08_medium.png",
+      "boxes_used": {
+       "a horse-drawn sled on the open right side of the street": 4,
+       "a snowman": 2,
+       "a row of lanterns along the houses": 3
+      },
+      "file": "SA08_large_c01"
+     },
+     {
+      "spill_pct": 0.8521,
+      "added_element_region_pct": 1.751,
+      "input": "SA09_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a butterfly over the path": 1
+      },
+      "file": "SA09_small_c01"
+     },
+     {
+      "spill_pct": 0.9856,
+      "added_element_region_pct": 6.264,
+      "input": "SA09_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a watering can on the path": 1
+      },
+      "file": "SA09_medium_c01"
+     },
+     {
+      "spill_pct": 0.0502,
+      "added_element_region_pct": 22.438,
+      "input": "SA09_medium.png",
+      "medium_mask_from": "SA09_medium.png",
+      "boxes_used": {
+       "a watering can on the path": 2,
+       "a wheelbarrow": 5,
+       "a birdbath": 2
+      },
+      "file": "SA09_large_c01"
+     },
+     {
+      "spill_pct": 0.6224,
+      "added_element_region_pct": 3.781,
+      "input": "SA10_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single gull": 1
+      },
+      "file": "SA10_small_c01"
+     },
+     {
+      "spill_pct": 0.5728,
+      "added_element_region_pct": 8.682,
+      "input": "SA10_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a large sailing ship in the open sea": 3
+      },
+      "file": "SA10_medium_c81"
+     },
+     {
+      "spill_pct": 0.0474,
+      "added_element_region_pct": 20.464,
+      "input": "SA10_medium.png",
+      "medium_mask_from": "SA10_medium.png",
+      "boxes_used": {
+       "a large sailing ship in the open sea": 2,
+       "a rowboat": 2,
+       "a flare in the sky": 4
+      },
+      "file": "SA10_large_c01"
+     },
+     {
+      "spill_pct": 0.0029,
+      "added_element_region_pct": 4.395,
+      "input": "SA-R1_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a teacup on a saucer beside the scissors": 1
+      },
+      "file": "SA-R1_small_c01"
+     },
+     {
+      "spill_pct": 0.8026,
+      "added_element_region_pct": 14.397,
+      "input": "SA-R1_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a basket of folded cloth on the bare left end of the table": 2
+      },
+      "file": "SA-R1_medium_c01"
+     },
+     {
+      "spill_pct": 0.1877,
+      "added_element_region_pct": 48.435,
+      "input": "SA-R1_medium.png",
+      "medium_mask_from": "SA-R1_medium.png",
+      "boxes_used": {
+       "a basket of folded cloth on the bare left end of the table": 3,
+       "a tall wooden cupboard against the back wall": 1,
+       "a rocking chair beside the table": 1
+      },
+      "file": "SA-R1_large_c41"
+     },
+     {
+      "spill_pct": 0.9367,
+      "added_element_region_pct": 3.366,
+      "input": "SA-R2_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a milk churn beside the hay wagon": 1
+      },
+      "file": "SA-R2_small_c01"
+     },
+     {
+      "spill_pct": 0.422,
+      "added_element_region_pct": 31.716,
+      "input": "SA-R2_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a haystack on the open right side of the field": 3
+      },
+      "file": "SA-R2_medium_c01"
+     },
+     {
+      "spill_pct": 2.7371,
+      "added_element_region_pct": 33.264,
+      "input": "SA-R2_medium.png",
+      "medium_mask_from": "SA-R2_medium.png",
+      "boxes_used": {
+       "a haystack on the open right side of the field": 2,
+       "a grazing horse": 1,
+       "a stone water trough": 1
+      },
+      "file": "SA-R2_large_c01"
+     }
+    ],
+    "n": 35,
+    "median": 0.1305,
+    "mad": 0.1222,
+    "units": "percent of the image's 1536 x 1024 pixels"
+   }
+  }
+ },
+ "prompt_bank_sha256": "05a8ef29179a310af3a0b25b37c891f2941607664848f751c19c20b8b37019b2",
+ "amendments": [
+  {
+   "utc": "2026-10-28T19:13:42+00:00",
+   "date": "28 October 2026",
+   "what": "Phrase amendments: three A1 phrases reworded by David before any participant data",
+   "decided_by": "David G. Kamper, 28 October 2026 (prompt bank, 'Phrase amendments')",
+   "old": {
+    "SA04 medium": "a dog asleep on the rug in front of the man",
+    "SA10 medium": "a small sailboat in the open sea",
+    "SA-R1 large": "a dress form beside the table, and a cat asleep on the floor"
+   },
+   "new": {
+    "SA04 medium": "a large dog asleep on the rug in front of the man",
+    "SA10 medium": "a sailboat in the open sea",
+    "SA-R1 large": "a tall wooden cupboard against the back wall, and a rocking chair beside the table"
+   },
+   "questions": {
+    "a large dog asleep on the rug in front of the man": "Does the image show a large dog asleep on the rug in front of the man?",
+    "a sailboat in the open sea": "Does the image show a sailboat in the sea?",
+    "a tall wooden cupboard against the back wall": "Does the image show a tall wooden cupboard against the back wall?",
+    "a rocking chair beside the table": "Does the image show a rocking chair beside the table?"
+   },
+   "detector_queries": {
+    "a large dog asleep on the rug in front of the man": "a dog",
+    "a sailboat in the open sea": "a sailboat",
+    "a tall wooden cupboard against the back wall": "a cupboard",
+    "a rocking chair beside the table": "a rocking chair"
+   },
+   "reason": "Under the rescue rule, each of the three files failed 20 tries and 20 revised tries, with both reserves already in use: SA04 medium reached at most 2.17 percent against 2.24; SA10 medium at most 0.89 against 1.64; SA-R1 large at most 17.9 against 17.09, with the detector confirming 'a dress form' on 7 of 40 and the description model 'a cat asleep on the floor' on 1 of 40.",
+   "consequences": "Only the files that depend on these phrases are made again (SA04 medium and large, SA10 medium and large, SA-R1 large), under the same rules and frozen thresholds. Candidate numbers continue; candidates made with an earlier phrase stay in the manifest but are not tries under the amended phrase, and the 20 tries, the one revision and the 20 further tries count anew. SA10's question follows the frozen rule of 27 October (the place word 'open' is dropped). No other accepted file changes."
+  },
+  {
+   "utc": "2026-10-29T06:24:03+00:00",
+   "date": "28 October 2026",
+   "what": "Phrase amendment: SA10 medium reworded a second time by David before any participant data",
+   "decided_by": "David G. Kamper, 28 October 2026 (prompt bank, 'Phrase amendments')",
+   "old": {
+    "SA10 medium": "a sailboat in the open sea"
+   },
+   "new": {
+    "SA10 medium": "a large sailing ship in the open sea"
+   },
+   "questions": {
+    "a large sailing ship in the open sea": "Does the image show a large sailing ship in the sea?"
+   },
+   "detector_queries": {
+    "a large sailing ship in the open sea": "a sailing ship"
+   },
+   "reason": "Under 'a sailboat in the open sea', all 40 tries (c41 to c80, 20 revised) passed the detector and the description model but changed only 0.67 to 0.98 percent of the image against the 1.64 percent required.",
+   "consequences": "SA10 medium is searched afresh under the new phrase (candidate numbers continue; the 20 tries, the one revision and the 20 further tries count anew), then SA10 large from it. Earlier candidates and phrases stay in the manifest."
+  },
+  {
+   "utc": "2026-10-29T06:24:03+00:00",
+   "date": "28 October 2026",
+   "what": "New acceptance condition for every Set A addition: the 'unchanged elsewhere' check",
+   "decided_by": "David G. Kamper, 28 October 2026, before any participant data",
+   "rule": "The description model (gpt-5.1-2025-11-13, reasoning off, temperature 0, at most 16 output tokens) is shown the edit's input and the composited file in one request: the text 'First image:', the input, the text 'Second image:', the composited file, then the instruction 'Look at the two images and answer the question with exactly one word: yes or no.' and 'Question: Apart from <the added element or elements, named as in the instruction>, is everything that was in the first image still in the same place and unchanged in the second image?'. For large the input is the accepted medium file and the question names the medium element and the two further elements. The answer must be 'yes'; any other reply is asked again, three calls at most, then recorded as invalid, which does not confirm. The question is asked only of a candidate that passes every earlier check.",
+   "reason": "A1 tells participants that Alex 'changed nothing else'. Two accepted large files (SA04, whose edit also redrew the empty chair, and SA-R1, whose edit moved the framed picture) changed existing objects inside the pasted region and still passed every earlier check.",
+   "consequences": "Every Set A addition in use is re-judged in candidate order: the question is asked of the earliest candidate that passes every earlier check; on 'no' the search continues in order through the candidates that passed the earlier checks, then with new candidates under the rescue rule. When a small file changes, its medium's size minimum (2 x small) changes with it; when a medium changes, large candidates made from the old medium are superseded and the large is searched again from the new medium. The earlier judgments are kept in each record under previous_judgments. The replaced scenes SA05 and SA08 are not re-judged, since their files are not used.",
+   "questions": {
+    "SA01 small": "Apart from a spoon beside the cup, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA01 medium": "Apart from a vase of daisies on the bare end of the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA01 large": "Apart from a vase of daisies on the bare end of the table, a loaf of bread on a board, and a cat asleep on a stool, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA02 small": "Apart from a gull standing on the wooden crate, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA02 medium": "Apart from a dog lying on the empty dock to the man's right, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA02 large": "Apart from a dog lying on the empty dock to the man's right, a stack of barrels, and a lantern on a post, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA03 small": "Apart from a bird flying in the open sky, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA03 medium": "Apart from a dog running beside the two children, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA03 large": "Apart from a dog running beside the two children, a picnic blanket with a basket, and a second kite, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA04 small": "Apart from a sheet of music on the floor, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA04 medium": "Apart from a large dog asleep on the rug in front of the man, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA04 large": "Apart from a large dog asleep on the rug in front of the man, a side table with a vase, and a candlestick, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA05 small": "Apart from a single lemon on the ground, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA05 medium": "Apart from a basket of eggs on the empty end of the counter, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA05 large": "Apart from a basket of eggs on the empty end of the counter, buckets of flowers, and a customer with a shopping bag, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA06 small": "Apart from a duck on the empty stretch of water, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA06 medium": "Apart from a heron standing in the shallow water, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA06 large": "Apart from a heron standing in the shallow water, a second boat, and a stand of reeds, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA07 small": "Apart from a single walnut, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA07 medium": "Apart from a pear on the bare right side of the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA07 large": "Apart from a pear on the bare right side of the table, a bowl of grapes, and a candlestick, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA08 small": "Apart from a bird on a rooftop, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA08 medium": "Apart from a horse-drawn sled on the open right side of the street, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA08 large": "Apart from a horse-drawn sled on the open right side of the street, a snowman, and a row of lanterns along the houses, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA09 small": "Apart from a butterfly over the path, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA09 medium": "Apart from a watering can on the path, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA09 large": "Apart from a watering can on the path, a wheelbarrow, and a birdbath, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA10 small": "Apart from a single gull, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA10 medium": "Apart from a large sailing ship in the open sea, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA10 large": "Apart from a large sailing ship in the open sea, a rowboat, and a flare in the sky, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R1 small": "Apart from a teacup on a saucer beside the scissors, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R1 medium": "Apart from a basket of folded cloth on the bare left end of the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R1 large": "Apart from a basket of folded cloth on the bare left end of the table, a tall wooden cupboard against the back wall, and a rocking chair beside the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R2 small": "Apart from a milk churn beside the hay wagon, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R2 medium": "Apart from a haystack on the open right side of the field, is everything that was in the first image still in the same place and unchanged in the second image?",
+    "SA-R2 large": "Apart from a haystack on the open right side of the field, a grazing horse, and a stone water trough, is everything that was in the first image still in the same place and unchanged in the second image?"
+   }
+  },
+  {
+   "utc": "2026-10-29T06:46:16+00:00",
+   "date": "28 October 2026",
+   "what": "Spill check replaces the 'unchanged elsewhere' description question for every Set A addition",
+   "decided_by": "David G. Kamper, 28 October 2026, before any participant data",
+   "supersedes": "the 'unchanged elsewhere' question of the amendment above; its answers stay in each candidate's previous_judgments and in manifest.csv",
+   "rule": "Added-element region: for each element the file must show (small: the small element; medium: the medium element; large: the medium element and the two further elements), every detector box for the element's query that scores at least the detector score cut and whose center lies inside the composited region (the widened mask; for large, the union of the medium's and the large's widened masks), each box's rectangle grown by the widening radius (64 pixels) on every side and clipped to the image; the region is the union of these rectangles. Spill: the percent of the image's 1536 x 1024 pixels that lie inside the cleaned change mask (before widening; the edit's input against the composited file, with the frozen difference threshold and speck rule) but outside the added-element region. Cut: compute spill for candidate 1 of every addition file that has one (small, medium and large across all twelve scenes, reserves included), each rebuilt from its raw edit and its input with the frozen thresholds; the cut is median + 3.5 x MAD / 0.6745 of those values, rounded up to three decimals (numbers.spill_cut_pct). A file passes when its spill is at or below the cut.",
+   "readings_made_determinate": "'The detector's accepted boxes' is read as every box that confirms the element (score at least the cut, center inside the composited region), so that plural elements (a stack of barrels, a row of lanterns, buckets of flowers, reeds) are covered by all their boxes; 'widened by 64 pixels' is read as growing each box's rectangle by 64 pixels on every side.",
+   "reason": "The two-image description question answered 'yes' for SA04 large c28 (the edit redrew the empty chair) and SA-R1 large c42 (the edit moved the framed picture), the two known cases it was meant to catch.",
+   "consequences": "Every addition in use is re-judged in candidate order under all current checks with the spill check in place of the question; when a medium changes, its large is searched again; searches continue under the rescue rule."
+  },
+  {
+   "utc": "2026-10-29T08:04:24+00:00",
+   "date": "29 October 2026",
+   "what": "Object-position check replaces the spill check for every Set A addition",
+   "decided_by": "David G. Kamper, 29 October 2026, before any participant data",
+   "supersedes": "the spill check of 28 October 2026; its values stay in each candidate's previous_judgments and in manifest.csv",
+   "rule": "Tracked objects (fixed per scene before any judging, in tracked_objects): the noun chunks (spaCy 3.7.4, en_core_web_sm 3.7.1) of the scene's Composition and Background sentences in the bank; each chunk's head noun as the detector query 'a' or 'an' + noun; excluded: the scene's added elements at all three amounts, the person or people of the Subject sentence, and the surfaces and regions area, background, center, centre, corner, distance, end, field, floor, foreground, frame, ground, horizon, left, right, river, road, room, rug, sea, side, sky, street, stretch, table, third, wall, water. A tracked object is trackable when the detector finds it in the accepted source at or above the score cut; otherwise it is untrackable and ignored. A file passes when every trackable object found in its input (at or above the cut) is also found in the composited file, at or above the cut, by a box whose intersection over union with the object's box in the input is at least 0.5 (a fixed constant, not tuned); for each object the best-matching box is used. The input is the source for small and medium, and the accepted medium for large.",
+   "readings_made_determinate": "Head noun: the chunk's root token when it is a noun, lemmatized to the singular ('oars' -> 'an oar'); chunks whose root is a pronoun ('She', 'his right') are skipped. 'an' before a vowel letter, else 'a'. Added elements: the head noun of each element phrase's first noun chunk and the noun (last word, and its singular) of the element's detector query, for the small, medium and large phrases in use. Person: the head noun of the Subject sentence's first noun chunk, in a scene with a person. The object's box in the input: its best-scoring box at or above the cut; an object not found in a file's input is not checked for that file. The lists are the rule's literal output and include chunk heads that are not objects ('a hand', 'a band', 'a front', 'a glow'); they are applied as written.",
+   "reason": "The spill check measures pixel change: it penalized re-rendered texture (SA-R2's hay) and passed a moved object of modest size (SA04's chair). A1's statement promises that no existing object moved or vanished, which this check tests directly.",
+   "consequences": "Every addition in use is re-judged in candidate order under all current checks with the object-position check in place of the spill check, starting with SA-R2 small's existing candidates; when a medium changes, its large is searched again; searches continue under the rescue rule."
+  },
+  {
+   "utc": "2026-10-29T17:23:34+00:00",
+   "date": "29 October 2026",
+   "what": "SA04 large phrase given a place",
+   "decided_by": "David G. Kamper, 29 October 2026, before any participant data",
+   "old": {
+    "SA04 large": "a side table with a vase, and a candlestick"
+   },
+   "new": {
+    "SA04 large": "a side table with a vase in the far right corner, and a candlestick on the mantelpiece"
+   },
+   "questions": {
+    "a side table with a vase in the far right corner": "Does the image show a side table with a vase in the far right corner?",
+    "a candlestick on the mantelpiece": "Does the image show a candlestick on the mantelpiece?"
+   },
+   "detector_queries": {
+    "a side table with a vase in the far right corner": "a side table",
+    "a candlestick on the mantelpiece": "a candlestick"
+   },
+   "reason": "The accepted SA04 large (c67) passed every check, including the object-position check (the chair's box overlapped its input box at IoU 0.547, because the detector's chair box in the edit took in the new table's base), but the model had placed the side table where the empty chair stood and shrunk and moved the chair behind it, which A1's statement 'changed nothing else' does not allow. With no place given, the model chose the empty chair's spot.",
+   "consequences": "Only SA04 large is searched again, from the accepted medium (c73), under all current checks; its earlier candidates were made with the earlier phrase and are not tries under the current one. The superseded c67 is kept in setA/superseded_2026-10-29_SA04_large_phrase/."
+  },
+  {
+   "utc": "2026-10-29T18:16:04+00:00",
+   "date": "29 October 2026",
+   "what": "SA04 large phrase placed in the right foreground",
+   "decided_by": "David G. Kamper, 29 October 2026, before any participant data",
+   "old": {
+    "SA04 large": "a side table with a vase in the far right corner, and a candlestick on the mantelpiece"
+   },
+   "new": {
+    "SA04 large": "a side table with a vase in the right foreground, and a candlestick on the side table"
+   },
+   "questions": {
+    "a side table with a vase in the right foreground": "Does the image show a side table with a vase in the right foreground?",
+    "a candlestick on the side table": "Does the image show a candlestick on the side table?"
+   },
+   "detector_queries": {
+    "a side table with a vase in the right foreground": "a side table",
+    "a candlestick on the side table": "a candlestick"
+   },
+   "reason": "In the far right corner the model drew the table small and dark: 17 tries (c68 to c84) reached 2.5 to 3.4 percent of the image against the 4.96 percent required (twice the medium), and most failed the detector or description checks.",
+   "consequences": "Only SA04 large is searched again from the accepted medium; candidates made with the earlier phrases are not tries under the current one."
+  }
+ ],
+ "corrections": [
+  {
+   "utc": "2026-10-29T06:50:02+00:00",
+   "number": "spill_cut_pct",
+   "withdrawn_value": 0.793,
+   "withdrawn_basis": {
+    "candidates": [
+     {
+      "spill_pct": 0.0083,
+      "added_element_region_pct": 3.232,
+      "input": "SA01_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a spoon beside the cup": 1
+      },
+      "file": "SA01_small_c01"
+     },
+     {
+      "spill_pct": 0.699,
+      "added_element_region_pct": 12.242,
+      "input": "SA01_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a vase of daisies on the bare end of the table": 1
+      },
+      "file": "SA01_medium_c01"
+     },
+     {
+      "spill_pct": 0.4575,
+      "added_element_region_pct": 31.167,
+      "input": "SA01_medium.png",
+      "medium_mask_from": "SA01_medium.png",
+      "boxes_used": {
+       "a vase of daisies on the bare end of the table": 1,
+       "a loaf of bread on a board": 1,
+       "a cat asleep on a stool": 1
+      },
+      "file": "SA01_large_c01"
+     },
+     {
+      "spill_pct": 0.6763,
+      "added_element_region_pct": 9.129,
+      "input": "SA02_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a gull standing on the wooden crate": 1
+      },
+      "file": "SA02_small_c01"
+     },
+     {
+      "spill_pct": 0.5582,
+      "added_element_region_pct": 12.118,
+      "input": "SA02_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a dog lying on the empty dock to the man's right": 1
+      },
+      "file": "SA02_medium_c01"
+     },
+     {
+      "spill_pct": 0.0268,
+      "added_element_region_pct": 38.621,
+      "input": "SA02_medium.png",
+      "medium_mask_from": "SA02_medium.png",
+      "boxes_used": {
+       "a dog lying on the empty dock to the man's right": 1,
+       "a stack of barrels": 4,
+       "a lantern on a post": 3
+      },
+      "file": "SA02_large_c01"
+     },
+     {
+      "spill_pct": 0.0224,
+      "added_element_region_pct": 2.352,
+      "input": "SA03_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a bird flying in the open sky": 1
+      },
+      "file": "SA03_small_c01"
+     },
+     {
+      "spill_pct": 0.0109,
+      "added_element_region_pct": 4.052,
+      "input": "SA03_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a dog running beside the two children": 1
+      },
+      "file": "SA03_medium_c01"
+     },
+     {
+      "spill_pct": 0.0306,
+      "added_element_region_pct": 37.233,
+      "input": "SA03_medium.png",
+      "medium_mask_from": "SA03_medium.png",
+      "boxes_used": {
+       "a dog running beside the two children": 1,
+       "a picnic blanket with a basket": 1,
+       "a second kite": 10
+      },
+      "file": "SA03_large_c01"
+     },
+     {
+      "spill_pct": 0.0306,
+      "added_element_region_pct": 5.416,
+      "input": "SA04_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a sheet of music on the floor": 2
+      },
+      "file": "SA04_small_c01"
+     },
+     {
+      "spill_pct": 0.0321,
+      "added_element_region_pct": 7.565,
+      "input": "SA04_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a large dog asleep on the rug in front of the man": 2
+      },
+      "file": "SA04_medium_c01"
+     },
+     {
+      "spill_pct": 0.0982,
+      "added_element_region_pct": 24.414,
+      "input": "SA04_medium.png",
+      "medium_mask_from": "SA04_medium.png",
+      "boxes_used": {
+       "a large dog asleep on the rug in front of the man": 2,
+       "a side table with a vase": 1,
+       "a candlestick": 5
+      },
+      "file": "SA04_large_c01"
+     },
+     {
+      "spill_pct": 0.1589,
+      "added_element_region_pct": 6.175,
+      "input": "SA05_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single lemon on the ground": 10
+      },
+      "file": "SA05_small_c01"
+     },
+     {
+      "spill_pct": 0.1717,
+      "added_element_region_pct": 4.477,
+      "input": "SA05_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a basket of eggs on the empty end of the counter": 1
+      },
+      "file": "SA05_medium_c01"
+     },
+     {
+      "spill_pct": 0.0401,
+      "added_element_region_pct": 2.498,
+      "input": "SA06_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a duck on the empty stretch of water": 1
+      },
+      "file": "SA06_small_c01"
+     },
+     {
+      "spill_pct": 0.1305,
+      "added_element_region_pct": 4.247,
+      "input": "SA06_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a heron standing in the shallow water": 1
+      },
+      "file": "SA06_medium_c01"
+     },
+     {
+      "spill_pct": 0.0198,
+      "added_element_region_pct": 44.141,
+      "input": "SA06_medium.png",
+      "medium_mask_from": "SA06_medium.png",
+      "boxes_used": {
+       "a heron standing in the shallow water": 1,
+       "a second boat": 8,
+       "a stand of reeds": 7
+      },
+      "file": "SA06_large_c01"
+     },
+     {
+      "spill_pct": 0.1225,
+      "added_element_region_pct": 3.146,
+      "input": "SA07_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single walnut": 1
+      },
+      "file": "SA07_small_c01"
+     },
+     {
+      "spill_pct": 0.2872,
+      "added_element_region_pct": 12.305,
+      "input": "SA07_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a pear on the bare right side of the table": 1
+      },
+      "file": "SA07_medium_c01"
+     },
+     {
+      "spill_pct": 0.8935,
+      "added_element_region_pct": 26.556,
+      "input": "SA07_medium.png",
+      "medium_mask_from": "SA07_medium.png",
+      "boxes_used": {
+       "a pear on the bare right side of the table": 1,
+       "a bowl of grapes": 3,
+       "a candlestick": 3
+      },
+      "file": "SA07_large_c01"
+     },
+     {
+      "spill_pct": 0.0,
+      "added_element_region_pct": 1.86,
+      "input": "SA08_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a bird on a rooftop": 1
+      },
+      "file": "SA08_small_c01"
+     },
+     {
+      "spill_pct": 0.0,
+      "added_element_region_pct": 19.543,
+      "input": "SA08_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a horse-drawn sled on the open right side of the street": 4
+      },
+      "file": "SA08_medium_c01"
+     },
+     {
+      "spill_pct": 0.0197,
+      "added_element_region_pct": 29.71,
+      "input": "SA08_medium.png",
+      "medium_mask_from": "SA08_medium.png",
+      "boxes_used": {
+       "a horse-drawn sled on the open right side of the street": 4,
+       "a snowman": 2,
+       "a row of lanterns along the houses": 3
+      },
+      "file": "SA08_large_c01"
+     },
+     {
+      "spill_pct": 0.8521,
+      "added_element_region_pct": 1.751,
+      "input": "SA09_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a butterfly over the path": 1
+      },
+      "file": "SA09_small_c01"
+     },
+     {
+      "spill_pct": 0.9856,
+      "added_element_region_pct": 6.264,
+      "input": "SA09_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a watering can on the path": 1
+      },
+      "file": "SA09_medium_c01"
+     },
+     {
+      "spill_pct": 0.0502,
+      "added_element_region_pct": 22.438,
+      "input": "SA09_medium.png",
+      "medium_mask_from": "SA09_medium.png",
+      "boxes_used": {
+       "a watering can on the path": 2,
+       "a wheelbarrow": 5,
+       "a birdbath": 2
+      },
+      "file": "SA09_large_c01"
+     },
+     {
+      "spill_pct": 0.6224,
+      "added_element_region_pct": 3.781,
+      "input": "SA10_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a single gull": 1
+      },
+      "file": "SA10_small_c01"
+     },
+     {
+      "spill_pct": 0.5245,
+      "added_element_region_pct": 6.146,
+      "input": "SA10_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a large sailing ship in the open sea": 3
+      },
+      "file": "SA10_medium_c01"
+     },
+     {
+      "spill_pct": 0.0474,
+      "added_element_region_pct": 20.464,
+      "input": "SA10_medium.png",
+      "medium_mask_from": "SA10_medium.png",
+      "boxes_used": {
+       "a large sailing ship in the open sea": 2,
+       "a rowboat": 2,
+       "a flare in the sky": 4
+      },
+      "file": "SA10_large_c01"
+     },
+     {
+      "spill_pct": 0.0029,
+      "added_element_region_pct": 4.395,
+      "input": "SA-R1_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a teacup on a saucer beside the scissors": 1
+      },
+      "file": "SA-R1_small_c01"
+     },
+     {
+      "spill_pct": 0.8026,
+      "added_element_region_pct": 14.397,
+      "input": "SA-R1_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a basket of folded cloth on the bare left end of the table": 2
+      },
+      "file": "SA-R1_medium_c01"
+     },
+     {
+      "spill_pct": 5.7934,
+      "added_element_region_pct": 12.429,
+      "input": "SA-R1_medium.png",
+      "medium_mask_from": "SA-R1_medium.png",
+      "boxes_used": {
+       "a basket of folded cloth on the bare left end of the table": 2,
+       "a tall wooden cupboard against the back wall": 0,
+       "a rocking chair beside the table": 0
+      },
+      "file": "SA-R1_large_c01"
+     },
+     {
+      "spill_pct": 0.9367,
+      "added_element_region_pct": 3.366,
+      "input": "SA-R2_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a milk churn beside the hay wagon": 1
+      },
+      "file": "SA-R2_small_c01"
+     },
+     {
+      "spill_pct": 0.422,
+      "added_element_region_pct": 31.716,
+      "input": "SA-R2_source.png",
+      "medium_mask_from": null,
+      "boxes_used": {
+       "a haystack on the open right side of the field": 3
+      },
+      "file": "SA-R2_medium_c01"
+     },
+     {
+      "spill_pct": 2.7371,
+      "added_element_region_pct": 33.264,
+      "input": "SA-R2_medium.png",
+      "medium_mask_from": "SA-R2_medium.png",
+      "boxes_used": {
+       "a haystack on the open right side of the field": 2,
+       "a grazing horse": 1,
+       "a stone water trough": 1
+      },
+      "file": "SA-R2_large_c01"
+     }
+    ],
+    "n": 35,
+    "median": 0.1305,
+    "mad": 0.1276,
+    "units": "percent of the image's 1536 x 1024 pixels"
+   },
+   "reason": "The first computation (written 2026-10-29T06:49:21+00:00) took candidate c01 of every addition file, including three made with a superseded phrase (SA04 medium c01, SA10 medium c01, SA-R1 large c01), and measured them against the current phrase's elements, which those images do not contain (SA-R1 large c01 scored 5.79 percent because the cupboard and rocking chair it was measured against are not in it). Those candidates are marked excluded, not candidates of the current file. The cut is recomputed from each file's first candidate under its current phrase (SA04 medium c41, SA10 medium c81, SA-R1 large c41), before any acceptance decision used it."
+  }
+ ],
+ "tracked_objects": {
+  "SA01": {
+   "noun_chunk_heads": [
+    "third",
+    "frame",
+    "teapot",
+    "cup",
+    "hand",
+    "end",
+    "table",
+    "wall",
+    "pot",
+    "hook"
+   ],
+   "excluded": {
+    "third": "surface or region",
+    "frame": "surface or region",
+    "end": "surface or region",
+    "table": "surface or region",
+    "wall": "surface or region"
+   },
+   "tracked": [
+    "a teapot",
+    "a cup",
+    "a hand",
+    "a pot",
+    "a hook"
+   ],
+   "trackable": [
+    "a teapot",
+    "a cup",
+    "a hand",
+    "a pot",
+    "a hook"
+   ],
+   "untrackable": [],
+   "best_score_in_accepted_source": {
+    "a teapot": 0.4215,
+    "a cup": 0.2256,
+    "a hand": 0.2758,
+    "a pot": 0.3508,
+    "a hook": 0.4534
+   },
+   "source_file": "SA01_source.png",
+   "source_sha256": "aeba9c1a70f12c4250d1679519c29d5bd1e4c7d201e973b754b092a69180f297"
+  },
+  "SA02": {
+   "noun_chunk_heads": [
+    "center",
+    "crate",
+    "coil",
+    "rope",
+    "dock",
+    "right",
+    "harbor",
+    "rowboat"
+   ],
+   "excluded": {
+    "center": "surface or region",
+    "right": "surface or region"
+   },
+   "tracked": [
+    "a crate",
+    "a coil",
+    "a rope",
+    "a dock",
+    "a harbor",
+    "a rowboat"
+   ],
+   "trackable": [
+    "a crate",
+    "a coil",
+    "a rope",
+    "a dock",
+    "a harbor",
+    "a rowboat"
+   ],
+   "untrackable": [],
+   "best_score_in_accepted_source": {
+    "a crate": 0.4744,
+    "a coil": 0.1619,
+    "a rope": 0.571,
+    "a dock": 0.2937,
+    "a harbor": 0.2611,
+    "a rowboat": 0.6383
+   },
+   "source_file": "SA02_source.png",
+   "source_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d"
+  },
+  "SA03": {
+   "noun_chunk_heads": [
+    "child",
+    "right",
+    "kite",
+    "left",
+    "band",
+    "sky",
+    "middle",
+    "cloud",
+    "farmhouse",
+    "ridge"
+   ],
+   "excluded": {
+    "child": "person of the Subject sentence",
+    "right": "surface or region",
+    "kite": "added element",
+    "left": "surface or region",
+    "sky": "surface or region"
+   },
+   "tracked": [
+    "a band",
+    "a middle",
+    "a cloud",
+    "a farmhouse",
+    "a ridge"
+   ],
+   "trackable": [
+    "a cloud",
+    "a farmhouse"
+   ],
+   "untrackable": [
+    "a band",
+    "a middle",
+    "a ridge"
+   ],
+   "best_score_in_accepted_source": {
+    "a band": 0.0154,
+    "a middle": 0.1087,
+    "a cloud": 0.2502,
+    "a farmhouse": 0.4886,
+    "a ridge": 0.1428
+   },
+   "source_file": "SA03_source.png",
+   "source_sha256": "2d7962f0b225c5fa492d0fd5574cc78cc2752b07c618873aecec310a4a1f7415"
+  },
+  "SA04": {
+   "noun_chunk_heads": [
+    "center",
+    "stand",
+    "chair",
+    "left",
+    "rug",
+    "front",
+    "curtain",
+    "mirror",
+    "wall",
+    "glow"
+   ],
+   "excluded": {
+    "center": "surface or region",
+    "left": "surface or region",
+    "rug": "surface or region",
+    "wall": "surface or region"
+   },
+   "tracked": [
+    "a stand",
+    "a chair",
+    "a front",
+    "a curtain",
+    "a mirror",
+    "a glow"
+   ],
+   "trackable": [
+    "a stand",
+    "a chair",
+    "a mirror"
+   ],
+   "untrackable": [
+    "a front",
+    "a curtain",
+    "a glow"
+   ],
+   "best_score_in_accepted_source": {
+    "a stand": 0.3693,
+    "a chair": 0.477,
+    "a front": 0.0368,
+    "a curtain": 0.1383,
+    "a mirror": 0.2394,
+    "a glow": 0.1351
+   },
+   "source_file": "SA04_source.png",
+   "source_sha256": "32c2155c1c616e03f9cf8379dee869e72a48b744899c614b6d5c3065dd91403f"
+  },
+  "SA05": {
+   "noun_chunk_heads": [
+    "center",
+    "counter",
+    "crate",
+    "basket",
+    "lemon",
+    "end",
+    "orange",
+    "front",
+    "third",
+    "arcade",
+    "lantern"
+   ],
+   "excluded": {
+    "center": "surface or region",
+    "basket": "added element",
+    "lemon": "added element",
+    "end": "surface or region",
+    "third": "surface or region"
+   },
+   "tracked": [
+    "a counter",
+    "a crate",
+    "an orange",
+    "a front",
+    "an arcade",
+    "a lantern"
+   ],
+   "trackable": [
+    "a crate",
+    "an orange",
+    "a lantern"
+   ],
+   "untrackable": [
+    "a counter",
+    "a front",
+    "an arcade"
+   ],
+   "best_score_in_accepted_source": {
+    "a counter": 0.0855,
+    "a crate": 0.4268,
+    "an orange": 0.4863,
+    "a front": 0.0994,
+    "an arcade": 0.0849,
+    "a lantern": 0.3105
+   },
+   "source_file": "SA05_source.png",
+   "source_sha256": "aff73584ef267b4ebc68a48aedb354d6f2e7e90ff967e1e745135a6af6a5b115"
+  },
+  "SA06": {
+   "noun_chunk_heads": [
+    "boat",
+    "foreground",
+    "oar",
+    "seat",
+    "view",
+    "river",
+    "right",
+    "stretch",
+    "water",
+    "tree",
+    "distance",
+    "bridge"
+   ],
+   "excluded": {
+    "boat": "added element",
+    "foreground": "surface or region",
+    "river": "surface or region",
+    "right": "surface or region",
+    "stretch": "surface or region",
+    "water": "surface or region",
+    "distance": "surface or region"
+   },
+   "tracked": [
+    "an oar",
+    "a seat",
+    "a view",
+    "a tree",
+    "a bridge"
+   ],
+   "trackable": [
+    "an oar",
+    "a view",
+    "a tree",
+    "a bridge"
+   ],
+   "untrackable": [
+    "a seat"
+   ],
+   "best_score_in_accepted_source": {
+    "an oar": 0.4247,
+    "a seat": 0.0184,
+    "a view": 0.497,
+    "a tree": 0.4306,
+    "a bridge": 0.7423
+   },
+   "source_file": "SA06_source.png",
+   "source_sha256": "e44d0fd949ed7666a9a887a15f5095ffdb7a41f2cc167dee6ddaa076d5afbe1f"
+  },
+  "SA07": {
+   "noun_chunk_heads": [
+    "bread",
+    "cheese",
+    "cluster",
+    "half",
+    "knife",
+    "front",
+    "table",
+    "wood",
+    "wall"
+   ],
+   "excluded": {
+    "table": "surface or region",
+    "wall": "surface or region"
+   },
+   "tracked": [
+    "a bread",
+    "a cheese",
+    "a cluster",
+    "a half",
+    "a knife",
+    "a front",
+    "a wood"
+   ],
+   "trackable": [
+    "a bread",
+    "a cheese",
+    "a half",
+    "a knife",
+    "a wood"
+   ],
+   "untrackable": [
+    "a cluster",
+    "a front"
+   ],
+   "best_score_in_accepted_source": {
+    "a bread": 0.6031,
+    "a cheese": 0.6153,
+    "a cluster": 0.0463,
+    "a half": 0.3182,
+    "a knife": 0.6091,
+    "a front": 0.0273,
+    "a wood": 0.3828
+   },
+   "source_file": "SA07_source.png",
+   "source_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4"
+  },
+  "SA08": {
+   "noun_chunk_heads": [
+    "street",
+    "center",
+    "row",
+    "house",
+    "cart",
+    "post",
+    "left",
+    "side",
+    "steeple",
+    "sky"
+   ],
+   "excluded": {
+    "street": "surface or region",
+    "center": "surface or region",
+    "row": "added element",
+    "left": "surface or region",
+    "side": "surface or region",
+    "sky": "surface or region"
+   },
+   "tracked": [
+    "a house",
+    "a cart",
+    "a post",
+    "a steeple"
+   ],
+   "trackable": [
+    "a house",
+    "a cart",
+    "a post",
+    "a steeple"
+   ],
+   "untrackable": [],
+   "best_score_in_accepted_source": {
+    "a house": 0.4516,
+    "a cart": 0.5687,
+    "a post": 0.188,
+    "a steeple": 0.397
+   },
+   "source_file": "SA08_source.png",
+   "source_sha256": "7eb5d3dcc42c1f8cac66962e8b329c1d70c4faa18ef748d740688d7185bb80dd"
+  },
+  "SA09": {
+   "noun_chunk_heads": [
+    "bench",
+    "flowerpot",
+    "tree",
+    "top",
+    "path",
+    "right",
+    "wall",
+    "gate"
+   ],
+   "excluded": {
+    "path": "added element",
+    "right": "surface or region",
+    "wall": "surface or region"
+   },
+   "tracked": [
+    "a bench",
+    "a flowerpot",
+    "a tree",
+    "a top",
+    "a gate"
+   ],
+   "trackable": [
+    "a bench",
+    "a flowerpot",
+    "a tree",
+    "a gate"
+   ],
+   "untrackable": [
+    "a top"
+   ],
+   "best_score_in_accepted_source": {
+    "a bench": 0.6598,
+    "a flowerpot": 0.4615,
+    "a tree": 0.3516,
+    "a top": 0.0293,
+    "a gate": 0.7488
+   },
+   "source_file": "SA09_source.png",
+   "source_sha256": "d41ccc02825505fabeec34b9e1804ec4740ad0dd62d913f40f34896824c30e01"
+  },
+  "SA10": {
+   "noun_chunk_heads": [
+    "lighthouse",
+    "third",
+    "wave",
+    "rock",
+    "left",
+    "bob",
+    "sea",
+    "center",
+    "cloud",
+    "ship",
+    "horizon",
+    "cottage",
+    "foot"
+   ],
+   "excluded": {
+    "third": "surface or region",
+    "left": "surface or region",
+    "sea": "surface or region",
+    "center": "surface or region",
+    "ship": "added element",
+    "horizon": "surface or region"
+   },
+   "tracked": [
+    "a lighthouse",
+    "a wave",
+    "a rock",
+    "a bob",
+    "a cloud",
+    "a cottage",
+    "a foot"
+   ],
+   "trackable": [
+    "a lighthouse",
+    "a wave",
+    "a rock",
+    "a cloud",
+    "a cottage"
+   ],
+   "untrackable": [
+    "a bob",
+    "a foot"
+   ],
+   "best_score_in_accepted_source": {
+    "a lighthouse": 0.6819,
+    "a wave": 0.4812,
+    "a rock": 0.2853,
+    "a bob": 0.0058,
+    "a cloud": 0.227,
+    "a cottage": 0.3509,
+    "a foot": 0.0116
+   },
+   "source_file": "SA10_source.png",
+   "source_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77"
+  },
+  "SA-R1": {
+   "noun_chunk_heads": [
+    "third",
+    "frame",
+    "pair",
+    "scissor",
+    "spool",
+    "thread",
+    "table",
+    "end",
+    "wall",
+    "picture"
+   ],
+   "excluded": {
+    "third": "surface or region",
+    "frame": "surface or region",
+    "table": "surface or region",
+    "end": "surface or region",
+    "wall": "surface or region"
+   },
+   "tracked": [
+    "a pair",
+    "a scissor",
+    "a spool",
+    "a thread",
+    "a picture"
+   ],
+   "trackable": [
+    "a scissor",
+    "a spool",
+    "a thread",
+    "a picture"
+   ],
+   "untrackable": [
+    "a pair"
+   ],
+   "best_score_in_accepted_source": {
+    "a pair": 0.0281,
+    "a scissor": 0.7506,
+    "a spool": 0.5036,
+    "a thread": 0.2682,
+    "a picture": 0.2156
+   },
+   "source_file": "SA-R1_source.png",
+   "source_sha256": "f6546a60d5b77368e290ecff0279fb5c3ba89ba23dc230b26aa22517247f8686"
+  },
+  "SA-R2": {
+   "noun_chunk_heads": [
+    "barn",
+    "third",
+    "wagon",
+    "stand",
+    "front",
+    "field",
+    "right",
+    "hill",
+    "line",
+    "tree"
+   ],
+   "excluded": {
+    "third": "surface or region",
+    "field": "surface or region",
+    "right": "surface or region"
+   },
+   "tracked": [
+    "a barn",
+    "a wagon",
+    "a stand",
+    "a front",
+    "a hill",
+    "a line",
+    "a tree"
+   ],
+   "trackable": [
+    "a barn",
+    "a wagon",
+    "a hill",
+    "a tree"
+   ],
+   "untrackable": [
+    "a stand",
+    "a front",
+    "a line"
+   ],
+   "best_score_in_accepted_source": {
+    "a barn": 0.6254,
+    "a wagon": 0.6388,
+    "a stand": 0.0327,
+    "a front": 0.1266,
+    "a hill": 0.4151,
+    "a line": 0.0434,
+    "a tree": 0.372
+   },
+   "source_file": "SA-R2_source.png",
+   "source_sha256": "a216eb9ae60f4b3806f56371915831f4499e21a1ed4633e9ba3dca25df258652"
+  }
+ }
+}

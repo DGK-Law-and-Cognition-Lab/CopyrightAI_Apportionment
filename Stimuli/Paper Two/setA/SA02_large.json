@@ -1,0 +1,375 @@
+{
+  "scene": "SA02",
+  "kind": "large",
+  "candidate": 8,
+  "revision": 0,
+  "file": "SA02_large_c08.png",
+  "raw_file": "SA02_large_c08_raw.png",
+  "prompt_or_instruction": "Add a stack of barrels, and a lantern on a post. Change nothing else.",
+  "input_file": "SA02_medium.png",
+  "input_sha256": "7e6375ad9d84979d551f03e267efd8ebda43e9edad5b0ae9670fe6a46f2ac0e3",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T08:21:45+00:00",
+  "seconds": 85.5,
+  "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 23
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7047
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "4c67a6be9fe99610cd4c5c3e041c53eb88a9892f070f627c06daae7c672fd9be",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 9.865,
+    "widened_area_pct": 25.31,
+    "masked_area_pct": 14.738,
+    "size_rule": "large: at least 2 x the accepted medium's 4.723 percent",
+    "size_min_pct": 9.446,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a dog lying on the empty dock to the man's right",
+        "query": "a dog",
+        "best_score_inside_region": 0.5434,
+        "best_score_anywhere": 0.5434,
+        "boxes": [
+          {
+            "score": 0.5434,
+            "box": [
+              1043.7,
+              410.7,
+              1383.3,
+              691.4
+            ]
+          },
+          {
+            "score": 0.052,
+            "box": [
+              809.3,
+              397.8,
+              1377.2,
+              856.6
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a stack of barrels",
+        "query": "a barrel",
+        "best_score_inside_region": 0.6522,
+        "best_score_anywhere": 0.6522,
+        "boxes": [
+          {
+            "score": 0.6522,
+            "box": [
+              1029.3,
+              104.1,
+              1164.5,
+              349.8
+            ]
+          },
+          {
+            "score": 0.5868,
+            "box": [
+              1079.7,
+              193.0,
+              1242.2,
+              418.1
+            ]
+          },
+          {
+            "score": 0.5257,
+            "box": [
+              1158.6,
+              31.2,
+              1358.4,
+              399.6
+            ]
+          },
+          {
+            "score": 0.4338,
+            "box": [
+              1231.6,
+              215.5,
+              1350.5,
+              399.2
+            ]
+          },
+          {
+            "score": 0.3194,
+            "box": [
+              1156.5,
+              27.3,
+              1359.4,
+              224.5
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a lantern on a post",
+        "query": "a lantern",
+        "best_score_inside_region": 0.3511,
+        "best_score_anywhere": 0.3511,
+        "boxes": [
+          {
+            "score": 0.3511,
+            "box": [
+              1381.3,
+              5.4,
+              1493.2,
+              210.7
+            ]
+          },
+          {
+            "score": 0.2199,
+            "box": [
+              1406.3,
+              110.7,
+              1465.5,
+              190.6
+            ]
+          },
+          {
+            "score": 0.2194,
+            "box": [
+              1379.4,
+              6.5,
+              1494.4,
+              415.5
+            ]
+          },
+          {
+            "score": 0.1981,
+            "box": [
+              1387.4,
+              89.7,
+              1489.7,
+              202.2
+            ]
+          },
+          {
+            "score": 0.1387,
+            "box": [
+              1384.6,
+              10.5,
+              1493.1,
+              206.7
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a dog lying on the dock to the man's right?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a stack of barrels?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a lantern on a post?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:22:17+00:00",
+    "medium_mask_pixels_inside_large_mask": 92118,
+    "input_sha256": "7e6375ad9d84979d551f03e267efd8ebda43e9edad5b0ae9670fe6a46f2ac0e3",
+    "object_position": {
+      "trackable": [
+        "a crate",
+        "a coil",
+        "a rope",
+        "a dock",
+        "a harbor",
+        "a rowboat"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a crate",
+          "in_input": true,
+          "input_box": [
+            73.8,
+            459.6,
+            494.3,
+            773.0
+          ],
+          "input_score": 0.4883,
+          "output_box": [
+            74.0,
+            459.3,
+            494.4,
+            772.6
+          ],
+          "output_score": 0.466,
+          "iou": 0.997,
+          "pass": true
+        },
+        {
+          "object": "a coil",
+          "in_input": true,
+          "input_box": [
+            142.7,
+            755.3,
+            524.3,
+            935.0
+          ],
+          "input_score": 0.1915,
+          "output_box": [
+            140.9,
+            752.3,
+            523.1,
+            933.3
+          ],
+          "output_score": 0.2185,
+          "iou": 0.967,
+          "pass": true
+        },
+        {
+          "object": "a rope",
+          "in_input": true,
+          "input_box": [
+            142.7,
+            755.3,
+            524.3,
+            935.0
+          ],
+          "input_score": 0.6081,
+          "output_box": [
+            140.9,
+            752.3,
+            523.1,
+            933.3
+          ],
+          "output_score": 0.6279,
+          "iou": 0.967,
+          "pass": true
+        },
+        {
+          "object": "a dock",
+          "in_input": true,
+          "input_box": [
+            938.1,
+            240.5,
+            1536.0,
+            821.5
+          ],
+          "input_score": 0.2579,
+          "output_box": [
+            949.6,
+            240.6,
+            1536.0,
+            797.5
+          ],
+          "output_score": 0.1639,
+          "iou": 0.94,
+          "pass": true
+        },
+        {
+          "object": "a harbor",
+          "in_input": true,
+          "input_box": [
+            5.4,
+            0.0,
+            1030.0,
+            914.9
+          ],
+          "input_score": 0.4036,
+          "output_box": [
+            11.3,
+            40.5,
+            1036.6,
+            999.1
+          ],
+          "output_score": 0.3282,
+          "iou": 0.865,
+          "pass": true
+        },
+        {
+          "object": "a rowboat",
+          "in_input": true,
+          "input_box": [
+            126.9,
+            96.9,
+            585.7,
+            357.4
+          ],
+          "input_score": 0.6532,
+          "output_box": [
+            127.4,
+            97.1,
+            584.5,
+            357.3
+          ],
+          "output_score": 0.6545,
+          "iou": 0.995,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "da0d209ff8c37814e8030da4454e6ecd741843c89bec2a68bd1cb9e6cd60823e"
+}

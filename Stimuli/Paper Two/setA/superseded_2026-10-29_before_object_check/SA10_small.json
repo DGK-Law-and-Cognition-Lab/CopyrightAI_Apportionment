@@ -1,0 +1,327 @@
+{
+  "scene": "SA10",
+  "kind": "small",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA10_small_c01.png",
+  "raw_file": "SA10_small_c01_raw.png",
+  "prompt_or_instruction": "Add a single gull. Change nothing else.",
+  "input_file": "SA10_source.png",
+  "input_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:52:03+00:00",
+  "seconds": 74.5,
+  "usage": {
+    "input_tokens": 1551,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 15
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7039
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "1fbc8c3821e1f4603774f8036ccc713eed5582006b4962ea0211423d795eeed1",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 0.822,
+    "widened_area_pct": 22.955,
+    "masked_area_pct": 0.822,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a single gull",
+        "query": "a gull",
+        "best_score_inside_region": 0.7125,
+        "best_score_anywhere": 0.7125,
+        "boxes": [
+          {
+            "score": 0.7125,
+            "box": [
+              223.4,
+              183.5,
+              356.9,
+              281.2
+            ]
+          },
+          {
+            "score": 0.0612,
+            "box": [
+              221.2,
+              179.4,
+              361.6,
+              283.2
+            ]
+          },
+          {
+            "score": 0.0504,
+            "box": [
+              340.5,
+              660.9,
+              362.4,
+              699.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a single gull?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T07:01:15+00:00",
+    "input_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+    "spill": {
+      "spill_pct": 0.6224,
+      "cut_pct": 0.765,
+      "added_element_region_pct": 3.781,
+      "boxes_used": {
+        "a single gull": [
+          [
+            223.4,
+            183.5,
+            356.9,
+            281.2
+          ]
+        ]
+      }
+    },
+    "spill_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "f70ddf4baa2939b8d60a01c37a476ab3ec7a4aba5fc57370c3bf39a9791fc394",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.822,
+        "widened_area_pct": 22.955,
+        "masked_area_pct": 0.822,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a single gull",
+            "query": "a gull",
+            "best_score_inside_region": 0.7125,
+            "best_score_anywhere": 0.7125,
+            "boxes": [
+              {
+                "score": 0.7125,
+                "box": [
+                  223.4,
+                  183.5,
+                  356.9,
+                  281.2
+                ]
+              },
+              {
+                "score": 0.0612,
+                "box": [
+                  221.2,
+                  179.4,
+                  361.6,
+                  283.2
+                ]
+              },
+              {
+                "score": 0.0504,
+                "box": [
+                  340.5,
+                  660.9,
+                  362.4,
+                  699.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a single gull?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-28T00:27:30+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 0.822,
+        "widened_area_pct": 22.955,
+        "masked_area_pct": 0.822,
+        "size_rule": "small: masked area at least 0.1 percent",
+        "size_min_pct": 0.1,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a single gull",
+            "query": "a gull",
+            "best_score_inside_region": 0.7125,
+            "best_score_anywhere": 0.7125,
+            "boxes": [
+              {
+                "score": 0.7125,
+                "box": [
+                  223.4,
+                  183.5,
+                  356.9,
+                  281.2
+                ]
+              },
+              {
+                "score": 0.0612,
+                "box": [
+                  221.2,
+                  179.4,
+                  361.6,
+                  283.2
+                ]
+              },
+              {
+                "score": 0.0504,
+                "box": [
+                  340.5,
+                  660.9,
+                  362.4,
+                  699.3
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a single gull?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:30:54+00:00",
+        "input_sha256": "a450d2eff781568020b67c2d699b8e182db4519fd52328a3397889a513de3a77",
+        "unchanged": {
+          "question": "Apart from a single gull, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    }
+  ]
+}

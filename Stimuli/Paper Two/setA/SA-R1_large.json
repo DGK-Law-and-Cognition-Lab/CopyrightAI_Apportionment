@@ -1,0 +1,333 @@
+{
+  "scene": "SA-R1",
+  "kind": "large",
+  "candidate": 48,
+  "revision": 0,
+  "file": "SA-R1_large_c48.png",
+  "raw_file": "SA-R1_large_c48_raw.png",
+  "prompt_or_instruction": "Add a tall wooden cupboard against the back wall, and a rocking chair beside the table. Change nothing else.",
+  "input_file": "SA-R1_medium.png",
+  "input_sha256": "4b352c620c62ec6464367d3f243e30b334216a25010a0467ff379227ffd8e7bb",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T08:23:56+00:00",
+  "seconds": 83.6,
+  "usage": {
+    "input_tokens": 1564,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 28
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7052
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "e126f253597b161ce6c019a9f177f0a3f7db8027e0d0a8e3fe28342b07f1a672",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 15.048,
+    "widened_area_pct": 29.231,
+    "masked_area_pct": 23.93,
+    "size_rule": "large: at least 2 x the accepted medium's 8.547 percent",
+    "size_min_pct": 17.094,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a basket of folded cloth on the bare left end of the table",
+        "query": "a basket of folded cloth",
+        "best_score_inside_region": 0.3456,
+        "best_score_anywhere": 0.3456,
+        "boxes": [
+          {
+            "score": 0.3456,
+            "box": [
+              46.5,
+              648.4,
+              528.6,
+              796.8
+            ]
+          },
+          {
+            "score": 0.3146,
+            "box": [
+              825.5,
+              0.5,
+              959.8,
+              42.7
+            ]
+          },
+          {
+            "score": 0.1895,
+            "box": [
+              84.1,
+              604.2,
+              513.2,
+              718.5
+            ]
+          },
+          {
+            "score": 0.167,
+            "box": [
+              51.1,
+              767.0,
+              511.8,
+              893.7
+            ]
+          },
+          {
+            "score": 0.0906,
+            "box": [
+              47.0,
+              614.8,
+              530.5,
+              812.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a tall wooden cupboard against the back wall",
+        "query": "a cupboard",
+        "best_score_inside_region": 0.149,
+        "best_score_anywhere": 0.149,
+        "boxes": [
+          {
+            "score": 0.149,
+            "box": [
+              819.5,
+              43.3,
+              1028.1,
+              531.8
+            ]
+          },
+          {
+            "score": 0.1389,
+            "box": [
+              793.9,
+              27.1,
+              1304.7,
+              710.9
+            ]
+          },
+          {
+            "score": 0.0855,
+            "box": [
+              717.2,
+              10.4,
+              1500.4,
+              739.3
+            ]
+          },
+          {
+            "score": 0.0806,
+            "box": [
+              698.7,
+              36.3,
+              841.5,
+              703.7
+            ]
+          },
+          {
+            "score": 0.0675,
+            "box": [
+              774.0,
+              34.1,
+              1014.3,
+              551.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a rocking chair beside the table",
+        "query": "a rocking chair",
+        "best_score_inside_region": 0.5956,
+        "best_score_anywhere": 0.5956,
+        "boxes": [
+          {
+            "score": 0.5956,
+            "box": [
+              316.7,
+              314.2,
+              682.3,
+              714.4
+            ]
+          },
+          {
+            "score": 0.0728,
+            "box": [
+              1186.0,
+              469.2,
+              1334.9,
+              719.2
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a basket of folded cloth on the left end of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a tall wooden cupboard against the back wall?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a rocking chair beside the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:24:25+00:00",
+    "medium_mask_pixels_inside_large_mask": 42711,
+    "input_sha256": "4b352c620c62ec6464367d3f243e30b334216a25010a0467ff379227ffd8e7bb",
+    "object_position": {
+      "trackable": [
+        "a scissor",
+        "a spool",
+        "a thread",
+        "a picture"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a scissor",
+          "in_input": true,
+          "input_box": [
+            744.4,
+            889.3,
+            959.2,
+            975.6
+          ],
+          "input_score": 0.7327,
+          "output_box": [
+            746.9,
+            889.5,
+            958.0,
+            974.5
+          ],
+          "output_score": 0.6748,
+          "iou": 0.968,
+          "pass": true
+        },
+        {
+          "object": "a spool",
+          "in_input": true,
+          "input_box": [
+            613.6,
+            804.7,
+            669.4,
+            902.8
+          ],
+          "input_score": 0.4152,
+          "output_box": [
+            614.5,
+            804.6,
+            670.1,
+            901.3
+          ],
+          "output_score": 0.427,
+          "iou": 0.956,
+          "pass": true
+        },
+        {
+          "object": "a thread",
+          "in_input": true,
+          "input_box": [
+            613.6,
+            804.7,
+            669.4,
+            902.8
+          ],
+          "input_score": 0.2954,
+          "output_box": [
+            614.5,
+            804.6,
+            670.1,
+            901.3
+          ],
+          "output_score": 0.2839,
+          "iou": 0.956,
+          "pass": true
+        },
+        {
+          "object": "a picture",
+          "in_input": true,
+          "input_box": [
+            452.2,
+            52.7,
+            647.1,
+            301.1
+          ],
+          "input_score": 0.2018,
+          "output_box": [
+            451.5,
+            53.1,
+            644.1,
+            297.8
+          ],
+          "output_score": 0.2266,
+          "iou": 0.967,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "9361705d9d7385eabdf8d6c7379e54ee105786956c1bc26b9c3f272deedac7dd"
+}

@@ -1,0 +1,808 @@
+{
+  "SA01": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "SA04": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 73,
+      "revision": 1
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 93,
+      "revision": 0
+    }
+  },
+  "SA05": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "stopped: scene replaced by SA-R1",
+      "revised_prompt": "Add a single lemon on the ground, clearly visible. Change nothing else.",
+      "failure_counts": {
+        "size": 0,
+        "detector": 0,
+        "description": 20
+      },
+      "most_frequent_failure": "fixed wording",
+      "revised_utc": "2026-10-27T23:35:15+00:00",
+      "tries": 29,
+      "revised_tries": 9,
+      "note": "run stopped by the agent at a combined $92.27 of the $100 cap (27 Oct 2026, 23:48 UTC)"
+    },
+    "medium": {
+      "state": "not judged (candidate 1 made; waits for an accepted small)",
+      "note": "run stopped by the agent at a combined $92.27 of the $100 cap (27 Oct 2026, 23:48 UTC)"
+    },
+    "reserve": {
+      "replaced_by": "SA-R1",
+      "failed_file": "small",
+      "utc": "2026-10-28T00:13:40+00:00",
+      "decided_by": "David G. Kamper, 27 October 2026, as the rescue rule says",
+      "evidence": "29 small candidates (20 with the bank's instruction, 9 with the recorded 'clearly visible' revision): the detector found a lemon on all 29, but the description model answered 'no' to 'Does the image show a single lemon on the ground?' on all 29. The bank's small phrase needs ground in front of the stall, and the SA05 source's frame shows the counter front, not the ground.",
+      "note": "SA-R1 takes SA05's place in every A1 list; SA05's accepted source is not used."
+    }
+  },
+  "SA06": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "SA02": {
+    "source": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 8,
+      "revision": 0
+    }
+  },
+  "SA08": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 12,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "failed after revision",
+      "revised_prompt": "Add a snowman, and a row of lanterns along the houses, clearly visible. Change nothing else.",
+      "tries": 40
+    },
+    "reserve": {
+      "replaced_by": "SA-R2",
+      "failed_file": "large",
+      "utc": "2026-10-28T00:46:10+00:00",
+      "decided_by": "the rescue rule (bank, 'Rescue rules'), applied by script",
+      "evidence": "40 large candidates (20 with the bank's instruction, 20 with the 'clearly visible' revision) reached 7.68 to 11.695 percent against the required 13.268 percent (2 x the accepted medium's 6.634); detector passed 40/40, description 40/40."
+    }
+  },
+  "SA09": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 3,
+      "revision": 0
+    }
+  },
+  "SA07": {
+    "source": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "SA03": {
+    "source": {
+      "state": "accepted",
+      "candidate": 3,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 3,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "SA10": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 85,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "SA-R1": {
+    "source": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 48,
+      "revision": 0
+    }
+  },
+  "SA-R2": {
+    "source": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "small": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    },
+    "medium": {
+      "state": "accepted",
+      "candidate": 2,
+      "revision": 0
+    },
+    "large": {
+      "state": "accepted",
+      "candidate": 1,
+      "revision": 0
+    }
+  },
+  "superseded_by_phrase_amendment_2026-10-28": {
+    "SA04": {
+      "medium": {
+        "state": "failed after revision",
+        "revised_prompt": "Add a dog asleep on the rug in front of the man, clearly visible. Change nothing else.",
+        "tries": 40
+      }
+    },
+    "SA10": {
+      "medium": {
+        "state": "failed after revision",
+        "revised_prompt": "Add a small sailboat in the open sea, clearly visible. Change nothing else.",
+        "tries": 40
+      }
+    },
+    "SA-R1": {
+      "large": {
+        "state": "failed after revision",
+        "revised_prompt": "Add a dress form beside the table, and a cat asleep on the floor, clearly visible. Change nothing else.",
+        "tries": 40
+      }
+    }
+  },
+  "superseded_before_unchanged_check": {
+    "SA01": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA02": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      }
+    },
+    "SA03": {
+      "small": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA04": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 47,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 28,
+        "revision": 1
+      }
+    },
+    "SA06": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA07": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA09": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA10": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "failed after revision",
+        "revised_prompt": "Add a sailboat in the open sea, clearly visible. Change nothing else.",
+        "tries": 40
+      }
+    },
+    "SA-R1": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 42,
+        "revision": 0
+      }
+    },
+    "SA-R2": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    }
+  },
+  "superseded_spill": {
+    "SA01": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA02": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      }
+    },
+    "SA03": {
+      "small": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA04": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 47,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 28,
+        "revision": 1
+      }
+    },
+    "SA06": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA07": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA09": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA10": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 85,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA-R1": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 42,
+        "revision": 0
+      }
+    },
+    "SA-R2": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    }
+  },
+  "superseded_objects": {
+    "SA01": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA02": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      }
+    },
+    "SA03": {
+      "small": {
+        "state": "accepted",
+        "candidate": 3,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA04": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 47,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 28,
+        "revision": 1
+      }
+    },
+    "SA06": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA07": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      }
+    },
+    "SA09": {
+      "small": {
+        "state": "accepted",
+        "candidate": 5,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 5,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      }
+    },
+    "SA10": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 85,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      }
+    },
+    "SA-R1": {
+      "small": {
+        "state": "accepted",
+        "candidate": 1,
+        "revision": 0
+      },
+      "medium": {
+        "state": "accepted",
+        "candidate": 2,
+        "revision": 0
+      },
+      "large": {
+        "state": "accepted",
+        "candidate": 43,
+        "revision": 0
+      }
+    },
+    "SA-R2": {
+      "small": {
+        "state": "failed after revision",
+        "revised_prompt": "Add a milk churn beside the hay wagon, clearly visible. Change nothing else.",
+        "tries": 40
+      }
+    }
+  }
+}

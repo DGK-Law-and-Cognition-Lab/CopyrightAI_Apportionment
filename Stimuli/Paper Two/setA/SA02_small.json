@@ -1,0 +1,239 @@
+{
+  "scene": "SA02",
+  "kind": "small",
+  "candidate": 2,
+  "revision": 0,
+  "file": "SA02_small_c02.png",
+  "raw_file": "SA02_small_c02_raw.png",
+  "prompt_or_instruction": "Add a gull standing on the wooden crate. Change nothing else.",
+  "input_file": "SA02_source.png",
+  "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-29T08:09:07+00:00",
+  "seconds": 81.4,
+  "usage": {
+    "input_tokens": 1555,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 19
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "63a57eb0c2008ed42fe9a2500c5dc96920a4a6c3c5204caaa509832803752835",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 2.361,
+    "widened_area_pct": 43.172,
+    "masked_area_pct": 2.361,
+    "size_rule": "small: masked area at least 0.1 percent",
+    "size_min_pct": 0.1,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a gull standing on the wooden crate",
+        "query": "a gull",
+        "best_score_inside_region": 0.4785,
+        "best_score_anywhere": 0.4785,
+        "boxes": [
+          {
+            "score": 0.4785,
+            "box": [
+              29.0,
+              333.8,
+              303.8,
+              570.3
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a gull standing on the wooden crate?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:09:29+00:00",
+    "input_sha256": "0fcb86263ad357ca545d2dc0a3d9a0e7cf5fd0e3db434552bfd775fb44a7488d",
+    "object_position": {
+      "trackable": [
+        "a crate",
+        "a coil",
+        "a rope",
+        "a dock",
+        "a harbor",
+        "a rowboat"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a crate",
+          "in_input": true,
+          "input_box": [
+            73.2,
+            459.6,
+            494.3,
+            769.9
+          ],
+          "input_score": 0.4744,
+          "output_box": [
+            72.5,
+            460.1,
+            497.7,
+            780.6
+          ],
+          "output_score": 0.5049,
+          "iou": 0.956,
+          "pass": true
+        },
+        {
+          "object": "a coil",
+          "in_input": true,
+          "input_box": [
+            142.5,
+            769.7,
+            528.5,
+            945.7
+          ],
+          "input_score": 0.1619,
+          "output_box": [
+            146.9,
+            760.4,
+            526.0,
+            935.6
+          ],
+          "output_score": 0.1979,
+          "iou": 0.88,
+          "pass": true
+        },
+        {
+          "object": "a rope",
+          "in_input": true,
+          "input_box": [
+            142.5,
+            769.7,
+            528.5,
+            945.7
+          ],
+          "input_score": 0.571,
+          "output_box": [
+            147.8,
+            779.5,
+            525.9,
+            945.6
+          ],
+          "output_score": 0.1653,
+          "iou": 0.924,
+          "pass": true
+        },
+        {
+          "object": "a dock",
+          "in_input": true,
+          "input_box": [
+            946.8,
+            240.6,
+            1536.0,
+            815.0
+          ],
+          "input_score": 0.2937,
+          "output_box": [
+            941.5,
+            240.8,
+            1536.0,
+            812.4
+          ],
+          "output_score": 0.2572,
+          "iou": 0.986,
+          "pass": true
+        },
+        {
+          "object": "a harbor",
+          "in_input": true,
+          "input_box": [
+            475.3,
+            0.0,
+            1536.0,
+            871.7
+          ],
+          "input_score": 0.2611,
+          "output_box": [
+            524.9,
+            0.0,
+            1536.0,
+            852.2
+          ],
+          "output_score": 0.234,
+          "iou": 0.932,
+          "pass": true
+        },
+        {
+          "object": "a rowboat",
+          "in_input": true,
+          "input_box": [
+            126.2,
+            96.8,
+            586.6,
+            357.3
+          ],
+          "input_score": 0.6383,
+          "output_box": [
+            126.1,
+            97.6,
+            585.6,
+            358.0
+          ],
+          "output_score": 0.6599,
+          "iou": 0.992,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "87293ea34ea0cb49a3941faa14a50616474a42a36c96829b33e7046966d81cf3"
+}

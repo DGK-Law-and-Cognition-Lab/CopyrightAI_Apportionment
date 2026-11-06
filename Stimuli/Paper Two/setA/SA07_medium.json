@@ -1,0 +1,456 @@
+{
+  "scene": "SA07",
+  "kind": "medium",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA07_medium_c01.png",
+  "raw_file": "SA07_medium_c01_raw.png",
+  "prompt_or_instruction": "Add a pear on the bare right side of the table. Change nothing else.",
+  "input_file": "SA07_source.png",
+  "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:50:34+00:00",
+  "seconds": 74.8,
+  "usage": {
+    "input_tokens": 1558,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 22
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7046
+  },
+  "estimated_usd": 0.177,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "ed261d664f9dc5dc1c799d4c5892a4513e9306256b558e9c814762e4e1533037",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 3.961,
+    "widened_area_pct": 20.397,
+    "masked_area_pct": 3.961,
+    "size_rule": "medium: at least 2 x the accepted small's 0.798 percent and at least 0.5 percent",
+    "size_min_pct": 1.596,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a pear on the bare right side of the table",
+        "query": "a pear",
+        "best_score_inside_region": 0.7166,
+        "best_score_anywhere": 0.7166,
+        "boxes": [
+          {
+            "score": 0.7166,
+            "box": [
+              1071.9,
+              369.4,
+              1326.7,
+              744.9
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a pear on the right side of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1,
+        "reused_from": "judgment_under_bands"
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-29T08:08:17+00:00",
+    "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+    "object_position": {
+      "trackable": [
+        "a bread",
+        "a cheese",
+        "a half",
+        "a knife",
+        "a wood"
+      ],
+      "iou_min": 0.5,
+      "objects": [
+        {
+          "object": "a bread",
+          "in_input": true,
+          "input_box": [
+            58.1,
+            381.1,
+            535.2,
+            706.8
+          ],
+          "input_score": 0.6031,
+          "output_box": [
+            57.5,
+            383.1,
+            534.9,
+            704.8
+          ],
+          "output_score": 0.5818,
+          "iou": 0.986,
+          "pass": true
+        },
+        {
+          "object": "a cheese",
+          "in_input": true,
+          "input_box": [
+            452.5,
+            505.3,
+            716.1,
+            712.2
+          ],
+          "input_score": 0.6153,
+          "output_box": [
+            453.8,
+            508.8,
+            715.5,
+            710.8
+          ],
+          "output_score": 0.6021,
+          "iou": 0.969,
+          "pass": true
+        },
+        {
+          "object": "a half",
+          "in_input": true,
+          "input_box": [
+            58.1,
+            381.1,
+            535.2,
+            706.8
+          ],
+          "input_score": 0.3182,
+          "output_box": [
+            57.5,
+            383.1,
+            534.9,
+            704.8
+          ],
+          "output_score": 0.3121,
+          "iou": 0.986,
+          "pass": true
+        },
+        {
+          "object": "a knife",
+          "in_input": true,
+          "input_box": [
+            236.9,
+            670.9,
+            809.2,
+            937.8
+          ],
+          "input_score": 0.6091,
+          "output_box": [
+            223.4,
+            670.0,
+            780.8,
+            931.1
+          ],
+          "output_score": 0.6095,
+          "iou": 0.903,
+          "pass": true
+        },
+        {
+          "object": "a wood",
+          "in_input": true,
+          "input_box": [
+            0.0,
+            449.2,
+            1181.3,
+            1020.0
+          ],
+          "input_score": 0.3828,
+          "output_box": [
+            0.0,
+            459.3,
+            1131.5,
+            1021.9
+          ],
+          "output_score": 0.3502,
+          "iou": 0.938,
+          "pass": true
+        }
+      ]
+    },
+    "object_position_pass": true,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "bab535898d71cb206e26aace95b824a6e11d1324be3968dce0a9b3477fdfc262",
+  "previous_judgments": [
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.961,
+        "widened_area_pct": 20.397,
+        "masked_area_pct": 3.961,
+        "size_rule": "medium: at least 2 x the accepted small's 0.798 percent and at least 0.5 percent",
+        "size_min_pct": 1.596,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.7166,
+            "best_score_anywhere": 0.7166,
+            "boxes": [
+              {
+                "score": 0.7166,
+                "box": [
+                  1071.9,
+                  369.4,
+                  1326.7,
+                  744.9
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-27T22:58:23+00:00",
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:26:34+00:00",
+      "why": "re-judged with the unchanged-elsewhere check"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.961,
+        "widened_area_pct": 20.397,
+        "masked_area_pct": 3.961,
+        "size_rule": "medium: at least 2 x the accepted small's 0.798 percent and at least 0.5 percent",
+        "size_min_pct": 1.596,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.7166,
+            "best_score_anywhere": 0.7166,
+            "boxes": [
+              {
+                "score": 0.7166,
+                "box": [
+                  1071.9,
+                  369.4,
+                  1326.7,
+                  744.9
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:28:28+00:00",
+        "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+        "unchanged": {
+          "question": "Apart from a pear on the bare right side of the table, is everything that was in the first image still in the same place and unchanged in the second image?",
+          "answer": "yes",
+          "raw": [
+            "yes"
+          ],
+          "model_reported": "gpt-5.1-2025-11-13",
+          "calls": 1,
+          "images": "first = the edit's input, second = the composited file"
+        },
+        "unchanged_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T06:53:03+00:00",
+      "why": "re-judged with the spill check in place of the unchanged-elsewhere question"
+    },
+    {
+      "checks": {
+        "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+        "detector_score_cut": 0.149,
+        "difference_threshold": 38.1,
+        "speck_px": 110,
+        "widening_px": 64,
+        "change_area_vs_input_pct": 3.961,
+        "widened_area_pct": 20.397,
+        "masked_area_pct": 3.961,
+        "size_rule": "medium: at least 2 x the accepted small's 0.798 percent and at least 0.5 percent",
+        "size_min_pct": 1.596,
+        "size_pass": true,
+        "identical_to_input_outside_mask": true,
+        "pixels_differing_outside_mask": 0,
+        "identical_to_source_outside_edit_region": true,
+        "pixels_differing_from_source_outside": 0,
+        "detections": [
+          {
+            "element": "a pear on the bare right side of the table",
+            "query": "a pear",
+            "best_score_inside_region": 0.7166,
+            "best_score_anywhere": 0.7166,
+            "boxes": [
+              {
+                "score": 0.7166,
+                "box": [
+                  1071.9,
+                  369.4,
+                  1326.7,
+                  744.9
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "description_model": "gpt-5.1-2025-11-13",
+        "questions": [
+          {
+            "question": "Does the image show a pear on the right side of the table?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          },
+          {
+            "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+            "answer": "yes",
+            "raw": [
+              "yes"
+            ],
+            "model_reported": "gpt-5.1-2025-11-13",
+            "calls": 1,
+            "reused_from": "judgment_under_bands"
+          }
+        ],
+        "detector_pass": true,
+        "description_pass": true,
+        "judged_utc": "2026-10-29T06:54:26+00:00",
+        "input_sha256": "7001c49266f6dc993d0efde0e0e25513e968c5af3f27f952de45644753fb68c4",
+        "spill": {
+          "spill_pct": 0.2872,
+          "cut_pct": 0.765,
+          "added_element_region_pct": 12.305,
+          "boxes_used": {
+            "a pear on the bare right side of the table": [
+              [
+                1071.9,
+                369.4,
+                1326.7,
+                744.9
+              ]
+            ]
+          }
+        },
+        "spill_pass": true,
+        "pass": true
+      },
+      "accepted": true,
+      "moved_utc": "2026-10-29T08:05:22+00:00",
+      "why": "re-judged with the object-position check in place of the spill check"
+    }
+  ]
+}

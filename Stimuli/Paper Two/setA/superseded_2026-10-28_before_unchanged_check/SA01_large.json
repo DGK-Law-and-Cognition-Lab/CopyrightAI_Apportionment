@@ -1,0 +1,195 @@
+{
+  "scene": "SA01",
+  "kind": "large",
+  "candidate": 1,
+  "revision": 0,
+  "file": "SA01_large_c01.png",
+  "raw_file": "SA01_large_c01_raw.png",
+  "prompt_or_instruction": "Add a loaf of bread on a board, and a cat asleep on a stool. Change nothing else.",
+  "input_file": "SA01_medium.png",
+  "input_sha256": "8286cd5cc7f1700929716d6533a5328442f98981db12e0927a17b5b09f50942d",
+  "model": "gpt-image-2-2026-04-21",
+  "endpoint": "POST /v1/images/edits (multipart form; one input image in image[]; no mask)",
+  "settings": {
+    "size": "1536x1024",
+    "quality": "high",
+    "n": 1,
+    "seed": "none (model accepts no seed)"
+  },
+  "created_utc": "2026-10-27T22:57:01+00:00",
+  "seconds": 77.4,
+  "usage": {
+    "input_tokens": 1563,
+    "input_tokens_details": {
+      "image_tokens": 1536,
+      "text_tokens": 27
+    },
+    "output_tokens": 5488,
+    "output_tokens_details": {
+      "image_tokens": 5488,
+      "text_tokens": 0
+    },
+    "total_tokens": 7051
+  },
+  "estimated_usd": 0.1771,
+  "width": 1536,
+  "height": 1024,
+  "raw_sha256": "de2ca6dfcdfc638f63ed5e96c466a35b79938c942f26e8abb19e71e98721e79a",
+  "request_errors": [],
+  "note": "",
+  "checks": {
+    "detector": "google/owlv2-base-patch16-ensemble@cfd3195ba4ea (cpu)",
+    "detector_score_cut": 0.149,
+    "difference_threshold": 38.1,
+    "speck_px": 110,
+    "widening_px": 64,
+    "change_area_vs_input_pct": 7.316,
+    "widened_area_pct": 20.46,
+    "masked_area_pct": 9.725,
+    "size_rule": "large: at least 2 x the accepted medium's 2.72 percent",
+    "size_min_pct": 5.44,
+    "size_pass": true,
+    "identical_to_input_outside_mask": true,
+    "pixels_differing_outside_mask": 0,
+    "identical_to_source_outside_edit_region": true,
+    "pixels_differing_from_source_outside": 0,
+    "detections": [
+      {
+        "element": "a vase of daisies on the bare end of the table",
+        "query": "a vase of daisies",
+        "best_score_inside_region": 0.5015,
+        "best_score_anywhere": 0.5015,
+        "boxes": [
+          {
+            "score": 0.5015,
+            "box": [
+              922.6,
+              340.5,
+              1294.6,
+              602.0
+            ]
+          },
+          {
+            "score": 0.3412,
+            "box": [
+              1320.9,
+              319.7,
+              1533.5,
+              484.2
+            ]
+          },
+          {
+            "score": 0.1329,
+            "box": [
+              1325.3,
+              318.1,
+              1536.0,
+              621.4
+            ]
+          },
+          {
+            "score": 0.1024,
+            "box": [
+              1438.5,
+              459.4,
+              1535.4,
+              619.4
+            ]
+          },
+          {
+            "score": 0.0886,
+            "box": [
+              912.9,
+              332.8,
+              1294.5,
+              736.2
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a loaf of bread on a board",
+        "query": "a loaf of bread",
+        "best_score_inside_region": 0.5327,
+        "best_score_anywhere": 0.5327,
+        "boxes": [
+          {
+            "score": 0.5327,
+            "box": [
+              895.9,
+              688.8,
+              1137.8,
+              832.7
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "element": "a cat asleep on a stool",
+        "query": "a cat",
+        "best_score_inside_region": 0.6473,
+        "best_score_anywhere": 0.6473,
+        "boxes": [
+          {
+            "score": 0.6473,
+            "box": [
+              116.8,
+              752.8,
+              606.6,
+              986.8
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "description_model": "gpt-5.1-2025-11-13",
+    "questions": [
+      {
+        "question": "Does the image show a vase of daisies on the end of the table?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a loaf of bread on a board?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Does the image show a cat asleep on a stool?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      },
+      {
+        "question": "Is the image free of any visible text, letters, numbers, signatures or watermarks?",
+        "answer": "yes",
+        "raw": [
+          "yes"
+        ],
+        "model_reported": "gpt-5.1-2025-11-13",
+        "calls": 1
+      }
+    ],
+    "detector_pass": true,
+    "description_pass": true,
+    "judged_utc": "2026-10-27T22:57:41+00:00",
+    "medium_mask_pixels_inside_large_mask": 44043,
+    "pass": true
+  },
+  "accepted": true,
+  "sha256": "dcd91d8f58529407afd3675bd568043a274851c26bc2803f020a365a5b7903ea"
+}
